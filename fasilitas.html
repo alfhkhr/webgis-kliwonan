@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fasilitas Desa Kliwonan</title>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+      <header id="navbar-container"></header>
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+      <!-- PAGE HEADER -->
+
+      <section class="page-header">
+        <span class="page-label"> FASILITAS DESA </span>
+
+        <h1>Mengenal Fasilitas Kliwonan</h1>
+
+        <p>
+          Temukan berbagai fasilitas umum, sarana desa, peninggalan sejarah,
+          serta informasi kewilayahan yang terdapat di Desa Kliwonan.
+        </p>
+      </section>
+
+      <!-- =================================================
+             RINGKASAN DATA
+        ================================================== -->
+
+      <section class="stats-section">
+        <div class="section-heading">
+          <span class="section-label"> DALAM ANGKA </span>
+
+          <h2>Desa Kliwonan dalam Data</h2>
+
+          <p>
+            Ringkasan jumlah fasilitas desa berdasarkan data spasial yang
+            tersedia.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <!-- PJU -->
+
+          <div class="stat-card">
+            <div class="stat-icon pju">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+
+            <div class="stat-content">
+              <span class="stat-number" id="count-pju">0</span>
+
+              <span class="stat-title"> Penerangan Jalan </span>
+
+              <span class="stat-description"> Titik penerangan jalan </span>
+            </div>
+          </div>
+
+          <!-- PERIBADATAN -->
+
+          <div class="stat-card">
+            <div class="stat-icon worship">
+              <i class="fas fa-mosque"></i>
+            </div>
+
+            <div class="stat-content">
+              <span class="stat-number" id="count-peribadatan">0</span>
+
+              <span class="stat-title"> Tempat Peribadatan </span>
+
+              <span class="stat-description"> Fasilitas peribadatan </span>
+            </div>
+          </div>
+
+          <!-- SEJARAH -->
+
+          <div class="stat-card">
+            <div class="stat-icon history">
+              <i class="fas fa-landmark"></i>
+            </div>
+
+            <div class="stat-content">
+              <span class="stat-number" id="count-sejarah">0</span>
+
+              <span class="stat-title"> Peninggalan Sejarah </span>
+
+              <span class="stat-description"> Warisan sejarah dan budaya </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             STRUKTUR WILAYAH
+        ================================================== -->
+
+      <section class="administration-section">
+        <div class="section-heading">
+          <span class="section-label"> KEWILAYAHAN </span>
+
+          <h2>Struktur Wilayah Desa</h2>
+
+          <p>
+            Gambaran pembagian wilayah administratif Desa Kliwonan berdasarkan
+            dusun, RW, dan RT.
+          </p>
+        </div>
+
+        <div class="administration-grid">
+          <!-- DUSUN -->
+
+          <div class="administration-card">
+            <div class="administration-icon">
+              <i class="fas fa-house-chimney"></i>
+            </div>
+
+            <div>
+              <span class="administration-number"> 3 </span>
+
+              <h3>Dusun</h3>
+
+              <p>Terdapat 3 dusun di Desa Kliwonan.</p>
+            </div>
+          </div>
+
+          <!-- RW -->
+
+          <div class="administration-card">
+            <div class="administration-icon">
+              <i class="fas fa-people-group"></i>
+            </div>
+
+            <div>
+              <span class="administration-number"> 3 </span>
+
+              <h3>RW</h3>
+
+              <p>Terdapat 3 Rukun Warga di Desa Kliwonan.</p>
+            </div>
+          </div>
+
+          <!-- RT -->
+
+          <div class="administration-card">
+            <div class="administration-icon">
+              <i class="fas fa-users"></i>
+            </div>
+
+            <div>
+              <span class="administration-number"> 6 </span>
+
+              <h3>RT</h3>
+
+              <p>Terdapat 6 Rukun Tetangga di Desa Kliwonan.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             INFORMASI WILAYAH
+        ================================================== -->
+
+      <section class="administration-map-section">
+        <div class="administration-map-heading">
+          <div>
+            <span class="section-label"> INFORMASI WILAYAH </span>
+
+            <h2>Kenali Wilayah Kliwonan</h2>
+
+            <p>
+              Lihat batas dan informasi administrasi Desa Kliwonan melalui peta
+              digital.
+            </p>
+          </div>
+
+          <div class="map-heading-number">
+            <i class="fas fa-location-dot"></i>
+
+            <span> 01 </span>
+          </div>
+        </div>
+
+        <a href="map.html?layer=desakliwonan" class="administration-map-card">
+          <div class="administration-map-visual">
+            <div class="map-pattern"></div>
+
+            <div class="map-center-icon">
+              <i class="fas fa-map-location-dot"></i>
+            </div>
+
+            <span class="map-coordinate"> DESA KLIWONAN </span>
+          </div>
+
+          <div class="administration-map-content">
+            <span class="map-card-label">
+              <i class="fas fa-map"></i>
+
+              PETA WILAYAH
+            </span>
+
+            <h3>Peta Administrasi Desa Kliwonan</h3>
+
+            <p>
+              Jelajahi batas wilayah Desa Kliwonan beserta informasi
+              kewilayahannya melalui peta interaktif.
+            </p>
+
+            <div class="map-card-button">
+              <span> Buka Peta </span>
+
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+      <div class="footer-content">
+        <div>
+          <div class="footer-title">Desa Kliwonan</div>
+
+          <div class="footer-text">
+            WebGIS Desa Kliwonan — Informasi Geospasial Desa
+          </div>
+        </div>
+
+        <div class="footer-right">
+          Peta Digital Desa Kliwonan
+
+          <br />
+
+          Informasi untuk masyarakat dan perencanaan desa
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/fasilitas.js"></script>
+    <script src="navbar.js"></script>
+    
+  </body>
+</html>

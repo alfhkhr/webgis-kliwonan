@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94818159807879, -7.7631312246150559]
+      },
+      "properties": {
+        "FID": 5,
+        "Id": 0,
+        "Nama": "SPPG Kliwonan",
+        "Kelas": "Satuan Pelayanan Pemenuhan Gizi"
+      }
+    }
+  ]
+}

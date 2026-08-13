@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95377298152036, -7.7615177875017451]
+      },
+      "properties": {
+        "FID": 8,
+        "Id": 0,
+        "Nama": "Lapangan Voli",
+        "Kelas": "Lapangan"
+      }
+    }
+  ]
+}

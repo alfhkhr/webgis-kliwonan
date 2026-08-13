@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95303290563918, -7.7604685942118659]
+      },
+      "properties": {
+        "FID": 12,
+        "Id": 0,
+        "Nama": "Balai Desa Kliwonan",
+        "Kelas": "Pemerintahan"
+      }
+    }
+  ]
+}

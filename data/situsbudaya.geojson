@@ -1,0 +1,89 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95451681637502, -7.7616486775270506]
+      },
+      "properties": {
+        "FID": 10,
+        "Id": 0,
+        "Nama": "Sumur Gayam",
+        "Kelas": "Situs Budaya"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95655963555109, -7.7575703994463021]
+      },
+      "properties": {
+        "FID": 17,
+        "Id": 0,
+        "Nama": "Sumur Gayam Tegaliser",
+        "Kelas": "Situs Budaya"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94691293471006, -7.7651452708173974]
+      },
+      "properties": {
+        "FID": 18,
+        "Id": 0,
+        "Nama": "Pertapan",
+        "Kelas": "Situs Budaya"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94706180127733, -7.7652538046884576]
+      },
+      "properties": {
+        "FID": 19,
+        "Id": 0,
+        "Nama": "Sumur Senggot",
+        "Kelas": "Situs Budaya"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94800017373271, -7.7626957022541747]
+      },
+      "properties": {
+        "FID": 20,
+        "Id": 0,
+        "Nama": "Sumur Cikal",
+        "Kelas": "Situs Budaya"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94628630524285, -7.7646196232780529]
+      },
+      "properties": {
+        "FID": 21,
+        "Id": 0,
+        "Nama": "Pemakaman Mbah Kliwon",
+        "Kelas": "Situs Budaya"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94923735762828, -7.7624008344869004]
+      },
+      "properties": {
+        "FID": 6,
+        "Id": 0,
+        "Nama": "TK Tunas Harapan Kliwonan",
+        "Kelas": "Pendidikan Taman Kanak-kanak"
+      }
+    }
+  ]
+}

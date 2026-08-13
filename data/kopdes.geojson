@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94825600514802, -7.7629565694106271]
+      },
+      "properties": {
+        "FID": 4,
+        "Id": 0,
+        "Nama": "Koperasi Desa Merah Putih Kliwonan",
+        "Kelas": "Koperasi Desa"
+      }
+    }
+  ]
+}

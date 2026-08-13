@@ -1,0 +1,3159 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94912709100004, -7.7637859699999581]
+      },
+      "properties": {
+        "FID": 0,
+        "ID_Lampu": "L-001",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7637859699999998,
+        "Longitude": 109.94912709099999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:10:42+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95440440600004, -7.7567524799999319]
+      },
+      "properties": {
+        "FID": 1,
+        "ID_Lampu": "L-002",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7567524800000003,
+        "Longitude": 109.95440440599999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:33:59+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94891747200006, -7.7634475059999772]
+      },
+      "properties": {
+        "FID": 2,
+        "ID_Lampu": "L-003",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7634475060000003,
+        "Longitude": 109.94891747200001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:12:55+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95442225100004, -7.7564417999999478]
+      },
+      "properties": {
+        "FID": 3,
+        "ID_Lampu": "L-004",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7564418000000002,
+        "Longitude": 109.954422251,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:34:43+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95186877816478, -7.762259573797575]
+      },
+      "properties": {
+        "FID": 4,
+        "ID_Lampu": "L-005",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7622595737999998,
+        "Longitude": 109.95186877800001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:45:23+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94914848300004, -7.7634037969999667]
+      },
+      "properties": {
+        "FID": 5,
+        "ID_Lampu": "L-006",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7634037969999996,
+        "Longitude": 109.949148483,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:13:07+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95187950500008, -7.7621522469999604]
+      },
+      "properties": {
+        "FID": 6,
+        "ID_Lampu": "L-007",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7621522470000004,
+        "Longitude": 109.95187950499999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:46:55+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95191005200007, -7.76296044999998]
+      },
+      "properties": {
+        "FID": 7,
+        "ID_Lampu": "L-008",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7629604499999996,
+        "Longitude": 109.951910052,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:19:55+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95413713200008, -7.7623326289999568]
+      },
+      "properties": {
+        "FID": 8,
+        "ID_Lampu": "L-009",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7623326290000003,
+        "Longitude": 109.954137132,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:24:45+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95415389100003, -7.7622048969999469]
+      },
+      "properties": {
+        "FID": 9,
+        "ID_Lampu": "L-010",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7622048970000002,
+        "Longitude": 109.954153891,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:24:16+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95416041800007, -7.7620163979999575]
+      },
+      "properties": {
+        "FID": 10,
+        "ID_Lampu": "L-011",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7620163980000001,
+        "Longitude": 109.954160418,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:25:31+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95422012400007, -7.761858694999944]
+      },
+      "properties": {
+        "FID": 11,
+        "ID_Lampu": "L-012",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7618586949999999,
+        "Longitude": 109.954220124,
+        "Kondisi": "Mati",
+        "BeginTime": "2026-08-02T19:25:52+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95383357500003, -7.7611177979999297]
+      },
+      "properties": {
+        "FID": 12,
+        "ID_Lampu": "L-013",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7611177979999999,
+        "Longitude": 109.953833575,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:28:04+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95404700300008, -7.7611337349999303]
+      },
+      "properties": {
+        "FID": 13,
+        "ID_Lampu": "L-014",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7611337349999996,
+        "Longitude": 109.954047003,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:28:29+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95053476600003, -7.7631524589999685]
+      },
+      "properties": {
+        "FID": 14,
+        "ID_Lampu": "L-015",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631524589999996,
+        "Longitude": 109.950534766,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-08-02T19:15:08+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94810618000008, -7.7647919429999774]
+      },
+      "properties": {
+        "FID": 15,
+        "ID_Lampu": "L-016",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7647919429999996,
+        "Longitude": 109.94810618,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:12:09+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94723465200008, -7.7633670379999558]
+      },
+      "properties": {
+        "FID": 16,
+        "ID_Lampu": "L-017",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7633670380000002,
+        "Longitude": 109.94723465200001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:22:32+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95676068900008, -7.7566161359999342]
+      },
+      "properties": {
+        "FID": 17,
+        "ID_Lampu": "L-018",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7566161359999999,
+        "Longitude": 109.95676068900001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:44:09+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94701351600008, -7.763467789999936]
+      },
+      "properties": {
+        "FID": 18,
+        "ID_Lampu": "L-019",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.76346779,
+        "Longitude": 109.947013516,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:23:48+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95651942300009, -7.7564619699999753]
+      },
+      "properties": {
+        "FID": 19,
+        "ID_Lampu": "L-020",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7564619700000002,
+        "Longitude": 109.956519423,
+        "Kondisi": "Mati",
+        "BeginTime": "2026-07-31T18:44:39+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94705518000006, -7.7638443179999399]
+      },
+      "properties": {
+        "FID": 20,
+        "ID_Lampu": "L-021",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7638443180000003,
+        "Longitude": 109.94705518000001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:24:02+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95586296000005, -7.7563789699999575]
+      },
+      "properties": {
+        "FID": 21,
+        "ID_Lampu": "L-022",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7563789700000001,
+        "Longitude": 109.95586296,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:45:16+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94704794000006, -7.7641734599999381]
+      },
+      "properties": {
+        "FID": 22,
+        "ID_Lampu": "L-023",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7641734600000003,
+        "Longitude": 109.94704794,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:24:34+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95542887600004, -7.7563081069999384]
+      },
+      "properties": {
+        "FID": 23,
+        "ID_Lampu": "L-024",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7563081069999997,
+        "Longitude": 109.955428876,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:45:38+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94703774300007, -7.7644498569999314]
+      },
+      "properties": {
+        "FID": 24,
+        "ID_Lampu": "L-025",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7644498569999998,
+        "Longitude": 109.947037743,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:25:04+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95542126800007, -7.7562007509999376]
+      },
+      "properties": {
+        "FID": 25,
+        "ID_Lampu": "L-026",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7562007509999997,
+        "Longitude": 109.95542126799999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:46:11+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94703619900008, -7.7646880129999545]
+      },
+      "properties": {
+        "FID": 26,
+        "ID_Lampu": "L-027",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7646880129999998,
+        "Longitude": 109.947036199,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:26:59+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94697603700007, -7.76482171899994]
+      },
+      "properties": {
+        "FID": 27,
+        "ID_Lampu": "L-028",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7648217190000004,
+        "Longitude": 109.946976037,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:28:23+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95542355900005, -7.7559493269999393]
+      },
+      "properties": {
+        "FID": 28,
+        "ID_Lampu": "L-029",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7559493269999997,
+        "Longitude": 109.955423559,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:46:29+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94702851800008, -7.7650717779999354]
+      },
+      "properties": {
+        "FID": 29,
+        "ID_Lampu": "L-030",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7650717780000003,
+        "Longitude": 109.947028518,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:29:44+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95530496300006, -7.7566408289999345]
+      },
+      "properties": {
+        "FID": 30,
+        "ID_Lampu": "L-031",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7566408290000002,
+        "Longitude": 109.955304963,
+        "Kondisi": "Mati",
+        "BeginTime": "2026-07-31T18:48:11+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95530755400006, -7.7567393449999713]
+      },
+      "properties": {
+        "FID": 31,
+        "ID_Lampu": "L-032",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7567393449999997,
+        "Longitude": 109.955307554,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:48:33+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94700487600005, -7.7652718589999381]
+      },
+      "properties": {
+        "FID": 32,
+        "ID_Lampu": "L-033",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7652718590000003,
+        "Longitude": 109.94700487599999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:30:41+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95527330600004, -7.7570150219999618]
+      },
+      "properties": {
+        "FID": 33,
+        "ID_Lampu": "L-034",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.757015022,
+        "Longitude": 109.955273306,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:48:56+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94824318800005, -7.7645240639999429]
+      },
+      "properties": {
+        "FID": 34,
+        "ID_Lampu": "L-035",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7645240639999997,
+        "Longitude": 109.94824318800001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:15:54+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94722633100008, -7.7632213499999807]
+      },
+      "properties": {
+        "FID": 35,
+        "ID_Lampu": "L-036",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7632213500000002,
+        "Longitude": 109.947226331,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:34:27+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95549520100008, -7.7570435939999811]
+      },
+      "properties": {
+        "FID": 36,
+        "ID_Lampu": "L-037",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7570435939999998,
+        "Longitude": 109.95549520100001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:49:20+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95578918800004, -7.7570956879999358]
+      },
+      "properties": {
+        "FID": 37,
+        "ID_Lampu": "L-038",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7570956879999997,
+        "Longitude": 109.955789188,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:49:36+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95603466600005, -7.7571273399999541]
+      },
+      "properties": {
+        "FID": 38,
+        "ID_Lampu": "L-039",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7571273400000003,
+        "Longitude": 109.95603466599999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:49:58+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95638000900004, -7.7571772959999521]
+      },
+      "properties": {
+        "FID": 39,
+        "ID_Lampu": "L-040",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7571772960000001,
+        "Longitude": 109.956380009,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:50:16+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94823625800007, -7.7627460769999743]
+      },
+      "properties": {
+        "FID": 40,
+        "ID_Lampu": "L-041",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7627460770000001,
+        "Longitude": 109.94823625799999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:44:40+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95519501500007, -7.7570230999999694]
+      },
+      "properties": {
+        "FID": 41,
+        "ID_Lampu": "L-042",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7570230999999996,
+        "Longitude": 109.955195015,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:52:13+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94843095500005, -7.7626590989999613]
+      },
+      "properties": {
+        "FID": 42,
+        "ID_Lampu": "L-043",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7626590990000004,
+        "Longitude": 109.94843095500001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:45:43+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95481369400005, -7.7569490409999275]
+      },
+      "properties": {
+        "FID": 43,
+        "ID_Lampu": "L-044",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7569490410000004,
+        "Longitude": 109.95481369399999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:52:33+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94856111300004, -7.7625729099999603]
+      },
+      "properties": {
+        "FID": 44,
+        "ID_Lampu": "L-045",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7625729100000003,
+        "Longitude": 109.948561113,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:47:19+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95456373700006, -7.7569193679999557]
+      },
+      "properties": {
+        "FID": 45,
+        "ID_Lampu": "L-046",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7569193680000001,
+        "Longitude": 109.954563737,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:52:53+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94880756800006, -7.7624206839999488]
+      },
+      "properties": {
+        "FID": 46,
+        "ID_Lampu": "L-047",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7624206840000003,
+        "Longitude": 109.94880756800001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:51:38+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95432907500003, -7.7568973749999373]
+      },
+      "properties": {
+        "FID": 47,
+        "ID_Lampu": "L-048",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7568973750000003,
+        "Longitude": 109.954329075,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:53:10+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94894362200006, -7.762267440999949]
+      },
+      "properties": {
+        "FID": 48,
+        "ID_Lampu": "L-049",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7622674409999997,
+        "Longitude": 109.948943622,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:52:16+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95410382700004, -7.7568930129999671]
+      },
+      "properties": {
+        "FID": 49,
+        "ID_Lampu": "L-050",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.756893013,
+        "Longitude": 109.954103827,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:53:40+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94915641400007, -7.762229644999934]
+      },
+      "properties": {
+        "FID": 50,
+        "ID_Lampu": "L-051",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7622296449999997,
+        "Longitude": 109.949156414,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:53:05+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95383665700007, -7.7568620809999516]
+      },
+      "properties": {
+        "FID": 51,
+        "ID_Lampu": "L-052",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7568620810000004,
+        "Longitude": 109.953836657,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:54:10+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94825558400004, -7.7642568729999653]
+      },
+      "properties": {
+        "FID": 52,
+        "ID_Lampu": "L-053",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7642568729999999,
+        "Longitude": 109.94825558399999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:17:09+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95753324900005, -7.7573685869999736]
+      },
+      "properties": {
+        "FID": 53,
+        "ID_Lampu": "L-054",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7573685870000002,
+        "Longitude": 109.95753324899999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:40:24+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94936846500008, -7.7621038189999467]
+      },
+      "properties": {
+        "FID": 54,
+        "ID_Lampu": "L-055",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.762103819,
+        "Longitude": 109.94936846500001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:54:05+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95295286200007, -7.7577026319999618]
+      },
+      "properties": {
+        "FID": 55,
+        "ID_Lampu": "L-056",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.757702632,
+        "Longitude": 109.952952862,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:00:56+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94966604400008, -7.761936713999944]
+      },
+      "properties": {
+        "FID": 56,
+        "ID_Lampu": "L-057",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.761936714,
+        "Longitude": 109.949666044,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:55:01+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95299141500004, -7.7573457389999589]
+      },
+      "properties": {
+        "FID": 57,
+        "ID_Lampu": "L-058",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7573457389999998,
+        "Longitude": 109.952991415,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:01:15+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95003105900008, -7.7617397799999708]
+      },
+      "properties": {
+        "FID": 58,
+        "ID_Lampu": "L-059",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7617397800000001,
+        "Longitude": 109.950031059,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:55:52+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95300082800009, -7.7572123489999285]
+      },
+      "properties": {
+        "FID": 59,
+        "ID_Lampu": "L-060",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7572123489999996,
+        "Longitude": 109.953000828,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:01:32+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95044866300009, -7.7615195519999816]
+      },
+      "properties": {
+        "FID": 60,
+        "ID_Lampu": "L-061",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7615195520000002,
+        "Longitude": 109.950448663,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:56:54+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95293516000004, -7.7569445349999455]
+      },
+      "properties": {
+        "FID": 61,
+        "ID_Lampu": "L-062",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7569445349999997,
+        "Longitude": 109.95293516,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:01:50+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95081132800004, -7.7613408319999735]
+      },
+      "properties": {
+        "FID": 62,
+        "ID_Lampu": "L-063",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7613408320000001,
+        "Longitude": 109.950811328,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:57:36+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95269956600004, -7.756909425999936]
+      },
+      "properties": {
+        "FID": 63,
+        "ID_Lampu": "L-064",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.756909426,
+        "Longitude": 109.95269956600001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:02:08+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95116054700009, -7.7612903049999318]
+      },
+      "properties": {
+        "FID": 64,
+        "ID_Lampu": "L-065",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7612903050000002,
+        "Longitude": 109.951160547,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:58:44+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95252927800004, -7.7569050869999501]
+      },
+      "properties": {
+        "FID": 65,
+        "ID_Lampu": "L-066",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7569050869999998,
+        "Longitude": 109.952529278,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:02:27+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95116345700006, -7.7615670209999621]
+      },
+      "properties": {
+        "FID": 66,
+        "ID_Lampu": "L-067",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7615670210000003,
+        "Longitude": 109.95116345700001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T21:00:06+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95245511700006, -7.7568986099999506]
+      },
+      "properties": {
+        "FID": 67,
+        "ID_Lampu": "L-068",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7568986100000004,
+        "Longitude": 109.952455117,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:03:03+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95110004200006, -7.7619079589999274]
+      },
+      "properties": {
+        "FID": 68,
+        "ID_Lampu": "L-069",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7619079590000002,
+        "Longitude": 109.95110004199999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T21:01:24+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95226030300006, -7.7568709269999658]
+      },
+      "properties": {
+        "FID": 69,
+        "ID_Lampu": "L-070",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7568709269999996,
+        "Longitude": 109.952260303,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:03:21+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95111563200004, -7.762200193999945]
+      },
+      "properties": {
+        "FID": 70,
+        "ID_Lampu": "L-071",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7622001940000001,
+        "Longitude": 109.951115632,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T21:02:43+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95220074600007, -7.7570334849999654]
+      },
+      "properties": {
+        "FID": 71,
+        "ID_Lampu": "L-072",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.757033485,
+        "Longitude": 109.952200746,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:03:42+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95110155100008, -7.7624235299999782]
+      },
+      "properties": {
+        "FID": 72,
+        "ID_Lampu": "L-073",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7624235300000004,
+        "Longitude": 109.95110155099999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T21:03:20+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95194965100006, -7.7568477859999803]
+      },
+      "properties": {
+        "FID": 73,
+        "ID_Lampu": "L-074",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7568477859999998,
+        "Longitude": 109.95194965100001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:04:09+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94812255300008, -7.7639762559999781]
+      },
+      "properties": {
+        "FID": 74,
+        "ID_Lampu": "L-075",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7639762560000003,
+        "Longitude": 109.948122553,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:18:10+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95733432300005, -7.7573227469999324]
+      },
+      "properties": {
+        "FID": 75,
+        "ID_Lampu": "L-076",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7573227469999999,
+        "Longitude": 109.957334323,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:40:53+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95093674200007, -7.7624346219999438]
+      },
+      "properties": {
+        "FID": 76,
+        "ID_Lampu": "L-077",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7624346219999998,
+        "Longitude": 109.950936742,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T21:04:01+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95182781000005, -7.7568180009999423]
+      },
+      "properties": {
+        "FID": 77,
+        "ID_Lampu": "L-078",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7568180010000001,
+        "Longitude": 109.95182781,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:04:29+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95123172200005, -7.762513677999948]
+      },
+      "properties": {
+        "FID": 78,
+        "ID_Lampu": "L-079",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7625136780000004,
+        "Longitude": 109.951231722,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T21:05:39+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95338012200006, -7.7569583479999551]
+      },
+      "properties": {
+        "FID": 79,
+        "ID_Lampu": "L-080",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7569583480000004,
+        "Longitude": 109.953380122,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T19:08:23+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94808176000004, -7.7636580189999336]
+      },
+      "properties": {
+        "FID": 80,
+        "ID_Lampu": "L-081",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7636580190000002,
+        "Longitude": 109.94808175999999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:18:41+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95719126800009, -7.7572888969999667]
+      },
+      "properties": {
+        "FID": 81,
+        "ID_Lampu": "L-082",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7572888969999996,
+        "Longitude": 109.957191268,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:41:19+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94805061200009, -7.7634190879999778]
+      },
+      "properties": {
+        "FID": 82,
+        "ID_Lampu": "L-083",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.763419088,
+        "Longitude": 109.948050612,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:19:04+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95714835200005, -7.7572838069999648]
+      },
+      "properties": {
+        "FID": 83,
+        "ID_Lampu": "L-084",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7572838070000003,
+        "Longitude": 109.957148352,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:41:33+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94804520300005, -7.7632624379999697]
+      },
+      "properties": {
+        "FID": 84,
+        "ID_Lampu": "L-085",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7632624379999999,
+        "Longitude": 109.94804520300001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:19:43+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95703591600005, -7.7572661569999468]
+      },
+      "properties": {
+        "FID": 85,
+        "ID_Lampu": "L-086",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7572661570000001,
+        "Longitude": 109.957035916,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:41:51+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94799629500005, -7.762889682999969]
+      },
+      "properties": {
+        "FID": 86,
+        "ID_Lampu": "L-087",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.762889683,
+        "Longitude": 109.947996295,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:20:34+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95674800700004, -7.757235914999967]
+      },
+      "properties": {
+        "FID": 87,
+        "ID_Lampu": "L-088",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7572359149999999,
+        "Longitude": 109.956748007,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:42:25+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94749078300003, -7.7632142429999362]
+      },
+      "properties": {
+        "FID": 88,
+        "ID_Lampu": "L-089",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7632142430000002,
+        "Longitude": 109.94749078300001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:21:14+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95675145600006, -7.7569985199999678]
+      },
+      "properties": {
+        "FID": 89,
+        "ID_Lampu": "L-090",
+        "Dusun": "Tegaliser",
+        "Latitude": -7.7569985199999998,
+        "Longitude": 109.95675145600001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-31T18:43:32+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/Layer 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95250333300004, -7.7609366669999531]
+      },
+      "properties": {
+        "FID": 90,
+        "ID_Lampu": "L-091",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7609366670000002,
+        "Longitude": 109.952503333,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:44:19+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 91,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95383166700009, -7.7615099999999302]
+      },
+      "properties": {
+        "FID": 91,
+        "ID_Lampu": "L-092",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7615100000000004,
+        "Longitude": 109.953831667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:33:06+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 92,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95418500000005, -7.7615266669999414]
+      },
+      "properties": {
+        "FID": 92,
+        "ID_Lampu": "L-093",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.761526667,
+        "Longitude": 109.954185,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:33:33+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 93,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95246333300008, -7.7620033329999387]
+      },
+      "properties": {
+        "FID": 93,
+        "ID_Lampu": "L-094",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.762003333,
+        "Longitude": 109.952463333,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:25:09+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 94,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95204995200004, -7.7619426229999249]
+      },
+      "properties": {
+        "FID": 94,
+        "ID_Lampu": "L-095",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7619426230000004,
+        "Longitude": 109.952049952,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:26:44+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 95,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95486500000004, -7.7598416669999324]
+      },
+      "properties": {
+        "FID": 95,
+        "ID_Lampu": "L-096",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7598416669999999,
+        "Longitude": 109.954865,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:40:00+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 96,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95460702500009, -7.7598846419999745]
+      },
+      "properties": {
+        "FID": 96,
+        "ID_Lampu": "L-097",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7598846420000003,
+        "Longitude": 109.954607025,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:40:29+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 97,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95298666700006, -7.7614299999999616]
+      },
+      "properties": {
+        "FID": 97,
+        "ID_Lampu": "L-098",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7614299999999998,
+        "Longitude": 109.952986667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:31:36+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 98,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95510333300007, -7.7597283329999414]
+      },
+      "properties": {
+        "FID": 98,
+        "ID_Lampu": "L-099",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.759728333,
+        "Longitude": 109.955103333,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:39:36+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 99,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95451166700008, -7.7600116669999579]
+      },
+      "properties": {
+        "FID": 99,
+        "ID_Lampu": "L-100",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7600116669999997,
+        "Longitude": 109.95451166700001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:40:58+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 100,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95469000000008, -7.7602033329999358]
+      },
+      "properties": {
+        "FID": 100,
+        "ID_Lampu": "L-101",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7602033329999998,
+        "Longitude": 109.95469,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:36:47+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95176404900008, -7.7618999459999714]
+      },
+      "properties": {
+        "FID": 101,
+        "ID_Lampu": "L-102",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7618999459999998,
+        "Longitude": 109.951764049,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:27:27+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 102,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95289000000008, -7.7614999999999554]
+      },
+      "properties": {
+        "FID": 102,
+        "ID_Lampu": "L-103",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7614999999999998,
+        "Longitude": 109.95289,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:29:51+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95442859800005, -7.7615283329999443]
+      },
+      "properties": {
+        "FID": 103,
+        "ID_Lampu": "L-104",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7615283330000002,
+        "Longitude": 109.95442859800001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:34:07+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 104,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95451000000008, -7.7613766669999791]
+      },
+      "properties": {
+        "FID": 104,
+        "ID_Lampu": "L-105",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7613766670000004,
+        "Longitude": 109.95451,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:34:27+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 105,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95186738300004, -7.7619299459999525]
+      },
+      "properties": {
+        "FID": 105,
+        "ID_Lampu": "L-106",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7619299460000004,
+        "Longitude": 109.95186738300001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:27:07+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 106,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95360215700003, -7.7614928429999281]
+      },
+      "properties": {
+        "FID": 106,
+        "ID_Lampu": "L-107",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7614928430000001,
+        "Longitude": 109.95360215700001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:32:47+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 107,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95222466600006, -7.7619618629999536]
+      },
+      "properties": {
+        "FID": 107,
+        "ID_Lampu": "L-108",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7619618629999998,
+        "Longitude": 109.95222466600001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:26:11+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 108,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95230333300009, -7.7610080809999431]
+      },
+      "properties": {
+        "FID": 108,
+        "ID_Lampu": "L-109",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7610080809999999,
+        "Longitude": 109.952303333,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:44:37+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 109,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95235221200005, -7.7619966669999485]
+      },
+      "properties": {
+        "FID": 109,
+        "ID_Lampu": "L-110",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.761996667,
+        "Longitude": 109.95235221199999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:25:38+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 110,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95284816700007, -7.760892657999932]
+      },
+      "properties": {
+        "FID": 110,
+        "ID_Lampu": "L-111",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7608926580000004,
+        "Longitude": 109.952848167,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:30:42+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 111,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95286500000009, -7.7617966669999419]
+      },
+      "properties": {
+        "FID": 111,
+        "ID_Lampu": "L-112",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7617966669999996,
+        "Longitude": 109.952865,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:29:26+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 112,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95469463600006, -7.7599266669999452]
+      },
+      "properties": {
+        "FID": 112,
+        "ID_Lampu": "L-113",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7599266670000002,
+        "Longitude": 109.954694636,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:37:43+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 113,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95311500000008, -7.7614549999999554]
+      },
+      "properties": {
+        "FID": 113,
+        "ID_Lampu": "L-114",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7614549999999998,
+        "Longitude": 109.953115,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:31:52+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 114,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95533666700004, -7.7596035349999397]
+      },
+      "properties": {
+        "FID": 114,
+        "ID_Lampu": "L-115",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7596035350000001,
+        "Longitude": 109.955336667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:39:17+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 115,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95291833300007, -7.7611968669999669]
+      },
+      "properties": {
+        "FID": 115,
+        "ID_Lampu": "L-116",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7611968669999998,
+        "Longitude": 109.952918333,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:30:18+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 116,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95468666700003, -7.7604366669999649]
+      },
+      "properties": {
+        "FID": 116,
+        "ID_Lampu": "L-117",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7604366669999996,
+        "Longitude": 109.954686667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:36:22+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 117,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95342166700004, -7.7614799999999491]
+      },
+      "properties": {
+        "FID": 117,
+        "ID_Lampu": "L-118",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7614799999999997,
+        "Longitude": 109.953421667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:32:25+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 118,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95465166700006, -7.7606383329999744]
+      },
+      "properties": {
+        "FID": 118,
+        "ID_Lampu": "L-119",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7606383330000002,
+        "Longitude": 109.95465166699999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:36:01+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 119,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95458223100007, -7.7611772579999752]
+      },
+      "properties": {
+        "FID": 119,
+        "ID_Lampu": "L-120",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.761177258,
+        "Longitude": 109.954582231,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:34:59+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 120,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95465666700005, -7.7609006709999449]
+      },
+      "properties": {
+        "FID": 120,
+        "ID_Lampu": "L-121",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7609006709999999,
+        "Longitude": 109.95465666699999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:35:41+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 121,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95200152500007, -7.7610833329999309]
+      },
+      "properties": {
+        "FID": 121,
+        "ID_Lampu": "L-122",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7610833330000002,
+        "Longitude": 109.952001525,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:45:08+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95084166700008, -7.7631216669999503]
+      },
+      "properties": {
+        "FID": 122,
+        "ID_Lampu": "L-123",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631216670000001,
+        "Longitude": 109.95084166700001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:12:07+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 123,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95278166700007, -7.762418332999971]
+      },
+      "properties": {
+        "FID": 123,
+        "ID_Lampu": "L-124",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7624183330000003,
+        "Longitude": 109.952781667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:17:06+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 124,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95303500000006, -7.7623716669999681]
+      },
+      "properties": {
+        "FID": 124,
+        "ID_Lampu": "L-125",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.762371667,
+        "Longitude": 109.953035,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:17:52+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 125,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95331500000009, -7.762403332999952]
+      },
+      "properties": {
+        "FID": 125,
+        "ID_Lampu": "L-126",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.762403333,
+        "Longitude": 109.953315,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:18:30+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 126,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95359666700006, -7.7624133329999268]
+      },
+      "properties": {
+        "FID": 126,
+        "ID_Lampu": "L-127",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7624133329999996,
+        "Longitude": 109.953596667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:19:48+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 127,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95384333300007, -7.7624583329999268]
+      },
+      "properties": {
+        "FID": 127,
+        "ID_Lampu": "L-128",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7624583329999997,
+        "Longitude": 109.95384333299999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:20:11+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 128,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95410666700008, -7.7624583329999268]
+      },
+      "properties": {
+        "FID": 128,
+        "ID_Lampu": "L-129",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7624583329999997,
+        "Longitude": 109.954106667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:20:34+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 129,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95432807500003, -7.7624852579999697]
+      },
+      "properties": {
+        "FID": 129,
+        "ID_Lampu": "L-130",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7624852579999999,
+        "Longitude": 109.95432807500001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:20:56+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 130,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95285500000006, -7.7620299999999816]
+      },
+      "properties": {
+        "FID": 130,
+        "ID_Lampu": "L-131",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7620300000000002,
+        "Longitude": 109.952855,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:23:36+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 131,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95280833300006, -7.7620016669999359]
+      },
+      "properties": {
+        "FID": 131,
+        "ID_Lampu": "L-132",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7620016669999998,
+        "Longitude": 109.95280833299999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:23:53+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 132,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95112500000005, -7.7631383329999721]
+      },
+      "properties": {
+        "FID": 132,
+        "ID_Lampu": "L-133",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631383329999997,
+        "Longitude": 109.951125,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:12:29+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 133,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95260666700005, -7.762004999999931]
+      },
+      "properties": {
+        "FID": 133,
+        "ID_Lampu": "L-134",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7620050000000003,
+        "Longitude": 109.952606667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:24:43+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 134,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95131333300009, -7.7631499999999392]
+      },
+      "properties": {
+        "FID": 134,
+        "ID_Lampu": "L-135",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631500000000004,
+        "Longitude": 109.951313333,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:12:56+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 135,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95165255500007, -7.763172554999926]
+      },
+      "properties": {
+        "FID": 135,
+        "ID_Lampu": "L-136",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631725549999997,
+        "Longitude": 109.951652555,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:13:27+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 136,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95188409800005, -7.7631875689999674]
+      },
+      "properties": {
+        "FID": 136,
+        "ID_Lampu": "L-137",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631875690000003,
+        "Longitude": 109.95188409799999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:13:55+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 137,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95231500000006, -7.7632249999999772]
+      },
+      "properties": {
+        "FID": 137,
+        "ID_Lampu": "L-138",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7632250000000003,
+        "Longitude": 109.952315,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:14:32+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 138,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95265166700005, -7.7632466669999758]
+      },
+      "properties": {
+        "FID": 138,
+        "ID_Lampu": "L-139",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7632466669999998,
+        "Longitude": 109.952651667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:15:16+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 139,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95271000000008, -7.7629933329999403]
+      },
+      "properties": {
+        "FID": 139,
+        "ID_Lampu": "L-140",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7629933329999998,
+        "Longitude": 109.95271,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:15:45+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 140,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95273166700008, -7.7627449999999385]
+      },
+      "properties": {
+        "FID": 140,
+        "ID_Lampu": "L-141",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7627449999999998,
+        "Longitude": 109.95273166699999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:16:16+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 141,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95290079500006, -7.760746145999974]
+      },
+      "properties": {
+        "FID": 141,
+        "ID_Lampu": "L-142",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7607461459999998,
+        "Longitude": 109.95290079500001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:43:37+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 142,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95283500000005, -7.760819999999967]
+      },
+      "properties": {
+        "FID": 142,
+        "ID_Lampu": "L-143",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7608199999999998,
+        "Longitude": 109.95283499999999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:44:02+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 143,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95162333300004, -7.7611886859999686]
+      },
+      "properties": {
+        "FID": 143,
+        "ID_Lampu": "L-144",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7611886859999997,
+        "Longitude": 109.951623333,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:45:41+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 144,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95138333300008, -7.7612316669999473]
+      },
+      "properties": {
+        "FID": 144,
+        "ID_Lampu": "L-145",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7612316669999997,
+        "Longitude": 109.951383333,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:46:02+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 145,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95118333300007, -7.7612983329999565]
+      },
+      "properties": {
+        "FID": 145,
+        "ID_Lampu": "L-146",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.761298333,
+        "Longitude": 109.951183333,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:46:25+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 146,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94808666700004, -7.7632466669999758]
+      },
+      "properties": {
+        "FID": 146,
+        "ID_Lampu": "L-147",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7632466669999998,
+        "Longitude": 109.948086667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:52:44+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 147,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94833166700005, -7.7632066669999631]
+      },
+      "properties": {
+        "FID": 147,
+        "ID_Lampu": "L-148",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7632066670000004,
+        "Longitude": 109.94833166700001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:53:09+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 148,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94855166700006, -7.7631916669999441]
+      },
+      "properties": {
+        "FID": 148,
+        "ID_Lampu": "L-149",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631916670000001,
+        "Longitude": 109.948551667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:53:43+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 149,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94883166700004, -7.7631249999999454]
+      },
+      "properties": {
+        "FID": 149,
+        "ID_Lampu": "L-150",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631249999999996,
+        "Longitude": 109.94883166699999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:54:00+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 150,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94926666700007, -7.763161666999963]
+      },
+      "properties": {
+        "FID": 150,
+        "ID_Lampu": "L-151",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631616670000003,
+        "Longitude": 109.949266667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:54:36+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 151,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94949166700007, -7.7631233329999532]
+      },
+      "properties": {
+        "FID": 151,
+        "ID_Lampu": "L-152",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631233330000002,
+        "Longitude": 109.949491667,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:54:52+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 152,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94909796500008, -7.7631033859999548]
+      },
+      "properties": {
+        "FID": 152,
+        "ID_Lampu": "L-153",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631033860000001,
+        "Longitude": 109.94909796500001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-08T10:35:48+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 153,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94976666700006, -7.7631249999999454]
+      },
+      "properties": {
+        "FID": 153,
+        "ID_Lampu": "L-154",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631249999999996,
+        "Longitude": 109.94976666700001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:55:11+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 154,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94999500000006, -7.7631299999999328]
+      },
+      "properties": {
+        "FID": 154,
+        "ID_Lampu": "L-155",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631300000000003,
+        "Longitude": 109.949995,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:55:25+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 155,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95026000000007, -7.763134999999977]
+      },
+      "properties": {
+        "FID": 155,
+        "ID_Lampu": "L-156",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.7631350000000001,
+        "Longitude": 109.95026,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:55:39+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 156,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95055819000004, -7.763109396999937]
+      },
+      "properties": {
+        "FID": 156,
+        "ID_Lampu": "L-157",
+        "Dusun": "Kliwonan",
+        "Latitude": -7.763109397,
+        "Longitude": 109.95055819,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:55:54+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 157,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95437666700008, -7.7600833329999546]
+      },
+      "properties": {
+        "FID": 157,
+        "ID_Lampu": "L-158",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7600833329999999,
+        "Longitude": 109.95437666700001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:41:22+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 158,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95419333300003, -7.7601550959999486]
+      },
+      "properties": {
+        "FID": 158,
+        "ID_Lampu": "L-159",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7601550960000001,
+        "Longitude": 109.95419333300001,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:41:48+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 159,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95407000000006, -7.7602366669999583]
+      },
+      "properties": {
+        "FID": 159,
+        "ID_Lampu": "L-160",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.760236667,
+        "Longitude": 109.95407,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:42:01+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 160,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95388000000008, -7.7603166669999268]
+      },
+      "properties": {
+        "FID": 160,
+        "ID_Lampu": "L-161",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7603166669999997,
+        "Longitude": 109.95388,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:42:15+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 161,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95367833300008, -7.7604366669999649]
+      },
+      "properties": {
+        "FID": 161,
+        "ID_Lampu": "L-162",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7604366669999996,
+        "Longitude": 109.953678333,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:42:33+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 162,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95348833300005, -7.7605349999999476]
+      },
+      "properties": {
+        "FID": 162,
+        "ID_Lampu": "L-163",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.760535,
+        "Longitude": 109.953488333,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:42:47+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 163,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95321500000006, -7.7606766669999274]
+      },
+      "properties": {
+        "FID": 163,
+        "ID_Lampu": "L-164",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7606766670000003,
+        "Longitude": 109.953215,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:43:13+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 164,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95463000000007, -7.7610766669999407]
+      },
+      "properties": {
+        "FID": 164,
+        "ID_Lampu": "L-165",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7610766670000002,
+        "Longitude": 109.95462999999999,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:35:18+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 165,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95176407239838, -7.7651449150337397]
+      },
+      "properties": {
+        "FID": 165,
+        "ID_Lampu": "L-166",
+        "Dusun": "Karangwaru",
+        "Latitude": -7.7651449150299996,
+        "Longitude": 109.951764072,
+        "Kondisi": "Nyala",
+        "BeginTime": "2026-07-09T20:35:18+07:00",
+        "EndTime": " ",
+        "FolderPath": "Document/LAMPU"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1359 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Peta Interaktif | Desa Kliwonan</title>
+
+    <!-- ============= LEAFLET CSS ============ -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+    />
+
+    <!-- ====================== LEAFLET DRAW CSS ======================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"
+    />
+
+    <!-- ================= FONT AWESOME ===================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =====================================================
+         CSS UTAMA
+    ====================================================== -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+  
+    <header id="navbar-container"></header>
+
+    <!-- =====================================================
+         MAP PAGE
+    ====================================================== -->
+
+    <main class="map-page-container">
+      <!-- ===================================================
+           SIDEBAR
+      ==================================================== -->
+
+      <aside class="sidebar" id="sidebar">
+        <!-- =================================================
+             BASEMAP
+        ================================================== -->
+
+        <div class="control-group">
+          <h3>
+            <i class="fas fa-layer-group"></i>
+            Basemap
+          </h3>
+
+          <div class="basemap-selector">
+            <select id="basemapSelect">
+              <option value="osm">OpenStreetMap</option>
+              <option value="esri">Esri World Imagery</option>
+              <option value="google" selected>Google Satellite</option>
+              <option value="topo">OpenTopoMap</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- =================================================
+             LAYER PETA
+        ================================================== -->
+
+        <div class="control-group">
+          <h3>
+            <i class="fas fa-list"></i>
+            Layer Peta
+          </h3>
+
+          <div class="layer-controls">
+            <!-- =================================================
+                 BATAS DAN WILAYAH
+            ================================================== -->
+
+            <div class="control-group-inner">
+              <h4>
+                <i class="fas fa-map"></i>
+                Batas &amp; Wilayah
+              </h4>
+
+              <!-- =================================================
+                   BATAS DESA
+              ================================================== -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="batasdesa" checked />
+                <label for="batasdesa"> Batas Desa Kliwonan </label>
+
+                <div
+                  class="layer-legend border-legend"
+                  id="legend-batasdesa"
+                  style="border-color: #397b18"
+                ></div>
+
+                <button
+                  class="style-toggle-btn"
+                  data-target="style-controls-batasdesa"
+                  title="Atur tampilan"
+                  type="button"
+                >
+                  <i class="fas fa-palette"></i>
+                </button>
+              </div>
+
+              <div class="style-controls" id="style-controls-batasdesa">
+                <div class="layer-item" style="padding: 4px 8px">
+                  <input type="checkbox" id="batasFillToggle" />
+
+                  <label for="batasFillToggle" class="small-label">
+                    Aktifkan Isian (Fill)
+                  </label>
+                </div>
+
+                <div class="control-row">
+                  <label for="color-batasdesa"> Warna </label>
+
+                  <input type="color" id="color-batasdesa" value="#397b18" />
+                </div>
+
+                <div class="control-row">
+                  <label for="weight-batasdesa"> Ketebalan </label>
+
+                  <input
+                    type="range"
+                    id="weight-batasdesa"
+                    min="1"
+                    max="10"
+                    step="1"
+                    value="3"
+                  />
+
+                  <span id="weight-value-batasdesa" class="range-value">
+                    3
+                  </span>
+                </div>
+
+                <div class="control-row">
+                  <label for="opacity-batasdesa"> Opacity </label>
+
+                  <input
+                    type="range"
+                    id="opacity-batasdesa"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="1"
+                  />
+
+                  <span id="opacity-value-batasdesa" class="range-value">
+                    100%
+                  </span>
+                </div>
+              </div>
+
+              <!-- =================================================
+                   BATAS DUSUN
+              ================================================== -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="batasdusun" checked />
+
+                <label for="batasdusun"> Batas Dusun </label>
+
+                <div
+                  class="layer-legend border-legend"
+                  id="legend-batasdusun"
+                  style="border-color: #8e44ad"
+                ></div>
+
+                <button
+                  class="style-toggle-btn"
+                  data-target="style-controls-batasdusun"
+                  title="Atur tampilan"
+                  type="button"
+                >
+                  <i class="fas fa-palette"></i>
+                </button>
+              </div>
+
+              <div class="style-controls" id="style-controls-batasdusun">
+                <div class="control-row">
+                  <label for="opacity-batasdusun"> Opacity </label>
+
+                  <input
+                    type="range"
+                    id="opacity-batasdusun"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="0.8"
+                  />
+
+                  <span id="opacity-value-batasdusun" class="range-value">
+                    80%
+                  </span>
+                </div>
+
+                <div
+                  id="dusun-layer-controls"
+                  class="dusun-layer-controls"
+                ></div>
+              </div>
+
+              <!-- =================================================
+                   BATAS RT
+              ================================================== -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="batasrt" checked />
+
+                <label for="batasrt"> Batas RT </label>
+
+                <div
+                  class="layer-legend border-legend"
+                  id="legend-batasrt"
+                  style="border-color: #e91e63"
+                ></div>
+
+                <button
+                  class="style-toggle-btn"
+                  data-target="style-controls-batasrt"
+                  title="Atur tampilan"
+                  type="button"
+                >
+                  <i class="fas fa-palette"></i>
+                </button>
+              </div>
+
+              <div class="style-controls" id="style-controls-batasrt">
+                <div class="control-row">
+                  <label for="opacity-batasrt"> Opacity </label>
+
+                  <input
+                    type="range"
+                    id="opacity-batasrt"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="0.8"
+                  />
+
+                  <span id="opacity-value-batasrt" class="range-value">
+                    80%
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 SARANA DAN PELAYANAN
+            ================================================== -->
+
+            <div class="control-group-inner">
+              <h4>
+                <i class="fas fa-building"></i>
+                Sarana &amp; Pelayanan
+              </h4>
+
+              <!-- PEMERINTAHAN -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="pemerintahan" checked />
+
+                <label for="pemerintahan"> Pemerintahan </label>
+
+                <div class="auto-legend-icon" style="background: #7c3aed">
+                  🏛
+                </div>
+              </div>
+
+              <!-- PENDIDIKAN -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="pendidikan" checked />
+
+                <label for="pendidikan"> Pendidikan </label>
+
+                <div class="auto-legend-icon" style="background: #2563eb">
+                  🎓
+                </div>
+              </div>
+
+              <!-- PERIBADATAN -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="peribadatan" checked />
+
+                <label for="peribadatan"> Peribadatan </label>
+
+                <div class="auto-legend-icon" style="background: #15803d">
+                  🕌
+                </div>
+              </div>
+
+              <!-- LAPANGAN -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="lapangan" />
+
+                <label for="lapangan"> Lapangan </label>
+
+                <div class="auto-legend-icon" style="background: #ea580c">
+                  🏐
+                </div>
+              </div>
+
+              <!-- TPU -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="tpu" />
+
+                <label for="tpu"> TPU </label>
+
+                <div class="auto-legend-icon" style="background: #475569">
+                  🪦
+                </div>
+              </div>
+
+              <!-- SPPG -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="sppg" />
+
+                <label for="sppg"> SPPG </label>
+
+                <div class="auto-legend-icon" style="background: #ca8a04">
+                  🍽
+                </div>
+              </div>
+
+              <!-- KOPERASI DESA -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="kopdes" />
+
+                <label for="kopdes"> Koperasi Desa </label>
+
+                <div class="auto-legend-icon" style="background: #0891b2">
+                  🏪
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 EKONOMI
+            ================================================== -->
+
+            <div class="control-group-inner">
+              <h4>
+                <i class="fas fa-store"></i>
+                Ekonomi
+              </h4>
+
+              <!-- UMKM -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="umkm" />
+
+                <label for="umkm"> UMKM </label>
+
+                <div class="auto-legend-icon" style="background: #c026d3">
+                  🛍
+                </div>
+              </div>
+
+              <!-- INDUSTRI -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="industri" />
+
+                <label for="industri"> Industri </label>
+
+                <div class="auto-legend-icon" style="background: #64748b">
+                  🏭
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 TRANSPORTASI DAN INFRASTRUKTUR
+            ================================================== -->
+
+            <div class="control-group-inner">
+              <h4>
+                <i class="fas fa-road"></i>
+                Transportasi &amp; Infrastruktur
+              </h4>
+
+              <!-- =================================================
+                   JARINGAN JALAN
+              ================================================== -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="jaringanjalan" checked />
+                <label for="jaringanjalan"> Jaringan Jalan </label>
+
+                <div
+                  class="layer-legend line-legend"
+                  id="legend-jaringanjalan"
+                  style="background-color: #e67e22"
+                ></div>
+
+                <button
+                  class="style-toggle-btn"
+                  data-target="style-controls-jaringanjalan"
+                  title="Atur tampilan"
+                  type="button"
+                >
+                  <i class="fas fa-palette"></i>
+                </button>
+              </div>
+
+              <div class="style-controls" id="style-controls-jaringanjalan">
+                <div class="control-row">
+                  <label for="color-jaringanjalan"> Warna </label>
+
+                  <input
+                    type="color"
+                    id="color-jaringanjalan"
+                    value="#e67e22"
+                  />
+                </div>
+
+                <div class="control-row">
+                  <label for="weight-jaringanjalan"> Ketebalan </label>
+
+                  <input
+                    type="range"
+                    id="weight-jaringanjalan"
+                    min="1"
+                    max="10"
+                    step="1"
+                    value="3"
+                  />
+
+                  <span id="weight-value-jaringanjalan" class="range-value">
+                    3
+                  </span>
+                </div>
+
+                <div class="control-row">
+                  <label for="opacity-jaringanjalan"> Opacity </label>
+
+                  <input
+                    type="range"
+                    id="opacity-jaringanjalan"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="0.85"
+                  />
+
+                  <span id="opacity-value-jaringanjalan" class="range-value">
+                    85%
+                  </span>
+                </div>
+              </div>
+
+              <!-- =================================================
+                   REL KERETA API
+              ================================================== -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="relkereta" />
+                <label for="relkereta"> Jalur Kereta Api </label>
+
+                <div
+                  class="layer-legend line-legend"
+                  id="legend-relkereta"
+                  style="background-color: #5d4037"
+                ></div>
+
+                <button
+                  class="style-toggle-btn"
+                  data-target="style-controls-relkereta"
+                  title="Atur tampilan"
+                  type="button"
+                >
+                  <i class="fas fa-palette"></i>
+                </button>
+              </div>
+
+              <!-- =================================================
+                   PENGATURAN REL KERETA API
+              ================================================== -->
+
+              <div class="style-controls" id="style-controls-relkereta">
+                <!-- WARNA -->
+
+                <div class="control-row">
+                  <label for="color-relkereta"> Warna </label>
+
+                  <input type="color" id="color-relkereta" value="#5d4037" />
+                </div>
+
+                <!-- KETEBALAN -->
+
+                <div class="control-row">
+                  <label for="weight-relkereta"> Ketebalan </label>
+                  <input
+                    type="range"
+                    id="weight-relkereta"
+                    min="1"
+                    max="10"
+                    step="1"
+                    value="5"
+                  />
+                  <span id="weight-value-relkereta" class="range-value">
+                    5
+                  </span>
+                </div>
+                <!-- OPACITY -->
+
+                <div class="control-row">
+                  <label for="opacity-relkereta"> Opacity </label>
+
+                  <input
+                    type="range"
+                    id="opacity-relkereta"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="1"
+                  />
+
+                  <span id="opacity-value-relkereta" class="range-value">
+                    100%
+                  </span>
+                </div>
+              </div>
+
+              <!-- =================================================
+                   PJU
+              ================================================== -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="pju" />
+
+                <label for="pju"> Penerangan Jalan (PJU) </label>
+
+                <div class="auto-legend-icon" style="background: #eab308">
+                  💡
+                </div>
+              </div>
+
+              <!-- =================================================
+                   MINIM PENERANGAN
+              ================================================== -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="minim_penerangan" />
+
+                <label for="minim_penerangan"> Area Minim Penerangan </label>
+
+                <div
+                  class="layer-legend border-legend"
+                  id="legend-minim_penerangan"
+                  style="border-color: #c62828"
+                ></div>
+              </div>
+
+            <!-- =================================================
+                 LINGKUNGAN DAN POTENSI
+            ================================================== -->
+
+            <div class="control-group-inner">
+              <h4>
+                <i class="fas fa-leaf"></i>
+                Lingkungan &amp; Potensi
+              </h4>
+
+              <!-- =================================================
+                   SUNGAI
+              ================================================== -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="sungai" checked />
+                <label for="sungai"> Sungai </label>
+
+                <div
+                  class="layer-legend line-legend"
+                  id="legend-sungai"
+                  style="background-color: #2196f3"
+                ></div>
+
+                <button
+                  class="style-toggle-btn"
+                  data-target="style-controls-sungai"
+                  title="Atur tampilan"
+                  type="button"
+                >
+                  <i class="fas fa-palette"></i>
+                </button>
+              </div>
+
+              <div class="style-controls" id="style-controls-sungai">
+                <div class="control-row">
+                  <label for="color-sungai"> Warna </label>
+
+                  <input type="color" id="color-sungai" value="#2196f3" />
+                </div>
+
+                <div class="control-row">
+                  <label for="weight-sungai"> Ketebalan </label>
+
+                  <input
+                    type="range"
+                    id="weight-sungai"
+                    min="1"
+                    max="10"
+                    step="1"
+                    value="2"
+                  />
+
+                  <span id="weight-value-sungai" class="range-value"> 2 </span>
+                </div>
+
+                <div class="control-row">
+                  <label for="opacity-sungai"> Opacity </label>
+
+                  <input
+                    type="range"
+                    id="opacity-sungai"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="0.9"
+                  />
+
+                  <span id="opacity-value-sungai" class="range-value">
+                    90%
+                  </span>
+                </div>
+              </div>
+
+              <!-- =================================================
+                   SITUS BUDAYA
+              ================================================== -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="situsbudaya" />
+
+                <label for="situsbudaya"> Situs Budaya </label>
+
+                <div class="auto-legend-icon" style="background: #92400e">
+                  🏛
+                </div>
+              </div>
+
+              <!-- =================================================
+                   SUMUR BOR
+              ================================================== -->
+
+              <div class="layer-item">
+                <input type="checkbox" id="sumbor" />
+
+                <label for="sumbor"> Sumur Bor </label>
+
+                <div class="auto-legend-icon" style="background: #0284c7">
+                  💧
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 CUSTOM LAYERS
+            ================================================== -->
+
+            <div id="custom-layers-container"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- =====================================================
+           SIDEBAR TOGGLE
+      ====================================================== -->
+
+      <button
+        id="sidebar-toggle"
+        title="Buka/Tutup Sidebar"
+        aria-label="Buka atau tutup sidebar"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <!-- =====================================================
+           MAP
+      ====================================================== -->
+      <section class="map-container">
+        <div id="map"></div>
+
+        <!-- MAP CONTROLS -->
+
+        <div class="map-controls">
+          <button
+            class="control-btn"
+            id="aboutBtn"
+            title="Tentang Peta"
+            aria-label="Tentang Peta"
+          >
+            <i class="fas fa-info"></i>
+          </button>
+
+          <button
+            class="control-btn"
+            id="homeBtn"
+            title="Zoom ke Wilayah Desa Kliwonan"
+            aria-label="Zoom ke Wilayah Desa Kliwonan"
+          >
+            <i class="fas fa-expand-arrows-alt"></i>
+          </button>
+        </div>
+
+        <!-- LOADING -->
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+
+          <div>Memuat Layer...</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         ABOUT MODAL
+    ====================================================== -->
+    <div id="aboutModal" class="modal">
+      <div class="modal-content">
+        <button class="close" id="closeAboutModal" aria-label="Tutup">
+          &times;
+        </button>
+
+        <h2>
+          <i class="fas fa-info-circle"></i>
+          Tentang Peta Ini
+        </h2>
+
+        <p>
+          <strong>Judul:</strong>
+
+          Peta Interaktif Desa Kliwonan
+        </p>
+
+        <p>
+          <strong>Deskripsi:</strong>
+
+          WebGIS Desa Kliwonan menyajikan informasi spasial mengenai wilayah
+          desa, batas administratif, sarana dan pelayanan, kondisi ekonomi,
+          jaringan transportasi, infrastruktur, serta kondisi lingkungan dan
+          potensi desa.
+        </p>
+
+        <p>
+          <strong>Sumber Data:</strong>
+
+          Data spasial hasil digitasi, pengolahan data, dan survei lapangan.
+        </p>
+
+        <p>
+          <strong>Pengembang/Pembuat:</strong>
+
+          Swakarsa Banyuurip
+        </p>
+
+        <p>
+          <strong>Wilayah:</strong>
+
+          Desa Kliwonan
+        </p>
+
+        <div
+          style="
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 12px;
+            opacity: 0.75;
+          "
+        >
+          WebGIS Desa Kliwonan
+
+          <br />
+
+          Informasi geospasial untuk masyarakat dan perencanaan desa.
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         JAVASCRIPT LIBRARY
+    ====================================================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <!-- =====================================================
+         JAVASCRIPT PROJECT
+    ====================================================== -->
+    <script src="navbar.js"></script>
+    <script src="js/map-config.js"></script>
+    <script src="js/popup-handler.js"></script>
+    <script src="js/layer-manager.js"></script>
+    <script src="js/main.js"></script>
+    <!-- =====================================================
+         MAP PAGE SCRIPT
+    ====================================================== -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        /* =================================================
+             HELPER
+          ================================================= */
+        function getLayerManager() {
+          return window.app && window.app.layerManager;
+        }
+
+        function getLayer(layerName) {
+          const manager = getLayerManager();
+
+          if (!manager) {
+            return null;
+          }
+
+          return manager.layers[layerName] || null;
+        }
+
+        function updateRangeText(elementId, value, suffix = "") {
+          const element = document.getElementById(elementId);
+
+          if (element) {
+            element.textContent = value + suffix;
+          }
+        }
+
+        /* =================================================
+             ABOUT MODAL
+          ================================================= */
+
+        const aboutModal = document.getElementById("aboutModal");
+
+        const aboutBtn = document.getElementById("aboutBtn");
+
+        const closeAboutBtn = document.getElementById("closeAboutModal");
+
+        if (aboutBtn && aboutModal) {
+          aboutBtn.addEventListener("click", function () {
+            aboutModal.style.display = "block";
+          });
+        }
+
+        if (closeAboutBtn && aboutModal) {
+          closeAboutBtn.addEventListener("click", function () {
+            aboutModal.style.display = "none";
+          });
+        }
+
+        window.addEventListener("click", function (event) {
+          if (event.target === aboutModal) {
+            aboutModal.style.display = "none";
+          }
+        });
+
+        /* =================================================
+             SIDEBAR TOGGLE
+          ================================================= */
+        const sidebar = document.getElementById("sidebar");
+        const sidebarToggle = document.getElementById("sidebar-toggle");
+
+        if (sidebar && sidebarToggle) {
+          sidebarToggle.addEventListener("click", function () {
+            sidebar.classList.toggle("collapsed");
+
+            const icon = sidebarToggle.querySelector("i");
+
+            if (icon) {
+              icon.classList.toggle("fa-chevron-left");
+
+              icon.classList.toggle("fa-chevron-right");
+            }
+
+            setTimeout(function () {
+              if (window.app && window.app.map) {
+                window.app.map.invalidateSize({
+                  pan: true,
+                });
+              }
+            }, 400);
+          });
+        }
+
+        /* =================================================
+             STYLE TOGGLE
+          ================================================= */
+        const styleButtons = document.querySelectorAll(".style-toggle-btn");
+
+        styleButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            const targetId = button.dataset.target;
+
+            const target = document.getElementById(targetId);
+
+            if (!target) {
+              return;
+            }
+
+            target.classList.toggle("open");
+          });
+        });
+
+        /* =================================================
+             CHECKBOX LAYER
+          ================================================= */
+
+        const layerCheckboxes = document.querySelectorAll(
+          ".layer-controls input[type='checkbox']",
+        );
+
+        layerCheckboxes.forEach(function (checkbox) {
+          if (checkbox.id === "batasFillToggle") {
+            return;
+          }
+
+          checkbox.addEventListener("change", function () {
+            const manager = getLayerManager();
+
+            if (!manager) {
+              return;
+            }
+
+            manager.toggleLayer(checkbox.id, checkbox.checked);
+          });
+        });
+
+        /* =================================================
+             HOME BUTTON
+          ================================================= */
+
+        const homeBtn = document.getElementById("homeBtn");
+
+        if (homeBtn) {
+          homeBtn.addEventListener("click", function () {
+            const manager = getLayerManager();
+
+            if (manager) {
+              manager.zoomToExtent();
+            }
+          });
+        }
+
+        /* =================================================
+             BATAS DESA FILL
+          ================================================= */
+
+        const fillToggle = document.getElementById("batasFillToggle");
+
+        if (fillToggle) {
+          fillToggle.addEventListener("change", function () {
+            const layer = getLayer("batasdesa");
+
+            if (!layer) {
+              return;
+            }
+
+            layer.setStyle({
+              fillOpacity: fillToggle.checked ? 0.15 : 0,
+            });
+          });
+        }
+
+        /* =================================================
+             BATAS DESA STYLE
+          ================================================= */
+
+        const batasColor = document.getElementById("color-batasdesa");
+        const batasWeight = document.getElementById("weight-batasdesa");
+        const batasOpacity = document.getElementById("opacity-batasdesa");
+        function updateBatasDesaStyle() {
+          const layer = getLayer("batasdesa");
+
+          if (!layer) {
+            return;
+          }
+          const options = {};
+
+          if (batasColor) {
+            options.color = batasColor.value;
+          }
+
+          if (batasWeight) {
+            options.weight = Number(batasWeight.value);
+          }
+
+          if (batasOpacity) {
+            options.opacity = Number(batasOpacity.value);
+          }
+
+          if (fillToggle) {
+            options.fillOpacity = fillToggle.checked ? 0.15 : 0;
+          }
+
+          layer.setStyle(options);
+
+          const legend = document.getElementById("legend-batasdesa");
+
+          if (legend && batasColor) {
+            legend.style.borderColor = batasColor.value;
+          }
+
+          updateRangeText(
+            "weight-value-batasdesa",
+            batasWeight ? batasWeight.value : 3,
+          );
+
+          updateRangeText(
+            "opacity-value-batasdesa",
+            batasOpacity ? Math.round(Number(batasOpacity.value) * 100) : 100,
+            "%",
+          );}
+
+        if (batasColor) {
+          batasColor.addEventListener("input", updateBatasDesaStyle);
+        }
+
+        if (batasWeight) {
+          batasWeight.addEventListener("input", updateBatasDesaStyle);
+        }
+
+        if (batasOpacity) {
+          batasOpacity.addEventListener("input", updateBatasDesaStyle);
+        }
+
+        /* =================================================
+             OPACITY BATAS DUSUN
+          ================================================= */
+
+        const dusunOpacity = document.getElementById("opacity-batasdusun");
+
+        if (dusunOpacity) {
+          dusunOpacity.addEventListener("input", function () {
+            const layer = getLayer("batasdusun");
+            if (!layer) {
+              return;
+            }
+
+            const value = Number(dusunOpacity.value);
+            layer.setStyle({
+              opacity: value,
+
+              fillOpacity: value * 0.15,
+            });
+
+            updateRangeText(
+              "opacity-value-batasdusun",
+              Math.round(value * 100),
+              "%",
+            );
+          });}
+
+        /* =================================================
+             OPACITY BATAS RT
+          ================================================= */
+        const rtOpacity = document.getElementById("opacity-batasrt");
+        if (rtOpacity) {
+          rtOpacity.addEventListener("input", function () {
+            const layer = getLayer("batasrt");
+
+            if (!layer) {
+              return;
+            }
+
+            const value = Number(rtOpacity.value);
+
+            layer.setStyle({
+              opacity: value,
+
+              fillOpacity: 0,
+            });
+
+            updateRangeText(
+              "opacity-value-batasrt",
+              Math.round(value * 100),
+              "%",
+            );
+          });
+        }
+
+        /* =================================================
+             JARINGAN JALAN
+          ================================================= */
+
+        const roadColor = document.getElementById("color-jaringanjalan");
+
+        const roadWeight = document.getElementById("weight-jaringanjalan");
+
+        const roadOpacity = document.getElementById("opacity-jaringanjalan");
+
+        function updateRoadStyle() {
+          const layer = getLayer("jaringanjalan");
+
+          if (!layer) {
+            return;
+          }
+
+          const options = {};
+
+          if (roadColor) {
+            options.color = roadColor.value;
+          }
+
+          if (roadWeight) {
+            options.weight = Number(roadWeight.value);
+          }
+
+          if (roadOpacity) {
+            options.opacity = Number(roadOpacity.value);
+          }
+
+          layer.setStyle(options);
+
+          const legend = document.getElementById("legend-jaringanjalan");
+
+          if (legend && roadColor) {
+            legend.style.backgroundColor = roadColor.value;
+          }
+
+          updateRangeText(
+            "weight-value-jaringanjalan",
+            roadWeight ? roadWeight.value : 3,
+          );
+
+          updateRangeText(
+            "opacity-value-jaringanjalan",
+            roadOpacity ? Math.round(Number(roadOpacity.value) * 100) : 85,
+            "%",
+          );
+        }
+
+        if (roadColor) {
+          roadColor.addEventListener("input", updateRoadStyle);
+        }
+
+        if (roadWeight) {
+          roadWeight.addEventListener("input", updateRoadStyle);
+        }
+
+        if (roadOpacity) {
+          roadOpacity.addEventListener("input", updateRoadStyle);
+        }
+
+        /* =================================================
+             REL KERETA API
+             ================================================= */
+
+        const railColor = document.getElementById("color-relkereta");
+
+        const railWeight = document.getElementById("weight-relkereta");
+
+        const railOpacity = document.getElementById("opacity-relkereta");
+
+        function updateRailStyle() {
+          const layer = getLayer("relkereta");
+
+          if (!layer) {
+            return;
+          }
+
+          const options = {};
+
+          if (railColor) {
+            options.color = railColor.value;
+
+            options.fillColor = railColor.value;
+          }
+
+          if (railWeight) {
+            options.weight = Number(railWeight.value);
+          }
+
+          if (railOpacity) {
+            options.opacity = Number(railOpacity.value);
+          }
+
+          layer.setStyle(options);
+
+          /* ---------------------------------------------
+               UPDATE LEGEND
+            --------------------------------------------- */
+
+          const legend = document.getElementById("legend-relkereta");
+
+          if (legend && railColor) {
+            legend.style.backgroundColor = railColor.value;
+          }
+
+          /* ---------------------------------------------
+               UPDATE ANGKA KETEBALAN
+            --------------------------------------------- */
+
+          updateRangeText(
+            "weight-value-relkereta",
+            railWeight ? railWeight.value : 5,
+          );
+
+          /* ---------------------------------------------
+               UPDATE ANGKA OPACITY
+            --------------------------------------------- */
+
+          updateRangeText(
+            "opacity-value-relkereta",
+            railOpacity ? Math.round(Number(railOpacity.value) * 100) : 100,
+            "%",
+          );
+        }
+
+        if (railColor) {
+          railColor.addEventListener("input", updateRailStyle);
+        }
+
+        if (railWeight) {
+          railWeight.addEventListener("input", updateRailStyle);
+        }
+
+        if (railOpacity) {
+          railOpacity.addEventListener("input", updateRailStyle);
+        }
+
+        /* =================================================
+             SUNGAI
+          ================================================= */
+
+        const riverColor = document.getElementById("color-sungai");
+
+        const riverWeight = document.getElementById("weight-sungai");
+
+        const riverOpacity = document.getElementById("opacity-sungai");
+
+        function updateRiverStyle() {
+          const layer = getLayer("sungai");
+
+          if (!layer) {
+            return;
+          }
+
+          const options = {};
+
+          if (riverColor) {
+            options.color = riverColor.value;
+          }
+
+          if (riverWeight) {
+            options.weight = Number(riverWeight.value);
+          }
+
+          if (riverOpacity) {
+            options.opacity = Number(riverOpacity.value);
+          }
+
+          layer.setStyle(options);
+
+          const legend = document.getElementById("legend-sungai");
+
+          if (legend && riverColor) {
+            legend.style.backgroundColor = riverColor.value;
+          }
+
+          updateRangeText(
+            "weight-value-sungai",
+            riverWeight ? riverWeight.value : 2,
+          );
+
+          updateRangeText(
+            "opacity-value-sungai",
+            riverOpacity ? Math.round(Number(riverOpacity.value) * 100) : 90,
+            "%",
+          );
+        }
+
+        if (riverColor) {
+          riverColor.addEventListener("input", updateRiverStyle);
+        }
+
+        if (riverWeight) {
+          riverWeight.addEventListener("input", updateRiverStyle);
+        }
+
+        if (riverOpacity) {
+          riverOpacity.addEventListener("input", updateRiverStyle);
+        }
+
+        /* =================================================
+             MAP RESIZE
+          ================================================= */
+
+        window.addEventListener("resize", function () {
+          if (window.app && window.app.map) {
+            window.app.map.invalidateSize();
+          }
+        });
+
+        let initialStyleAttempts = 0;
+
+        const initialStyleTimer = setInterval(function () {
+          initialStyleAttempts++;
+
+          const manager = getLayerManager();
+
+          if (manager && manager.layers) {
+            if (manager.layers["batasdesa"]) {
+              updateBatasDesaStyle();
+            }
+
+            if (manager.layers["jaringanjalan"]) {
+              updateRoadStyle();
+            }
+
+            if (manager.layers["relkereta"]) {
+              updateRailStyle();
+            }
+
+            if (manager.layers["sungai"]) {
+              updateRiverStyle();
+            }
+
+            clearInterval(initialStyleTimer);
+          }
+
+          if (initialStyleAttempts >= 50) {
+            clearInterval(initialStyleTimer);
+          }
+        }, 200);
+      });
+    </script>
+  </body>
+</html>

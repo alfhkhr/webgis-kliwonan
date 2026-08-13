@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Album Peta Desa Kliwonan</title>
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ======= NAVBAR ======= -->
+
+    <header id="navbar-container"></header>
+
+    <!-- ===== MAIN ====== -->
+    <main>
+        <!-- ======== PAGE HEADER =========== -->
+
+        <section class="page-header">
+            <span class="page-label">
+                ALBUM PETA
+            </span>
+
+            <h1>
+                Peta Desa Kliwonan
+            </h1>
+
+            <p>
+                Kumpulan peta tematik Desa Kliwonan yang telah
+                disusun untuk memberikan informasi mengenai
+                wilayah, fasilitas, potensi, dan kondisi desa.
+            </p>
+
+        </section>
+
+        <!-- ======= ALBUM PETA ======= -->
+
+        <section class="album-section">
+
+            <div class="section-heading">
+                <span class="section-label">
+                    KOLEKSI PETA
+                </span>
+
+                <h2>
+                    Jelajahi Peta Kliwonan
+                </h2>
+
+                <p>
+                    Pilih peta untuk melihat tampilan dalam
+                    ukuran yang lebih besar.
+                </p>
+
+            </div>
+
+            <!-- ==== FILTER ==== -->
+
+            <div class="album-filter">
+
+                <button
+                    class="album-filter-btn active"
+                    data-filter="all"
+                >
+                    Semua
+                </button>
+
+                <button
+                    class="album-filter-btn"
+                    data-filter="administrasi"
+                >
+                    Administrasi
+                </button>
+
+                <button
+                    class="album-filter-btn"
+                    data-filter="potensi"
+                >
+                    Potensi
+                </button>
+
+                <button
+                    class="album-filter-btn"
+                    data-filter="infrastruktur"
+                >
+                    Infrastruktur
+                </button>
+
+                <button
+                    class="album-filter-btn"
+                    data-filter="lainnya"
+                >
+                    Lainnya
+                </button>
+            </div>
+
+            <!-- ============== GRID ALBUM ============== -->
+
+            <div class="album-grid">
+
+                <!-- ==== PETA 1==== -->
+
+                <article
+                    class="album-card"
+                    data-category="administrasi"
+                    data-index="0"
+                >
+                    <div class="album-image">
+                        <img
+                            src="videos/admin.jpg"
+                            alt="Peta Administrasi Desa Kliwonan"
+                        >
+                        <div class="album-overlay">
+
+                            <button
+                                class="album-view-btn"
+                                onclick="openLightbox(0)"
+                            >
+                                <i class="fas fa-expand"></i>
+                                Lihat Peta
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="album-content">
+                        <span class="album-category">
+                            ADMINISTRASI
+                        </span>
+                        <h3>
+                            Peta Administrasi Desa Kliwonan
+                        </h3>
+                        <p>
+                            Menampilkan batas wilayah dan
+                            informasi administrasi Desa Kliwonan.
+                        </p>
+                    </div>
+                </article>
+
+
+                <!-- ==== PETA 2 ===== -->
+
+                <article
+                    class="album-card"
+                    data-category="potensi"
+                    data-index="1"
+                >
+                    <div class="album-image">
+                        <img
+                            src="videos/umkm.png"
+                            alt="Peta Persebaran UMKM Desa Kliwonan"
+                        >
+                        <div class="album-overlay">
+                            <button
+                                class="album-view-btn"
+                                onclick="openLightbox(1)"
+                            >
+                                <i class="fas fa-expand"></i>
+                                Lihat Peta
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="album-content">
+                        <span class="album-category">
+                            POTENSI EKONOMI
+                        </span>
+                        <h3>
+                            Peta Persebaran UMKM
+                        </h3>
+                        <p>
+                            Menampilkan persebaran usaha dan
+                            potensi ekonomi masyarakat desa.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- == PETA 3 == -->
+
+                <article
+                    class="album-card"
+                    data-category="infrastruktur"
+                    data-index="2"
+                >
+                    <div class="album-image">
+                        <img
+                            src="videos/hasil_lampu.jpg"
+                            alt="Peta Penerangan Jalan Desa Kliwonan"
+                        >
+                        <div class="album-overlay">
+                            <button
+                                class="album-view-btn"
+                                onclick="openLightbox(2)"
+                            >
+                                <i class="fas fa-expand"></i>
+                                Lihat Peta
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="album-content">
+                        <span class="album-category">
+                            INFRASTRUKTUR
+                        </span>
+                        <h3>
+                            Peta Penerangan Jalan
+                        </h3>
+                        <p>
+                            Menampilkan persebaran titik
+                            penerangan jalan di Desa Kliwonan.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ==== PETA 4 ==== -->
+
+                <article
+                    class="album-card"
+                    data-category="administrasi"
+                    data-index="3"
+                >
+                    <div class="album-image">
+                        <img
+                            src="videos/jalan.jpg"
+                            alt="Peta Nama Jalan Desa Kliwonan"
+                        >
+                        <div class="album-overlay">
+                            <button
+                                class="album-view-btn"
+                                onclick="openLightbox(3)"
+                            >
+                                <i class="fas fa-expand"></i>
+                                Lihat Peta
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="album-content">
+                        <span class="album-category">
+                            ADMINISTRASI
+                        </span>
+                        <h3>
+                            Peta Nama Jalan Desa Kliwonan
+                        </h3>
+                        <p>
+                            Informasi nama dan jaringan jalan
+                            yang terdapat di Desa Kliwonan.
+                        </p>
+                    </div>
+                </article>
+
+
+                <!-- ==== PETA 5 ===== -->
+
+                <article
+                    class="album-card"
+                    data-category="lainnya"
+                    data-index="4"
+                >
+                    <div class="album-image">
+                        <img
+                            src="videos/sampah.jpg"
+                            alt="Peta Penempatan Tong Sampah Desa Kliwonan"
+                        >
+                        <div class="album-overlay">
+                            <button
+                                class="album-view-btn"
+                                onclick="openLightbox(4)"
+                            >
+                                <i class="fas fa-expand"></i>
+                                Lihat Peta
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="album-content">
+                        <span class="album-category">
+                            LINGKUNGAN
+                        </span>
+                        <h3>
+                            Peta Penempatan Tong Sampah
+                        </h3>
+                        <p>
+                            Informasi lokasi penempatan fasilitas
+                            tempat sampah di Desa Kliwonan.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- ======== LIGHTBOX ============= -->
+
+    <div
+        class="lightbox"
+        id="lightbox"
+        onclick="closeLightbox(event)"
+    >
+        <button
+            class="lightbox-close"
+            onclick="closeLightbox()"
+            aria-label="Tutup"
+        >
+            <i class="fas fa-xmark"></i>
+        </button>
+
+        <button
+            class="lightbox-prev"
+            onclick="changeSlide(-1)"
+            aria-label="Peta sebelumnya"
+        >
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div
+            class="lightbox-content"
+            onclick="event.stopPropagation()"
+        >
+            <div class="lightbox-image-wrapper">
+                <img
+                    id="lightboxImage"
+                    src=""
+                    alt=""
+                >
+            </div>
+
+            <div class="lightbox-info">
+                <span id="lightboxCategory">
+                    ADMINISTRASI
+                </span>
+
+                <h3 id="lightboxTitle">
+                    Peta Administrasi Desa Kliwonan
+                </h3>
+
+                <p id="lightboxDescription">
+                    Informasi peta Desa Kliwonan.
+                </p>
+
+                <div class="lightbox-counter">
+
+                    <span id="lightboxCounter">
+                        1 / 5
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <button
+            class="lightbox-next"
+            onclick="changeSlide(1)"
+            aria-label="Peta berikutnya"
+        >
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- ======== FOOTER ========= -->
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-title">
+                    Desa Kliwonan
+                </div>
+                <div class="footer-text">
+                    WebGIS Desa Kliwonan — Informasi Geospasial Desa
+                </div>
+            </div>
+
+            <div class="footer-right">
+                Peta Digital Desa Kliwonan
+
+                <br>
+
+                Informasi untuk masyarakat dan perencanaan desa
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        /* =================================================
+           DATA PETA
+        ================================================= */
+
+        const maps = [
+
+            {
+                image: "videos/admin.jpg",
+                category: "ADMINISTRASI",
+                title: "Peta Administrasi Desa Kliwonan",
+                description:
+                    "Menampilkan batas wilayah dan informasi administrasi Desa Kliwonan."
+            },
+
+            {
+                image: "videos/umkm.png",
+                category: "POTENSI EKONOMI",
+                title: "Peta Persebaran UMKM",
+                description:
+                    "Menampilkan persebaran usaha dan potensi ekonomi masyarakat Desa Kliwonan."
+            },
+
+            {
+                image: "videos/hasil_lampu.jpg",
+                category: "INFRASTRUKTUR",
+                title: "Peta Penerangan Jalan",
+                description:
+                    "Menampilkan persebaran titik penerangan jalan di Desa Kliwonan."
+            },
+
+            {
+                image: "videos/jalan.jpg",
+                category: "ADMINISTRASI",
+                title: "Peta Nama Jalan Desa Kliwonan",
+                description:
+                    "Informasi nama dan jaringan jalan yang terdapat di Desa Kliwonan."
+            },
+
+            {
+                image: "videos/sampah.jpg",
+                category: "LINGKUNGAN",
+                title: "Peta Penempatan Tong Sampah",
+                description:
+                    "Informasi lokasi penempatan fasilitas tempat sampah di Desa Kliwonan."
+            }
+
+        ];
+
+
+        /* =================================================
+           LIGHTBOX
+        ================================================== */
+
+        let currentSlide = 0;
+
+        function openLightbox(index) {
+
+            currentSlide = index;
+            updateLightbox();
+            document
+                .getElementById("lightbox")
+                .classList.add("show");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox(event) {
+            const lightbox =
+                document.getElementById("lightbox");
+            if (
+                event &&
+                event.target !== lightbox
+            ) {
+                return;
+            }
+            lightbox.classList.remove("show");
+            document.body.style.overflow = "";
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) {
+                currentSlide = maps.length - 1;
+            }
+
+            if (currentSlide >= maps.length) {
+                currentSlide = 0;
+            }
+            updateLightbox();
+        }
+
+
+        function updateLightbox() {
+            const map = maps[currentSlide];
+            const image =
+                document.getElementById("lightboxImage");
+            image.src = map.image;
+            image.alt = map.title;
+            document
+                .getElementById("lightboxCategory")
+                .textContent = map.category;
+            document
+                .getElementById("lightboxTitle")
+                .textContent = map.title;
+            document
+                .getElementById("lightboxDescription")
+                .textContent = map.description;
+            document
+                .getElementById("lightboxCounter")
+                .textContent =
+                    `${currentSlide + 1} / ${maps.length}`;
+        }
+
+        /* =================================================
+           KEYBOARD
+        ================================================== */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+                const lightbox =
+                    document.getElementById("lightbox");
+                if (!lightbox.classList.contains("show")) {
+                    return;
+                }
+
+                if (event.key === "ArrowLeft") {
+                    changeSlide(-1);
+                }
+
+                if (event.key === "ArrowRight") {
+                    changeSlide(1);
+                }
+
+                if (event.key === "Escape") {
+
+                    lightbox.classList.remove("show");
+
+                    document.body.style.overflow = "";
+                }
+            });
+
+        /* =================================================
+           FILTER ALBUM
+        ================================================== */
+
+        const filterButtons =
+            document.querySelectorAll(".album-filter-btn");
+
+        const albumCards =
+            document.querySelectorAll(".album-card");
+
+        filterButtons.forEach(button => {
+            button.addEventListener(
+                "click",
+                function() {
+                    filterButtons.forEach(btn =>
+                        btn.classList.remove("active")
+                    );
+                    this.classList.add("active");
+
+                    const filter =
+                        this.dataset.filter;
+
+                    albumCards.forEach(card => {
+
+                        const category =
+                            card.dataset.category;
+
+                        if (
+                            filter === "all" ||
+                            category === filter
+                        ) {
+
+                            card.style.display = "";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                }
+            );
+        });
+
+    </script>
+  <script src="navbar.js"></script>
+</body>
+</html>

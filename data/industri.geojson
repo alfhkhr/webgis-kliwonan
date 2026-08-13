@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95437021597506, -7.7615110598508865]
+      },
+      "properties": {
+        "FID": 9,
+        "Id": 0,
+        "Nama": "Kopra Mania Farm",
+        "Kelas": "Industri"
+      }
+    }
+  ]
+}

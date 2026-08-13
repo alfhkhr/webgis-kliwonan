@@ -1,0 +1,309 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94717601380339, -7.763554988136053]
+      },
+      "properties": {
+        "FID": 0,
+        "Id": 0,
+        "nama_usaha": "Warung Berkah Fiana",
+        "kelas": "Perdagangan",
+        "Longitude": 383907.449739,
+        "Latitude": 9141697.2666599993
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.9472945042229, -7.7632889543062777]
+      },
+      "properties": {
+        "FID": 1,
+        "Id": 0,
+        "nama_usaha": "Toko Sembako Bu Ninik",
+        "kelas": "Perdagangan",
+        "Longitude": 383920.44382599997,
+        "Latitude": 9141726.71404
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94748743295381, -7.763313734477868]
+      },
+      "properties": {
+        "FID": 2,
+        "Id": 0,
+        "nama_usaha": "Warung Kopi",
+        "kelas": "Makanan & Minuman",
+        "Longitude": 383941.72678099998,
+        "Latitude": 9141724.0269399993
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94760088423357, -7.7633052906618847]
+      },
+      "properties": {
+        "FID": 3,
+        "Id": 0,
+        "nama_usaha": "Nusadua Store",
+        "kelas": "Perdagangan",
+        "Longitude": 383954.23585499998,
+        "Latitude": 9141724.9915999994
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94763744513881, -7.7631764348287433]
+      },
+      "properties": {
+        "FID": 4,
+        "Id": 0,
+        "nama_usaha": "Bengkel Godbless",
+        "kelas": "Jasa",
+        "Longitude": 383958.23243400001,
+        "Latitude": 9141739.2489899993
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95200984308472, -7.7618708091187409]
+      },
+      "properties": {
+        "FID": 5,
+        "Id": 0,
+        "nama_usaha": "Warung Bu Karni",
+        "kelas": "Perdagangan",
+        "Longitude": 384440.06298599998,
+        "Latitude": 9141884.8036899995
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95320054399023, -7.7612206789945981]
+      },
+      "properties": {
+        "FID": 6,
+        "Id": 0,
+        "nama_usaha": "Warung Simbok Papon",
+        "kelas": "Perdagangan",
+        "Longitude": 384571.196169,
+        "Latitude": 9141957.0116300005
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95343668177553, -7.7606190165249291]
+      },
+      "properties": {
+        "FID": 7,
+        "Id": 0,
+        "nama_usaha": "Warung Mbak Atuna",
+        "kelas": "Perdagangan",
+        "Longitude": 384597.07338100002,
+        "Latitude": 9142023.6006099992
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95431495733554, -7.7598125990209583]
+      },
+      "properties": {
+        "FID": 8,
+        "Id": 0,
+        "nama_usaha": "Bio Water RO",
+        "kelas": "Produksi",
+        "Longitude": 384693.71015599999,
+        "Latitude": 9142113.0035299994
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95464370449366, -7.7600241978351701]
+      },
+      "properties": {
+        "FID": 9,
+        "Id": 0,
+        "nama_usaha": "Warung Bu Tatik",
+        "kelas": "Perdagangan",
+        "Longitude": 384730.02221000002,
+        "Latitude": 9142089.6967699993
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95525126779178, -7.7597745779323564]
+      },
+      "properties": {
+        "FID": 10,
+        "Id": 0,
+        "nama_usaha": "Warung Kopi Pak Totok",
+        "kelas": "Makanan & Minuman",
+        "Longitude": 384796.956611,
+        "Latitude": 9142117.4618100002
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.9551334539543, -7.7569628112754989]
+      },
+      "properties": {
+        "FID": 11,
+        "Id": 0,
+        "nama_usaha": "Warung Mbak Waryati",
+        "kelas": "Perdagangan",
+        "Longitude": 384783.19859099999,
+        "Latitude": 9142428.3215399999
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95523672928643, -7.7565622419485463]
+      },
+      "properties": {
+        "FID": 12,
+        "Id": 0,
+        "nama_usaha": "Kerupuk Bawang Pandawa",
+        "kelas": "Produksi",
+        "Longitude": 384794.47891000001,
+        "Latitude": 9142472.6397600006
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95377463401887, -7.7565954619717701]
+      },
+      "properties": {
+        "FID": 13,
+        "Id": 0,
+        "nama_usaha": "Ayam Petelor",
+        "kelas": "Peternakan",
+        "Longitude": 384633.24608000001,
+        "Latitude": 9142468.5695500001
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95337095345177, -7.7613485162099041]
+      },
+      "properties": {
+        "FID": 14,
+        "Id": 0,
+        "nama_usaha": "Anom Gabah",
+        "kelas": "Pertanian",
+        "Longitude": 384590.02383199998,
+        "Latitude": 9141942.9232700001
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94646801211088, -7.7640483334382955]
+      },
+      "properties": {
+        "FID": 15,
+        "Id": 0,
+        "nama_usaha": "Bengkel Las Listrik Adi Jaya Steel",
+        "kelas": "Jasa",
+        "Longitude": 383829.50695299997,
+        "Latitude": 9141642.5243500005
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.9547768542421, -7.7611653055039502]
+      },
+      "properties": {
+        "FID": 16,
+        "Id": 0,
+        "nama_usaha": "Saryono Gabah dan Pupuk",
+        "kelas": "Pertanian",
+        "Longitude": 384745.01686600002,
+        "Latitude": 9141963.5627999995
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94973281872794, -7.7627195532094619]
+      },
+      "properties": {
+        "FID": 17,
+        "Id": 0,
+        "nama_usaha": "Wibowo Gabah",
+        "kelas": "Pertanian",
+        "Longitude": 384189.18483400001,
+        "Latitude": 9141790.3384300005
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95435591610924, -7.7628702010482291]
+      },
+      "properties": {
+        "FID": 18,
+        "Id": 0,
+        "nama_usaha": "Suntoro Gabah",
+        "kelas": "Pertanian",
+        "Longitude": 384699.06042200001,
+        "Latitude": 9141774.9412500001
+      }
+    }
+  ]
+}

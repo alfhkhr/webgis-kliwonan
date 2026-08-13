@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95693305507125, -7.75714263358919]
+      },
+      "properties": {
+        "FID": 0,
+        "Id": 0,
+        "Nama": "Masjid At-Taqwa Tegaliser",
+        "Kelas": "Masjid/Musholla"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.94805778897171, -7.7643912805916209]
+      },
+      "properties": {
+        "FID": 3,
+        "Id": 0,
+        "Nama": "Musholla Nur Iman",
+        "Kelas": "Masjid/Musholla"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.9527359963314, -7.762419038252137]
+      },
+      "properties": {
+        "FID": 13,
+        "Id": 0,
+        "Nama": "Masjid Nurul Hidayah",
+        "Kelas": "Masjid/Musholla"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.95741908784112, -7.7579060144167702]
+      },
+      "properties": {
+        "FID": 15,
+        "Id": 0,
+        "Nama": "Gereja Kristen Setia Indonesia",
+        "Kelas": "Gereja"
+      }
+    }
+  ]
+}
