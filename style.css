@@ -1,7 +1,4 @@
-/* =====================================================
-   GLOBAL
-===================================================== */
-
+/* == GLOBAL == */
 * {
   margin: 0;
   padding: 0;
@@ -29,9 +26,7 @@ img {
   max-width: 100%;
 }
 
-/* =====================================================
-   NAVBAR
-===================================================== */
+/* ==== NAVBAR ==== */
 
 .navbar {
   position: relative;
@@ -119,9 +114,7 @@ img {
   background: #397b18;
 }
 
-/* =====================================================
-   HERO
-===================================================== */
+/* ===== HERO ====== */
 
 .hero-section {
   width: 100%;
@@ -195,12 +188,9 @@ img {
 
 .hero-content p {
   max-width: 570px;
-
   color: rgba(255, 255, 255, 0.88);
-
   font-size: 16px;
   line-height: 1.75;
-
   margin-bottom: 24px;
 }
 
@@ -208,17 +198,12 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-
   padding: 14px 20px;
-
   border-radius: 10px;
-
   background: #397b18;
   color: #ffffff;
-
   font-size: 13px;
   font-weight: 700;
-
   transition: 0.3s ease;
 }
 
@@ -235,9 +220,7 @@ img {
   transform: translateX(5px);
 }
 
-/* =====================================================
-   COMMON HEADING
-===================================================== */
+/* ==== COMMON HEADING ===== */
 
 .section-heading {
   max-width: 780px;
@@ -280,9 +263,7 @@ img {
 
 .about-section {
   width: min(1180px, 90%);
-
   margin: auto;
-
   padding: 65px 0 40px;
 }
 
@@ -292,94 +273,68 @@ img {
 
 .quick-section {
   width: min(1180px, 90%);
-
   margin: auto;
-
   padding: 15px 0 55px;
 }
 
 .quick-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 20px;
 }
 
 .quick-card {
   position: relative;
-
   min-height: 290px;
-
   display: flex;
   flex-direction: column;
-
   padding: 28px;
-
   background: #ffffff;
-
   border: 1px solid #e2e8e2;
   border-radius: 20px;
-
   box-shadow: 0 8px 28px rgba(30, 50, 38, 0.04);
-
   overflow: hidden;
-
   transition: 0.3s ease;
 }
 
 .quick-card:hover {
   transform: translateY(-7px);
-
   border-color: #b8ccb9;
-
   box-shadow: 0 18px 40px rgba(30, 50, 38, 0.09);
 }
 
 .quick-icon {
   width: 55px;
   height: 55px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin-bottom: 16px;
-
   border-radius: 15px;
-
   background: #edf5ef;
   color: #397b18;
-
   font-size: 21px;
 }
 
 .quick-number {
   position: absolute;
-
   top: 28px;
   right: 28px;
-
   color: #dbe7dc;
-
   font-size: 30px;
   font-weight: 700;
 }
 
 .quick-card h3 {
   color: #26382c;
-
   font-size: 20px;
-
   margin-bottom: 8px;
 }
 
 .quick-card p {
   color: #737d76;
-
   font-size: 14px;
   line-height: 1.7;
-
   margin-bottom: 16px;
 }
 
@@ -387,11 +342,8 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   margin-top: auto;
-
   color: #397b18;
-
   font-size: 13px;
   font-weight: 700;
 }
@@ -410,49 +362,36 @@ img {
 
 .village-video-section {
   width: min(1180px, 90%);
-
   margin: auto;
-
   padding: 60px 0;
-
   border-top: 1px solid #e1e6e1;
 }
 
 .village-video-heading {
   max-width: 760px;
-
   margin-bottom: 28px;
 }
 
 .village-video-card {
   display: grid;
-
   grid-template-columns: 58% 42%;
-
   overflow: hidden;
-
   background: #ffffff;
-
   border: 1px solid #dfe7df;
   border-radius: 24px;
-
   box-shadow: 0 12px 35px rgba(30, 50, 38, 0.06);
 }
 
 .village-video {
   min-height: 350px;
-
   background: #1f3326;
 }
 
 .village-video video {
   width: 100%;
   height: 100%;
-
   min-height: 350px;
-
   display: block;
-
   object-fit: cover;
 }
 
@@ -460,38 +399,29 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   padding: 40px;
 }
 
 .video-number {
   color: #397b18;
-
   font-size: 12px;
   font-weight: 800;
-
   letter-spacing: 2px;
-
   margin-bottom: 12px;
 }
 
 .village-video-text h3 {
   color: #20372a;
-
   font-family: "Playfair Display", serif;
-
   font-size: 30px;
   line-height: 1.25;
-
   margin-bottom: 12px;
 }
 
 .village-video-text p {
   color: #737d76;
-
   font-size: 14px;
   line-height: 1.75;
-
   margin-bottom: 18px;
 }
 
@@ -499,9 +429,7 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
-
   color: #397b18;
-
   font-size: 12px;
   font-weight: 700;
 }
@@ -516,11 +444,8 @@ img {
 
 .map-section {
   width: min(1180px, 90%);
-
   margin: auto;
-
   padding: 60px 0 70px;
-
   border-top: 1px solid #e1e6e1;
 }
 
@@ -530,86 +455,62 @@ img {
 
 .map-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 20px;
 }
 
 .map-card {
   position: relative;
-
   min-height: 310px;
-
   display: flex;
   flex-direction: column;
-
   padding: 28px;
-
   background: #ffffff;
-
   border: 1px solid #e2e8e2;
   border-radius: 20px;
-
   box-shadow: 0 8px 28px rgba(30, 50, 38, 0.04);
-
   overflow: hidden;
-
   transition: 0.3s ease;
 }
 
 .map-card:hover {
   transform: translateY(-7px);
-
   border-color: #b8ccb9;
-
   box-shadow: 0 18px 40px rgba(30, 50, 38, 0.09);
 }
 
 .map-card-icon {
   width: 55px;
   height: 55px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin-bottom: 16px;
-
   border-radius: 15px;
-
   background: #edf5ef;
   color: #397b18;
-
   font-size: 21px;
 }
 
 .map-badge {
   color: #718078;
-
   font-size: 10px;
   font-weight: 800;
-
   letter-spacing: 1.5px;
-
   margin-bottom: 6px;
 }
 
 .map-card h3 {
   color: #25382b;
-
   font-size: 21px;
   line-height: 1.3;
-
   margin-bottom: 8px;
 }
 
 .map-card p {
   color: #737d76;
-
   font-size: 14px;
   line-height: 1.7;
-
   margin-bottom: 16px;
 }
 
@@ -617,11 +518,8 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   margin-top: auto;
-
   color: #397b18;
-
   font-size: 13px;
   font-weight: 700;
 }
@@ -640,45 +538,34 @@ img {
 
 footer {
   background: #1f3326;
-
   color: #ffffff;
-
   padding: 40px 8%;
 }
 
 .footer-content {
   width: min(1180px, 100%);
-
   margin: auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 30px;
 }
 
 .footer-title {
   font-family: "Playfair Display", serif;
-
   font-size: 24px;
-
   margin-bottom: 6px;
 }
 
 .footer-text {
   color: rgba(255, 255, 255, 0.65);
-
   font-size: 13px;
 }
 
 .footer-right {
   color: rgba(255, 255, 255, 0.55);
-
   font-size: 12px;
-
   text-align: right;
-
   line-height: 1.7;
 }
 
@@ -686,14 +573,9 @@ footer {
    FASILITAS PAGE
 ===================================================== */
 
-/* =====================================================
-   PAGE HEADER
-===================================================== */
-
 .page-header {
   width: min(1180px, 90%);
   margin: auto;
-
   padding: 60px 0 45px;
 }
 
@@ -732,10 +614,6 @@ footer {
   line-height: 1.75;
 }
 
-/* =====================================================
-   COMMON SECTION
-===================================================== */
-
 .stats-section,
 .administration-section,
 .data-section,
@@ -756,9 +634,7 @@ footer {
 
 .stats-grid {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 18px;
 }
 
@@ -886,9 +762,7 @@ footer {
 
 .administration-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 18px;
 }
 
@@ -995,15 +869,12 @@ footer {
 
 .section-title > p {
   max-width: 400px;
-
   text-align: right;
 }
 
 .facility-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 20px;
 }
 
@@ -1265,7 +1136,12 @@ footer {
   align-items: center;
   justify-content: center;
 
-  background: linear-gradient(135deg, #dfeedd 0%, #edf5ef 48%, #d3e5d5 100%);
+  background: linear-gradient(
+    135deg,
+    #dfeedd 0%,
+    #edf5ef 48%,
+    #d3e5d5 100%
+  );
 }
 
 .map-pattern {
@@ -1527,9 +1403,7 @@ footer {
 
 .summary-table {
   width: 100%;
-
   min-width: 700px;
-
   border-collapse: collapse;
 }
 
@@ -1568,7 +1442,6 @@ footer {
 
 .summary-table td:first-child {
   color: #26382c;
-
   font-weight: 600;
 }
 
@@ -1578,274 +1451,6 @@ footer {
   color: #89938c !important;
 
   padding: 30px !important;
-}
-
-/* =====================================================
-   RESPONSIVE TABLET
-===================================================== */
-
-@media (max-width: 1100px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .facility-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* =====================================================
-   RESPONSIVE TABLET KECIL
-===================================================== */
-
-@media (max-width: 1000px) {
-  .nav-logo {
-    font-size: 23px;
-  }
-
-  .nav-link {
-    min-width: auto;
-    padding: 0 12px;
-    font-size: 14px;
-  }
-
-  .quick-grid,
-  .map-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .village-video-card {
-    grid-template-columns: 1fr;
-  }
-
-  .village-video,
-  .village-video video {
-    min-height: 300px;
-  }
-}
-
-/* =====================================================
-   RESPONSIVE TABLET MAP
-===================================================== */
-
-@media (max-width: 900px) {
-  .administration-map-card {
-    grid-template-columns: 1fr;
-  }
-
-  .administration-map-visual {
-    min-height: 280px;
-  }
-
-  .administration-map-content {
-    padding: 38px;
-  }
-}
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 700px) {
-  .nav-container {
-    flex-direction: column;
-
-    padding: 16px 0;
-
-    gap: 12px;
-  }
-
-  .nav-menu {
-    width: 100%;
-    min-height: 45px;
-
-    justify-content: center;
-  }
-
-  .nav-link {
-    padding: 0 8px;
-
-    font-size: 12px;
-
-    gap: 5px;
-  }
-
-  .nav-link i {
-    font-size: 13px;
-  }
-
-  .nav-link.active::after {
-    bottom: 0;
-
-    left: 7px;
-    right: 7px;
-  }
-
-  .hero-video-wrapper {
-    height: 560px;
-  }
-
-  .hero-content {
-    left: 7%;
-    width: 86%;
-  }
-
-  .hero-content h1 {
-    font-size: 40px;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
-
-  .about-section,
-  .quick-section,
-  .village-video-section,
-  .map-section {
-    width: 88%;
-  }
-
-  .about-section {
-    padding: 55px 0 30px;
-  }
-
-  .quick-section {
-    padding: 10px 0 45px;
-  }
-
-  .quick-grid,
-  .map-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .village-video-section,
-  .map-section {
-    padding: 50px 0;
-  }
-
-  .village-video-heading,
-  .map-section > .section-heading {
-    margin-bottom: 24px;
-  }
-
-  .village-video-text {
-    padding: 30px 25px;
-  }
-
-  .village-video-text h3 {
-    font-size: 26px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-right {
-    text-align: left;
-  }
-
-  /* FASILITAS */
-
-  .page-header,
-  .stats-section,
-  .administration-section,
-  .data-section,
-  .administration-map-section {
-    width: 88%;
-  }
-
-  .page-header {
-    padding: 50px 0 35px;
-  }
-
-  .page-header h1 {
-    font-size: 38px;
-  }
-
-  .stats-section {
-    padding-bottom: 40px;
-  }
-
-  .stats-grid,
-  .facility-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 10px;
-
-    margin-bottom: 24px;
-  }
-
-  .section-title > p {
-    max-width: 650px;
-
-    text-align: left;
-  }
-
-  .administration-section {
-    padding-top: 45px;
-    padding-bottom: 45px;
-  }
-
-  .administration-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .data-section {
-    padding-top: 45px;
-    padding-bottom: 50px;
-  }
-
-  .administration-map-section {
-    padding: 50px 0 55px;
-  }
-
-  .administration-map-heading {
-    align-items: flex-start;
-
-    flex-direction: column;
-
-    gap: 8px;
-
-    margin-bottom: 24px;
-  }
-
-  .map-heading-number {
-    display: none;
-  }
-
-  .administration-map-card {
-    border-radius: 18px;
-  }
-
-  .administration-map-visual {
-    min-height: 230px;
-  }
-
-  .map-center-icon {
-    width: 72px;
-    height: 72px;
-
-    font-size: 27px;
-  }
-
-  .administration-map-content {
-    padding: 30px 25px;
-  }
-
-  .administration-map-content h3 {
-    font-size: 26px;
-  }
-
-  .administration-map-content p {
-    font-size: 14px;
-  }
 }
 
 /* =====================================================
@@ -1905,7 +1510,6 @@ footer {
 .album-filter-btn.active {
   background: #397b18;
   border-color: #397b18;
-
   color: #ffffff;
 }
 
@@ -2117,10 +1721,6 @@ footer {
   visibility: visible;
 }
 
-/* =====================================================
-   LIGHTBOX CONTENT
-===================================================== */
-
 .lightbox-content {
   position: relative;
 
@@ -2147,10 +1747,6 @@ footer {
   transform: scale(1);
 }
 
-/* =====================================================
-   GAMBAR LIGHTBOX
-===================================================== */
-
 #lightboxImage {
   width: 100%;
   max-height: 65vh;
@@ -2161,10 +1757,6 @@ footer {
 
   background: #edf2ed;
 }
-
-/* =====================================================
-   INFORMASI LIGHTBOX
-===================================================== */
 
 .lightbox-info {
   padding: 25px 35px 30px;
@@ -2254,14 +1846,10 @@ footer {
   background: #397b18;
 }
 
-/* TUTUP */
-
 .lightbox-close {
   top: 32px;
   right: 32px;
 }
-
-/* SEBELUMNYA */
 
 .lightbox-prev {
   left: 35px;
@@ -2273,8 +1861,6 @@ footer {
 .lightbox-prev:hover {
   transform: translateY(-50%) scale(1.05);
 }
-
-/* BERIKUTNYA */
 
 .lightbox-next {
   right: 35px;
@@ -2288,102 +1874,6 @@ footer {
 }
 
 /* =====================================================
-   RESPONSIVE ALBUM
-===================================================== */
-
-@media (max-width: 1100px) {
-  .album-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .album-image {
-    height: 240px;
-  }
-}
-
-@media (max-width: 700px) {
-  .album-section {
-    width: 88%;
-
-    padding: 10px 0 55px;
-  }
-
-  .album-filter {
-    gap: 7px;
-  }
-
-  .album-filter-btn {
-    padding: 9px 13px;
-
-    font-size: 12px;
-  }
-
-  .album-grid {
-    grid-template-columns: 1fr;
-
-    gap: 18px;
-  }
-
-  .album-image {
-    height: 230px;
-  }
-
-  .album-content {
-    padding: 21px;
-  }
-
-  .lightbox {
-    padding: 15px;
-  }
-
-  .lightbox-content {
-    width: 100%;
-
-    max-height: 90vh;
-
-    border-radius: 18px;
-  }
-
-  #lightboxImage {
-    max-height: 48vh;
-  }
-
-  .lightbox-info {
-    padding: 20px;
-  }
-
-  .lightbox-info h3 {
-    font-size: 23px;
-  }
-
-  .lightbox-info p {
-    font-size: 13px;
-  }
-
-  .lightbox-close {
-    top: 18px;
-    right: 18px;
-
-    width: 45px;
-    height: 45px;
-  }
-
-  .lightbox-prev,
-  .lightbox-next {
-    width: 45px;
-    height: 45px;
-  }
-
-  .lightbox-prev {
-    left: 10px;
-  }
-
-  .lightbox-next {
-    right: 10px;
-  }
-}
-
-/* =====================================================
    MAP INTERACTIVE PAGE
 ===================================================== */
 
@@ -2392,8 +1882,6 @@ footer {
 
   width: 100%;
   height: calc(100vh - 103px);
-
-  display: flex;
 
   overflow: hidden;
 
@@ -2405,14 +1893,15 @@ footer {
 ===================================================== */
 
 .sidebar {
-  position: relative;
+  position: absolute;
 
-  z-index: 900;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
 
   width: 340px;
   height: 100%;
-
-  flex-shrink: 0;
 
   overflow-y: auto;
 
@@ -2424,21 +1913,34 @@ footer {
 
   box-shadow: 4px 0 18px rgba(30, 50, 38, 0.06);
 
-  transition:
-    width 0.35s ease,
-    padding 0.35s ease;
+  transform: translateX(0);
+
+  transition: transform 0.35s ease;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+  scrollbar-color: #cbd8cc transparent;
 }
 
+/* Scrollbar sidebar Chrome / Edge */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #cbd8cc;
+  border-radius: 10px;
+}
+
+/* SIDEBAR DITUTUP */
 .sidebar.collapsed {
-  width: 0;
-
-  padding-left: 0;
-  padding-right: 0;
-
-  overflow: hidden;
-
-  border-right: none;
-
+  transform: translateX(-100%);
+  pointer-events: none;
   box-shadow: none;
 }
 
@@ -2634,21 +2136,23 @@ footer {
 }
 
 .auto-legend-icon {
-    width: 25px;
-    height: 25px;
-    min-width: 25px;
-    border-radius: 50%;
+  width: 25px;
+  height: 25px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-width: 25px;
 
-    font-size: 15px;
-    line-height: 1;
+  border-radius: 50%;
 
-    color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    box-sizing: border-box;
+  font-size: 15px;
+  line-height: 1;
+
+  color: #ffffff;
+
+  box-sizing: border-box;
 }
 
 /* =====================================================
@@ -2754,9 +2258,7 @@ footer {
 .map-container {
   position: relative;
 
-  flex: 1;
-
-  min-width: 0;
+  width: 100%;
   height: 100%;
 }
 
@@ -2779,7 +2281,7 @@ footer {
   left: 340px;
   top: 50%;
 
-  width: 34px;
+  width: 36px;
   height: 58px;
 
   display: flex;
@@ -2803,15 +2305,26 @@ footer {
 
   transition:
     left 0.35s ease,
-    background 0.2s ease;
+    background 0.2s ease,
+    border-radius 0.2s ease,
+    box-shadow 0.2s ease;
+
+  touch-action: manipulation;
 }
 
 #sidebar-toggle:hover {
   background: #edf5ef;
 }
 
+/* Sidebar tertutup */
 .sidebar.collapsed + #sidebar-toggle {
   left: 0;
+
+  border-left: 1px solid #dfe7df;
+
+  border-radius: 0 10px 10px 0;
+
+  box-shadow: 3px 0 12px rgba(30, 50, 38, 0.08);
 }
 
 /* =====================================================
@@ -2979,69 +2492,601 @@ footer {
 }
 
 /* =====================================================
-   MAP RESPONSIVE
+   ABOUT MODAL
+===================================================== */
+
+.modal {
+  display: none;
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
+}
+
+.modal.show {
+  display: flex;
+}
+
+/* KOTAK POPUP */
+
+.modal-content {
+  position: relative;
+
+  width: 90%;
+  max-width: 430px;
+
+  max-height: 75vh;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  padding: 24px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.22);
+
+  margin: 0;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+/* JUDUL */
+
+.modal-content h2 {
+  margin: 0 35px 18px 0;
+
+  font-size: 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+/* ICON JUDUL */
+
+.modal-content h2 i {
+  width: 34px;
+  height: 34px;
+
+  min-width: 34px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #397b18;
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+/* ISI */
+
+.modal-content p {
+  margin: 0 0 12px;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* TOMBOL CLOSE */
+
+.modal .close {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 32px;
+  height: 32px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal .close:hover {
+  background: #e2e8f0;
+}
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facility-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   RESPONSIVE TABLET KECIL
+===================================================== */
+
+@media (max-width: 1000px) {
+  .nav-logo {
+    font-size: 23px;
+  }
+
+  .nav-link {
+    min-width: auto;
+
+    padding: 0 12px;
+
+    font-size: 14px;
+  }
+
+  .quick-grid,
+  .map-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .village-video-card {
+    grid-template-columns: 1fr;
+  }
+
+  .village-video,
+  .village-video video {
+    min-height: 300px;
+  }
+}
+
+/* =====================================================
+   RESPONSIVE TABLET MAP
 ===================================================== */
 
 @media (max-width: 900px) {
+  .administration-map-card {
+    grid-template-columns: 1fr;
+  }
+
+  .administration-map-visual {
+    min-height: 280px;
+  }
+
+  .administration-map-content {
+    padding: 38px;
+  }
+
   .map-page-container {
     height: calc(100vh - 145px);
   }
 
+  /* SIDEBAR TABLET */
   .sidebar {
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
     width: 320px;
-    height: 100%;
-
-    padding: 22px 18px;
-
-    z-index: 1000;
+    max-width: 85vw;
   }
 
-  .sidebar.collapsed {
-    width: 0;
-
-    padding-left: 0;
-    padding-right: 0;
-  }
-
+  /* TOGGLE MENGIKUTI SIDEBAR */
   #sidebar-toggle {
     left: 320px;
   }
 
+  /* SIDEBAR DITUTUP */
   .sidebar.collapsed + #sidebar-toggle {
     left: 0;
   }
 }
 
+/* =====================================================
+   MOBILE
+===================================================== */
+
 @media (max-width: 700px) {
+
+  /* =========================
+     NAVBAR MOBILE
+  ========================= */
+
+  .nav-container {
+    flex-direction: column;
+
+    padding: 16px 0;
+
+    gap: 12px;
+
+    min-height: auto;
+  }
+
+  .nav-logo {
+    font-size: 22px;
+  }
+
+  .nav-logo img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav-menu {
+    width: 100%;
+
+    min-height: 45px;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    gap: 2px;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    flex: 0 0 auto;
+
+    min-width: auto;
+
+    padding: 0 9px;
+
+    font-size: 12px;
+
+    gap: 5px;
+  }
+
+  .nav-link i {
+    font-size: 13px;
+  }
+
+  .nav-link.active::after {
+    bottom: 0;
+
+    left: 7px;
+    right: 7px;
+  }
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .hero-video-wrapper {
+    height: 560px;
+  }
+
+  .hero-content {
+    left: 7%;
+
+    width: 86%;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  /* =========================
+     HOME
+  ========================= */
+
+  .about-section,
+  .quick-section,
+  .village-video-section,
+  .map-section {
+    width: 88%;
+  }
+
+  .about-section {
+    padding: 55px 0 30px;
+  }
+
+  .quick-section {
+    padding: 10px 0 45px;
+  }
+
+  .quick-grid,
+  .map-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .village-video-section,
+  .map-section {
+    padding: 50px 0;
+  }
+
+  .village-video-heading,
+  .map-section > .section-heading {
+    margin-bottom: 24px;
+  }
+
+  .village-video-text {
+    padding: 30px 25px;
+  }
+
+  .village-video-text h3 {
+    font-size: 26px;
+  }
+
+  /* =========================
+     FOOTER
+  ========================= */
+
+  .footer-content {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
+
+  /* =========================
+     FASILITAS
+  ========================= */
+
+  .page-header,
+  .stats-section,
+  .administration-section,
+  .data-section,
+  .administration-map-section {
+    width: 88%;
+  }
+
+  .page-header {
+    padding: 50px 0 35px;
+  }
+
+  .page-header h1 {
+    font-size: 38px;
+  }
+
+  .stats-section {
+    padding-bottom: 40px;
+  }
+
+  .stats-grid,
+  .facility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+  }
+
+  .section-title > p {
+    max-width: 650px;
+
+    text-align: left;
+  }
+
+  .administration-section {
+    padding-top: 45px;
+
+    padding-bottom: 45px;
+  }
+
+  .administration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .data-section {
+    padding-top: 45px;
+
+    padding-bottom: 50px;
+  }
+
+  .administration-map-section {
+    padding: 50px 0 55px;
+  }
+
+  .administration-map-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 24px;
+  }
+
+  .map-heading-number {
+    display: none;
+  }
+
+  .administration-map-card {
+    border-radius: 18px;
+  }
+
+  .administration-map-visual {
+    min-height: 230px;
+  }
+
+  .map-center-icon {
+    width: 72px;
+    height: 72px;
+
+    font-size: 27px;
+  }
+
+  .administration-map-content {
+    padding: 30px 25px;
+  }
+
+  .administration-map-content h3 {
+    font-size: 26px;
+  }
+
+  .administration-map-content p {
+    font-size: 14px;
+  }
+
+  /* =========================
+     ALBUM
+  ========================= */
+
+  .album-section {
+    width: 88%;
+
+    padding: 10px 0 55px;
+  }
+
+  .album-filter {
+    gap: 7px;
+  }
+
+  .album-filter-btn {
+    padding: 9px 13px;
+
+    font-size: 12px;
+  }
+
+  .album-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .album-image {
+    height: 230px;
+  }
+
+  .album-content {
+    padding: 21px;
+  }
+
+  /* =========================
+     LIGHTBOX
+  ========================= */
+
+  .lightbox {
+    padding: 15px;
+  }
+
+  .lightbox-content {
+    width: 100%;
+
+    max-height: 90vh;
+
+    border-radius: 18px;
+  }
+
+  #lightboxImage {
+    max-height: 48vh;
+  }
+
+  .lightbox-info {
+    padding: 20px;
+  }
+
+  .lightbox-info h3 {
+    font-size: 23px;
+  }
+
+  .lightbox-info p {
+    font-size: 13px;
+  }
+
+  .lightbox-close {
+    top: 18px;
+    right: 18px;
+
+    width: 45px;
+    height: 45px;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    width: 45px;
+    height: 45px;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  /* =========================
+     MAP MOBILE
+  ========================= */
+
   .map-page-container {
-    height: calc(100vh - 130px);
+    height: calc(100vh - 145px);
+
+    min-height: 500px;
   }
 
+  /* SIDEBAR MOBILE */
   .sidebar {
-    width: 290px;
+    width: 300px;
+    max-width: 85vw;
 
-    padding: 18px 14px;
+    padding: 18px 15px;
   }
 
+  /* SIDEBAR DITUTUP */
   .sidebar.collapsed {
-    width: 0;
-
-    padding-left: 0;
-    padding-right: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
   }
 
+  /* TOGGLE MENGIKUTI SIDEBAR */
   #sidebar-toggle {
-    left: 290px;
+    left: 300px;
 
-    width: 32px;
-    height: 52px;
+    width: 34px;
+    height: 54px;
   }
 
+  /* TOGGLE SAAT SIDEBAR DITUTUP */
   .sidebar.collapsed + #sidebar-toggle {
     left: 0;
   }
@@ -3052,131 +3097,85 @@ footer {
   }
 
   .control-btn {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
   }
 
-  .loading {
-    white-space: nowrap;
+  /* =========================
+     MODAL MOBILE
+  ========================= */
 
-    padding: 12px 15px;
+  .modal {
+    padding: 12px;
+  }
 
-    font-size: 12px;
+  .modal-content {
+    width: 94%;
+
+    max-height: 80vh;
+
+    padding: 20px;
+
+    border-radius: 15px;
+  }
+
+  .modal-content h2 {
+    font-size: 20px;
+  }
+
+  .modal-content p {
+    font-size: 13px;
   }
 }
-/* ================================
-   ABOUT MODAL
-================================ */
 
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
 
-    width: 100%;
-    height: 100%;
+@media (max-width: 400px) {
 
-    background: rgba(0, 0, 0, 0.45);
+  .nav-logo {
+    font-size: 19px;
+  }
 
-    align-items: center;
-    justify-content: center;
+  .nav-logo img {
+    width: 40px;
+    height: 40px;
+  }
 
-    padding: 15px;
-    box-sizing: border-box;
-}
+  .nav-link {
+    padding: 0 7px;
 
-/* KOTAK POPUP */
+    font-size: 11px;
+  }
 
-.modal-content {
-    position: relative;
+  .hero-video-wrapper {
+    height: 520px;
+  }
 
-    width: 90%;
-    max-width: 430px;
+  .hero-content h1 {
+    font-size: 34px;
+  }
 
-    max-height: 75vh;
-    overflow-y: auto;
+  .hero-content p {
+    font-size: 13px;
+  }
 
-    background: #fff;
+  .quick-card,
+  .map-card,
+  .facility-card {
+    padding: 22px;
+  }
 
-    padding: 24px;
+  .sidebar {
+    width: 285px;
+    max-width: 85vw;
+  }
+  #sidebar-toggle {
+    left: 285px;
+  }
 
-    border-radius: 16px;
-
-    box-sizing: border-box;
-
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.22);
-
-    margin: 0;
-}
-
-/* JUDUL */
-
-.modal-content h2 {
-    margin: 0 35px 18px 0;
-
-    font-size: 22px;
-
-    display: flex;
-    align-items: center;
-    gap: 9px;
-}
-
-/* ICON JUDUL */
-
-.modal-content h2 i {
-    width: 34px;
-    height: 34px;
-
-    min-width: 34px;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #397b18;
-    color: white;
-
-    font-size: 15px;
-}
-
-/* ISI */
-
-.modal-content p {
-    margin: 0 0 12px;
-
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-/* TOMBOL CLOSE */
-
-.modal .close {
-    position: absolute;
-
-    top: 12px;
-    right: 12px;
-
-    width: 32px;
-    height: 32px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: #f1f5f9;
-    color: #475569;
-
-    font-size: 22px;
-
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal .close:hover {
-    background: #e2e8f0;
+  .sidebar.collapsed + #sidebar-toggle {
+    left: 0;
+  }
 }

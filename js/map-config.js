@@ -1,133 +1,225 @@
-const mapConfig={
-center:[-7.760371781873091,109.95300521889915],
-zoom:16,
+const mapConfig = {
+  center: [-7.760371781873091, 109.95300521889915],
+  zoom: 16,
 
-basemaps:{
-osm:{
-url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-attribution:'© OpenStreetMap contributors',
-maxZoom:19
-},
-esri:{
-url:'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-attribution:'© Esri, Maxar, Earthstar Geographics',
-maxZoom:19
-},
-google:{
-url:'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
-attribution:'© Google',
-maxZoom:20
-},
-topo:{
-url:'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
-attribution:'© OpenTopoMap contributors',
-maxZoom:17
-}
-},
+  basemaps: {
+    osm: {
+      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      attribution: "© OpenStreetMap contributors",
+      maxZoom: 19
+    },
 
-tingkatLampuColorMap:{
-Terang:'#2e7d32',
-Sedang:'#f9a825',
-Gelap:'#c62828'
-},
+    esri: {
+      url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+      attribution: "© Esri, Maxar, Earthstar Geographics",
+      maxZoom: 19
+    },
 
-dusunColorMap:{
-'Dusun Kliwonan':'#66c2a5',
-'Dusun Karangwaru':'#fc8d62',
-'Dusun Tegaliser':'#8da0cb'
-},
+    google: {
+      url: "https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+      attribution: "© Google",
+      maxZoom: 20
+    },
 
-layerStyles:{
-batasdesa:{
-color:'#397b18',
-weight:3,
-opacity:1,
-fillColor:'#397b18',
-fillOpacity:.08
-},
+    topo: {
+      url: "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+      attribution: "© OpenTopoMap contributors",
+      maxZoom: 17
+    }
+  },
 
-batasdusun:{
-color:'#8e44ad',
-weight:2,
-opacity:.9,
-fillColor:'#8e44ad',
-fillOpacity:.12
-},
+  /* =====================================================
+     WARNA TINGKAT PENERANGAN
+  ====================================================== */
 
-batasrt:{
-color:'#e91e63',
-weight:1,
-opacity:.8,
-fillColor:'#e91e63',
-fillOpacity:.08
-},
+  tingkatLampuColorMap: {
+    Terang: "#2e7d32",
+    Sedang: "#f9a825",
+    Gelap: "#c62828"
+  },
 
-pemerintahan:{opacity:1},
-pendidikan:{opacity:1},
-peribadatan:{opacity:1},
-lapangan:{opacity:1},
-tpu:{opacity:1},
-sppg:{opacity:1},
-kopdes:{opacity:1},
-umkm:{opacity:1},
-industri:{opacity:1},
+  /* =====================================================
+     WARNA BATAS DUSUN
+  ====================================================== */
 
-jaringanjalan:{
-color:'#e67e22',
-weight:2.5,
-opacity:.8
-},
+  dusunColorMap: {
+    "Dusun Kliwonan": "#66c2a5",
+    "Dusun Karangwaru": "#fc8d62",
+    "Dusun Tegaliser": "#8da0cb"
+  },
 
-relkereta:{
-color:'#5d4037',
-weight:5,
-opacity:1,
-dashArray:'8,5'
-},
+  /* =====================================================
+     STYLE LAYER
+  ====================================================== */
 
-sungai:{
-color:'#2196f3',
-weight:2,
-opacity:.9
-},
+  layerStyles: {
 
-pju:{opacity:1},
+    /* ================= BATAS ================= */
 
-minim_penerangan:{
-color:'#c62828',
-weight:2,
-opacity:.8,
-fillColor:'#c62828',
-fillOpacity:.15
-},
+    batasdesa: {
+      color: "#397b18",
+      weight: 3,
+      opacity: 1,
+      fillColor: "#397b18",
+      fillOpacity: 0
+    },
 
-situsbudaya:{opacity:1},
-sumbor:{opacity:1}
-},
+    batasdusun: {
+      color: "#8e44ad",
+      weight: 2,
+      opacity: 0.9,
+      fillColor: "#8e44ad",
+      fillOpacity: 0.12
+    },
 
-dataSources:{
-batasdesa:'data/desakliwonan.geojson',
-batasdusun:'data/batasdusun.geojson',
-batasrt:'data/batasrt.geojson',
+    batasrt: {
+      color: "#e91e63",
+      weight: 1,
+      opacity: 0.8,
+      fillColor: "#e91e63",
+      fillOpacity: 0
+    },
 
-pemerintahan:'data/pemerintahan.json',
-pendidikan:'data/pendidikan.geojson',
-peribadatan:'data/peribadatan.geojson',
-lapangan:'data/lapangan.geojson',
-tpu:'data/tpu.geojson',
-sppg:'data/sppg.geojson',
-kopdes:'data/kopdes.geojson',
+    /* ================= SARANA ================= */
 
-umkm:'data/umkm.geojson',
-industri:'data/industri.geojson',
+    pemerintahan: {
+      opacity: 1
+    },
 
-jaringanjalan:'data/jaringanjalan.geojson',
-relkereta:'data/relkereta.geojson',
-pju:'data/pju.geojson',
-minim_penerangan:'data/minim_penerangan.geojson',
+    pendidikan: {
+      opacity: 1
+    },
 
-sungai:'data/sungai.geojson',
-situsbudaya:'data/situsbudaya.geojson',
-sumbor:'data/sumurbor.geojson'
-}
+    peribadatan: {
+      opacity: 1
+    },
+
+    lapangan: {
+      opacity: 1
+    },
+
+    tpu: {
+      opacity: 1
+    },
+
+    sppg: {
+      opacity: 1
+    },
+
+    kopdes: {
+      opacity: 1
+    },
+
+    /* ================= EKONOMI ================= */
+
+    umkm: {
+      opacity: 1
+    },
+
+    industri: {
+      opacity: 1
+    },
+
+    /* ================= TRANSPORTASI ================= */
+
+    jaringanjalan: {
+      color: "#e67e22",
+      weight: 2.5,
+      opacity: 0.8
+    },
+
+    relkereta: {
+      color: "#5d4037",
+      weight: 5,
+      opacity: 1,
+      dashArray: "8,5"
+    },
+
+    /* ================= LINGKUNGAN ================= */
+
+    sungai: {
+      color: "#2196f3",
+      weight: 2,
+      opacity: 0.9
+    },
+
+    /* ================= PENERANGAN ================= */
+
+    pju: {
+      opacity: 1
+    },
+
+    minim_penerangan: {
+      color: "#c62828",
+      weight: 2,
+      opacity: 0.8,
+      fillColor: "#c62828",
+      fillOpacity: 0.15
+    },
+
+    /* ================= LAINNYA ================= */
+
+    situsbudaya: {
+      opacity: 1
+    },
+
+    sumbor: {
+      opacity: 1
+    }
+  },
+
+  /* =====================================================
+     SUMBER DATA
+  ====================================================== */
+
+  dataSources: {
+
+    /* ================= BATAS ================= */
+
+    batasdesa: "data/desakliwonan.geojson",
+
+    batasdusun: "data/batasdusun.geojson",
+
+    batasrt: "data/batasrt.geojson",
+
+    /* ================= SARANA ================= */
+
+    pemerintahan: "data/pemerintahan.json",
+
+    pendidikan: "data/pendidikan.geojson",
+
+    peribadatan: "data/peribadatan.geojson",
+
+    lapangan: "data/lapangan.geojson",
+
+    tpu: "data/tpu.geojson",
+
+    sppg: "data/sppg.geojson",
+
+    kopdes: "data/kopdes.geojson",
+
+    /* ================= EKONOMI ================= */
+
+    umkm: "data/umkm.geojson",
+
+    industri: "data/industri.geojson",
+
+    /* ================= TRANSPORTASI ================= */
+
+    jaringanjalan: "data/jaringanjalan.geojson",
+
+    relkereta: "data/relkereta.geojson",
+
+    pju: "data/pju.geojson",
+
+    minim_penerangan: "data/minim_penerangan.geojson",
+
+    /* ================= LINGKUNGAN ================= */
+
+    sungai: "data/sungai.geojson",
+
+    situsbudaya: "data/situsbudaya.geojson",
+
+    sumbor: "data/sumurbor.geojson"
+  }
 };
