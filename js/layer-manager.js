@@ -6,6 +6,8 @@ class LayerManager {
     this.layerGroups = {};
     this.bounds = null;
 
+    this.rtColorMap = {};
+
     this.popupLockedByClick = false;
 
     this.defaultVisibleLayers = [
@@ -17,14 +19,9 @@ class LayerManager {
       "sungai",
     ];
 
-    this.defaultHiddenLayers = [
-      "batasdusun",
-      "batasrt",
-    ];
+    this.defaultHiddenLayers = ["batasdusun", "batasrt"];
 
-    // =====================================================
     // ICON CONFIG
-    // =====================================================
 
     this.iconConfig = {
       pemerintahan: {
@@ -98,10 +95,7 @@ class LayerManager {
       },
     };
 
-    // =====================================================
     // PANE MAPPING
-    // =====================================================
-
     this.paneMapping = {
       batasdesa: "pane-batasdesa",
       batasdusun: "pane-batasdusun",
@@ -124,9 +118,7 @@ class LayerManager {
       sungai: "pane-sungai",
 
       pju: "pane-pju",
-
       minim_penerangan: "pane-minim-penerangan",
-
       situsbudaya: "pane-potensi",
       sumbor: "pane-potensi",
     };
@@ -136,29 +128,20 @@ class LayerManager {
     this.initializeLayerGroups();
   }
 
-  // =====================================================
   // INITIALIZE PANES
-  // =====================================================
-
   initializePanes() {
     const panes = {
       "pane-batasdesa": 300,
       "pane-batasdusun": 310,
       "pane-batasrt": 320,
-
       "pane-sungai": 350,
-
       "pane-jalan": 400,
       "pane-kereta": 410,
-
       "pane-ekonomi": 500,
       "pane-potensi": 510,
-
       "pane-minim-penerangan": 550,
-
       "pane-fasilitas": 600,
       "pane-pju": 650,
-
       tooltipPane: 1000,
     };
 
@@ -173,10 +156,7 @@ class LayerManager {
     });
   }
 
-  // =====================================================
   // INITIALIZE STYLE
-  // =====================================================
-
   initializeStyle() {
     if (document.getElementById("lm-style")) {
       return;
@@ -242,10 +222,7 @@ class LayerManager {
     document.head.appendChild(style);
   }
 
-  // =====================================================
   // INITIALIZE LAYER GROUPS
-  // =====================================================
-
   initializeLayerGroups() {
     if (!mapConfig || !mapConfig.dataSources) {
       console.error("mapConfig.dataSources tidak ditemukan.");
@@ -257,16 +234,12 @@ class LayerManager {
     });
   }
 
-  // =====================================================
   // AUTO ICON
-  // =====================================================
-
   createAutoIcon(category) {
-    const config =
-      this.iconConfig[category] || {
-        symbol: "●",
-        color: "#397b18",
-      };
+    const config = this.iconConfig[category] || {
+      symbol: "●",
+      color: "#397b18",
+    };
 
     return L.divIcon({
       className: "auto-map-icon",
@@ -299,10 +272,7 @@ class LayerManager {
     });
   }
 
-  // =====================================================
   // PROPERTY HELPER
-  // =====================================================
-
   getProperty(properties, keys) {
     for (const key of keys) {
       if (
@@ -323,18 +293,12 @@ class LayerManager {
       .toLowerCase();
   }
 
-  // =====================================================
   // DUSUN
-  // =====================================================
-
   getDusunName(feature) {
     return this.getProperty(feature.properties || {}, ["Nama"]);
   }
 
-  // =====================================================
   // RT
-  // =====================================================
-
   getRTName(feature) {
     const value = this.getProperty(feature.properties || {}, ["Nama"]);
 
@@ -383,17 +347,14 @@ class LayerManager {
         properties.JENIS ||
         properties.jenis ||
         properties.Nama ||
-        ""
+        "",
     ).toLowerCase();
 
     if (value.includes("gereja")) {
       return "gereja";
     }
 
-    if (
-      value.includes("musholla") ||
-      value.includes("mushola")
-    ) {
+    if (value.includes("musholla") || value.includes("mushola")) {
       return "mushola";
     }
 
@@ -406,7 +367,7 @@ class LayerManager {
 
   getPJUColor(feature) {
     const value = this.normalizeText(
-      this.getProperty(feature.properties || {}, ["Kondisi"])
+      this.getProperty(feature.properties || {}, ["Kondisi"]),
     );
 
     if (/nyala|menyala|baik|hidup/.test(value)) {
@@ -425,9 +386,7 @@ class LayerManager {
   // =====================================================
 
   getMinimLightingColor(feature) {
-    const value = this.normalizeText(
-      this.getLightingStatus(feature)
-    );
+    const value = this.normalizeText(this.getLightingStatus(feature));
 
     if (value.includes("terang")) {
       return "#2e7d32";
@@ -466,10 +425,7 @@ class LayerManager {
     let hash = 0;
 
     for (const char of String(name || "")) {
-      hash =
-        (hash << 5) -
-        hash +
-        char.charCodeAt(0);
+      hash = (hash << 5) - hash + char.charCodeAt(0);
 
       hash |= 0;
     }
@@ -485,11 +441,8 @@ class LayerManager {
     if (name && mapConfig.dusunColorMap) {
       const normalizedName = this.normalizeText(name);
 
-      for (const [key, color] of Object.entries(
-        mapConfig.dusunColorMap
-      )) {
-        const normalizedKey =
-          this.normalizeText(key);
+      for (const [key, color] of Object.entries(mapConfig.dusunColorMap)) {
+        const normalizedKey = this.normalizeText(key);
 
         if (
           normalizedKey === normalizedName ||
@@ -501,9 +454,7 @@ class LayerManager {
       }
     }
 
-    return this.generateNameColor(
-      name || "Dusun"
-    );
+    return this.generateNameColor(name || "Dusun");
   }
 
   // =====================================================
@@ -511,9 +462,67 @@ class LayerManager {
   // =====================================================
 
   getRTColor(feature) {
-    return this.generateNameColor(
-      this.getRTName(feature)
-    );
+    const rtName = this.getRTName(feature);
+
+    const normalized = this.normalizeText(rtName);
+
+    if (this.rtColorMap[normalized]) {
+      return this.rtColorMap[normalized];
+    }
+
+    // Palet warna RT
+
+    const colors = [
+      "#e53935", // merah
+
+      "#1e88e5", // biru
+
+      "#43a047", // hijau
+
+      "#fb8c00", // orange
+
+      "#8e24aa", // ungu
+
+      "#00acc1", // cyan
+
+      "#f4511e", // merah-oranye
+
+      "#3949ab", // indigo
+
+      "#7cb342", // hijau muda
+
+      "#d81b60", // pink
+
+      "#6d4c41", // coklat
+
+      "#00897b", // teal
+
+      "#5e35b1", // violet
+
+      "#c0ca33", // lime
+
+      "#039be5", // biru muda
+
+      "#ef6c00", // orange tua
+
+      "#546e7a", // abu biru
+
+      "#ad1457", // magenta
+
+      "#2e7d32", // hijau tua
+
+      "#4527a0", // ungu tua
+    ];
+
+    // Ambil warna berikutnya
+
+    const index = Object.keys(this.rtColorMap).length % colors.length;
+
+    const color = colors[index];
+
+    this.rtColorMap[normalized] = color;
+
+    return color;
   }
 
   // =====================================================
@@ -521,7 +530,6 @@ class LayerManager {
   // =====================================================
 
   getLayerStyle(name, feature) {
-
     // ===================================================
     // BATAS DESA
     // ===================================================
@@ -532,27 +540,18 @@ class LayerManager {
       return {
         color: "#FFD700",
 
-        weight:
-          config.weight !== undefined
-            ? config.weight
-            : 3,
+        weight: config.weight !== undefined ? config.weight : 3,
 
-        opacity:
-          config.opacity !== undefined
-            ? config.opacity
-            : 1,
+        opacity: config.opacity !== undefined ? config.opacity : 1,
 
         fill: true,
 
         fillColor: "#FFD700",
 
         fillOpacity:
-          config.fillOpacity !== undefined
-            ? config.fillOpacity
-            : 0.15,
+          config.fillOpacity !== undefined ? config.fillOpacity : 0.15,
 
-        dashArray:
-          config.dashArray || null,
+        dashArray: config.dashArray || null,
 
         pane: this.paneMapping[name],
       };
@@ -563,9 +562,7 @@ class LayerManager {
     // ===================================================
 
     if (name === "batasdusun") {
-      const color = this.findDusunColor(
-        this.getDusunName(feature)
-      );
+      const color = this.findDusunColor(this.getDusunName(feature));
 
       return {
         color: color,
@@ -604,7 +601,7 @@ class LayerManager {
 
         fillColor: color,
 
-        fillOpacity: 0.10,
+        fillOpacity: 0.1,
 
         dashArray: null,
 
@@ -617,25 +614,16 @@ class LayerManager {
     // ===================================================
 
     if (name === "jaringanjalan") {
-      const config =
-        mapConfig.layerStyles?.jaringanjalan || {};
+      const config = mapConfig.layerStyles?.jaringanjalan || {};
 
       return {
         ...config,
 
-        color:
-          config.color ||
-          "#e67e22",
+        color: config.color || "#e67e22",
 
-        weight:
-          config.weight !== undefined
-            ? config.weight
-            : 2.5,
+        weight: config.weight !== undefined ? config.weight : 2.5,
 
-        opacity:
-          config.opacity !== undefined
-            ? config.opacity
-            : 0.8,
+        opacity: config.opacity !== undefined ? config.opacity : 0.8,
 
         pane: this.paneMapping[name],
       };
@@ -646,29 +634,18 @@ class LayerManager {
     // ===================================================
 
     if (name === "relkereta") {
-      const config =
-        mapConfig.layerStyles?.relkereta || {};
+      const config = mapConfig.layerStyles?.relkereta || {};
 
       return {
         ...config,
 
-        color:
-          config.color ||
-          "#5d4037",
+        color: config.color || "#5d4037",
 
-        weight:
-          config.weight !== undefined
-            ? config.weight
-            : 5,
+        weight: config.weight !== undefined ? config.weight : 5,
 
-        opacity:
-          config.opacity !== undefined
-            ? config.opacity
-            : 1,
+        opacity: config.opacity !== undefined ? config.opacity : 1,
 
-        dashArray:
-          config.dashArray ||
-          "8,5",
+        dashArray: config.dashArray || "8,5",
 
         pane: this.paneMapping[name],
       };
@@ -679,8 +656,7 @@ class LayerManager {
     // ===================================================
 
     if (name === "pju") {
-      const color =
-        this.getPJUColor(feature);
+      const color = this.getPJUColor(feature);
 
       return {
         color: color,
@@ -702,14 +678,9 @@ class LayerManager {
     // ===================================================
 
     if (name === "minim_penerangan") {
-      const color =
-        this.getMinimLightingColor(
-          feature
-        );
+      const color = this.getMinimLightingColor(feature);
 
-      const config =
-        mapConfig.layerStyles?.minim_penerangan ||
-        {};
+      const config = mapConfig.layerStyles?.minim_penerangan || {};
 
       return {
         ...config,
@@ -720,15 +691,10 @@ class LayerManager {
 
         weight: 2,
 
-        opacity:
-          config.opacity !== undefined
-            ? config.opacity
-            : 0.9,
+        opacity: config.opacity !== undefined ? config.opacity : 0.9,
 
         fillOpacity:
-          config.fillOpacity !== undefined
-            ? config.fillOpacity
-            : 0.22,
+          config.fillOpacity !== undefined ? config.fillOpacity : 0.22,
 
         pane: this.paneMapping[name],
       };
@@ -754,14 +720,9 @@ class LayerManager {
   // =====================================================
 
   createPointLayer(name, feature, latlng) {
-
     if (name === "peribadatan") {
       return L.marker(latlng, {
-        icon: this.createAutoIcon(
-          this.getPeribadatanCategory(
-            feature
-          )
-        ),
+        icon: this.createAutoIcon(this.getPeribadatanCategory(feature)),
 
         pane: this.paneMapping[name],
       });
@@ -798,77 +759,42 @@ class LayerManager {
 
   async loadLayer(name) {
     try {
-      const url =
-        mapConfig.dataSources[name];
+      const url = mapConfig.dataSources[name];
 
       if (!url) {
-        console.warn(
-          `Sumber data untuk ${name} tidak ditemukan.`
-        );
+        console.warn(`Sumber data untuk ${name} tidak ditemukan.`);
 
         return null;
       }
 
-      const response =
-        await fetch(url);
+      const response = await fetch(url);
 
       if (!response.ok) {
-        throw new Error(
-          `HTTP ${response.status}`
-        );
+        throw new Error(`HTTP ${response.status}`);
       }
 
-      const data =
-        await response.json();
+      const data = await response.json();
 
-      if (
-        !data ||
-        !Array.isArray(data.features)
-      ) {
-        throw new Error(
-          "GeoJSON tidak valid"
-        );
+      if (!data || !Array.isArray(data.features)) {
+        throw new Error("GeoJSON tidak valid");
       }
 
-      const layer = L.geoJSON(
-        data,
-        {
-          pane: this.paneMapping[name],
+      const layer = L.geoJSON(data, {
+        pane: this.paneMapping[name],
 
-          style: (feature) =>
-            this.getLayerStyle(
-              name,
-              feature
-            ),
+        style: (feature) => this.getLayerStyle(name, feature),
 
-          pointToLayer: (
-            feature,
-            latlng
-          ) =>
-            this.createPointLayer(
-              name,
-              feature,
-              latlng
-            ),
+        pointToLayer: (feature, latlng) =>
+          this.createPointLayer(name, feature, latlng),
 
-          onEachFeature: (
-            feature,
-            layer
-          ) =>
-            this.setupFeatureEvents(
-              name,
-              feature,
-              layer
-            ),
-        }
-      );
+        onEachFeature: (feature, layer) =>
+          this.setupFeatureEvents(name, feature, layer),
+      });
 
       if (this.layerGroups[name]) {
         this.layerGroups[name].clearLayers();
 
-        this.layerGroups[name].addLayer(
-          layer
-        );
+        this.layerGroups[name].addLayer(layer);
       }
 
       this.layers[name] = layer;
@@ -876,17 +802,10 @@ class LayerManager {
       this.updateBounds(layer);
 
       return layer;
-
     } catch (error) {
+      console.error(`Gagal memuat ${name}:`, error);
 
-      console.error(
-        `Gagal memuat ${name}:`,
-        error
-      );
-
-      this.showError(
-        `Gagal memuat layer: ${name}`
-      );
+      this.showError(`Gagal memuat layer: ${name}`);
 
       return null;
     }
@@ -896,218 +815,126 @@ class LayerManager {
   // FEATURE EVENTS
   // =====================================================
 
-  setupFeatureEvents(
-    name,
-    feature,
-    layer
-  ) {
+  setupFeatureEvents(name, feature, layer) {
+    this.bindLayerLabel(name, feature, layer);
 
-    this.bindLayerLabel(
-      name,
-      feature,
-      layer
-    );
-
-    const isBoundary =
-      name === "batasdusun" ||
-      name === "batasrt";
+    const isBoundary = name === "batasdusun" || name === "batasrt";
 
     // ===================================================
     // MOUSEOVER
     // ===================================================
 
-    layer.on(
-      "mouseover",
-      () => {
-
-        if (isBoundary) {
-          return;
-        }
-
-        if (
-          layer.setStyle &&
-          feature.geometry?.type !== "Point"
-        ) {
-
-          const style =
-            this.getLayerStyle(
-              name,
-              feature
-            );
-
-          layer.setStyle({
-            weight: Math.max(
-              (style.weight || 2) + 2,
-              4
-            ),
-          });
-        }
+    layer.on("mouseover", () => {
+      if (isBoundary) {
+        return;
       }
-    );
+
+      if (layer.setStyle && feature.geometry?.type !== "Point") {
+        const style = this.getLayerStyle(name, feature);
+
+        layer.setStyle({
+          weight: Math.max((style.weight || 2) + 2, 4),
+        });
+      }
+    });
 
     // ===================================================
     // MOUSEOUT
     // ===================================================
 
-    layer.on(
-      "mouseout",
-      () => {
-
-        if (
-          !this.popupLockedByClick
-        ) {
-
-          this.resetLayerStyle(
-            name,
-            layer,
-            feature
-          );
-        }
+    layer.on("mouseout", () => {
+      if (!this.popupLockedByClick) {
+        this.resetLayerStyle(name, layer, feature);
       }
-    );
+    });
 
     // ===================================================
     // CLICK
     // ===================================================
 
-    layer.on(
-      "click",
-      (event) => {
+    layer.on("click", (event) => {
+      // ===============================================
+      // BATAS DUSUN / RT
+      // ===============================================
 
-        // ===============================================
-        // BATAS DUSUN / RT
-        // ===============================================
+      if (isBoundary) {
+        const nameText =
+          name === "batasdusun"
+            ? this.getDusunName(feature)
+            : this.getRTName(feature);
 
-        if (isBoundary) {
-
-          const nameText =
-            name === "batasdusun"
-              ? this.getDusunName(
-                  feature
-                )
-              : this.getRTName(
-                  feature
-                );
-
-          if (nameText) {
-
-            if (
-              layer.getTooltip()
-            ) {
-              layer.closeTooltip();
-            }
-
-            layer
-              .bindTooltip(
-                `<span class="boundary-click-label">${this.escapeHtml(
-                  nameText
-                )}</span>`,
-                {
-                  permanent: false,
-
-                  direction: "center",
-
-                  className:
-                    "boundary-label-wrapper",
-
-                  sticky: false,
-                }
-              )
-              .openTooltip(
-                event.latlng
-              );
+        if (nameText) {
+          if (layer.getTooltip()) {
+            layer.closeTooltip();
           }
 
-          L.DomEvent.stopPropagation(
-            event
-          );
+          layer
+            .bindTooltip(
+              `<span class="boundary-click-label">${this.escapeHtml(
+                nameText,
+              )}</span>`,
+              {
+                permanent: false,
 
-          return;
+                direction: "center",
+
+                className: "boundary-label-wrapper",
+
+                sticky: false,
+              },
+            )
+            .openTooltip(event.latlng);
         }
 
-        // ===============================================
-        // POPUP
-        // ===============================================
+        L.DomEvent.stopPropagation(event);
 
-        this.popupLockedByClick =
-          true;
-
-        const content =
-          window.popupHandler?.createPopupContent
-            ? window.popupHandler.createPopupContent(
-                feature,
-                name
-              )
-            : this.createDefaultPopup(
-                feature,
-                name
-              );
-
-        const popup = L.popup({
-          closeButton: true,
-
-          className:
-            "popup-click",
-
-          maxWidth: 340,
-        })
-          .setLatLng(
-            event.latlng
-          )
-          .setContent(content)
-          .openOn(this.map);
-
-        popup.on(
-          "remove",
-          () => {
-
-            this.popupLockedByClick =
-              false;
-
-            this.resetLayerStyle(
-              name,
-              layer,
-              feature
-            );
-          }
-        );
-
-        if (
-          layer.setStyle &&
-          feature.geometry?.type !== "Point"
-        ) {
-
-          const style =
-            this.getLayerStyle(
-              name,
-              feature
-            );
-
-          layer.setStyle({
-            weight: Math.max(
-              (style.weight || 2) + 2,
-              4
-            ),
-          });
-        }
-
-        L.DomEvent.stopPropagation(
-          event
-        );
+        return;
       }
-    );
+
+      // ===============================================
+      // POPUP
+      // ===============================================
+
+      this.popupLockedByClick = true;
+
+      const content = window.popupHandler?.createPopupContent
+        ? window.popupHandler.createPopupContent(feature, name)
+        : this.createDefaultPopup(feature, name);
+
+      const popup = L.popup({
+        closeButton: true,
+
+        className: "popup-click",
+
+        maxWidth: 340,
+      })
+        .setLatLng(event.latlng)
+        .setContent(content)
+        .openOn(this.map);
+
+      popup.on("remove", () => {
+        this.popupLockedByClick = false;
+
+        this.resetLayerStyle(name, layer, feature);
+      });
+
+      if (layer.setStyle && feature.geometry?.type !== "Point") {
+        const style = this.getLayerStyle(name, feature);
+
+        layer.setStyle({
+          weight: Math.max((style.weight || 2) + 2, 4),
+        });
+      }
+
+      L.DomEvent.stopPropagation(event);
+    });
   }
 
   // =====================================================
   // LABEL JALAN
   // =====================================================
 
-  bindLayerLabel(
-    name,
-    feature,
-    layer
-  ) {
-
+  bindLayerLabel(name, feature, layer) {
     if (
       name !== "jaringanjalan" ||
       !this.getRoadName(feature) ||
@@ -1116,10 +943,7 @@ class LayerManager {
       return;
     }
 
-    this.bindRoadLabel(
-      layer,
-      this.getRoadName(feature)
-    );
+    this.bindRoadLabel(layer, this.getRoadName(feature));
   }
 
   // =====================================================
@@ -1131,25 +955,13 @@ class LayerManager {
   // Jl. Panembahan Senopati I = 25% dari awal jalan.
   // =====================================================
 
-  bindRoadLabel(
-    layer,
-    name
-  ) {
-
+  bindRoadLabel(layer, name) {
     try {
+      const rawLatLngs = layer.getLatLngs();
 
-      const rawLatLngs =
-        layer.getLatLngs();
+      const paths = this.extractRoadPaths(rawLatLngs);
 
-      const paths =
-        this.extractRoadPaths(
-          rawLatLngs
-        );
-
-      if (
-        !paths ||
-        paths.length === 0
-      ) {
+      if (!paths || paths.length === 0) {
         return;
       }
 
@@ -1157,42 +969,21 @@ class LayerManager {
       // Pilih bagian garis TERPANJANG
       // -------------------------------------------------
 
-      let selectedPath =
-        paths[0];
+      let selectedPath = paths[0];
 
-      let longestLength =
-        this.getPathLength(
-          selectedPath
-        );
+      let longestLength = this.getPathLength(selectedPath);
 
-      for (
-        let i = 1;
-        i < paths.length;
-        i++
-      ) {
+      for (let i = 1; i < paths.length; i++) {
+        const currentLength = this.getPathLength(paths[i]);
 
-        const currentLength =
-          this.getPathLength(
-            paths[i]
-          );
+        if (currentLength > longestLength) {
+          longestLength = currentLength;
 
-        if (
-          currentLength >
-          longestLength
-        ) {
-
-          longestLength =
-            currentLength;
-
-          selectedPath =
-            paths[i];
+          selectedPath = paths[i];
         }
       }
 
-      if (
-        !selectedPath ||
-        selectedPath.length < 2
-      ) {
+      if (!selectedPath || selectedPath.length < 2) {
         return;
       }
 
@@ -1208,19 +999,11 @@ class LayerManager {
       // -------------------------------------------------
 
       const isPanembahanSenopatiI =
-        this.normalizeRoadName(name) ===
-        "jl panembahan senopati i";
+        this.normalizeRoadName(name) === "jl panembahan senopati i";
 
-      const labelPosition =
-        isPanembahanSenopatiI
-          ? 0.25
-          : 0.50;
+      const labelPosition = isPanembahanSenopatiI ? 0.25 : 0.5;
 
-      const labelPoint =
-        this.getPathPointAtRatio(
-          selectedPath,
-          labelPosition
-        );
+      const labelPoint = this.getPathPointAtRatio(selectedPath, labelPosition);
 
       if (!labelPoint) {
         return;
@@ -1230,121 +1013,81 @@ class LayerManager {
       // Arah jalan di sekitar posisi label
       // -------------------------------------------------
 
-      const direction =
-        this.getPathDirectionAtRatio(
-          selectedPath,
-          labelPosition
-        );
+      const direction = this.getPathDirectionAtRatio(
+        selectedPath,
+        labelPosition,
+      );
 
       // -------------------------------------------------
       // Buat tooltip label
       // -------------------------------------------------
 
       layer.bindTooltip(
-        `<span class="road-label-text">${this.escapeHtml(
-          name
-        )}</span>`,
+        `<span class="road-label-text">${this.escapeHtml(name)}</span>`,
         {
           permanent: false,
 
           direction: "center",
 
-          className:
-            "road-label-wrapper",
+          className: "road-label-wrapper",
 
           sticky: false,
 
           opacity: 1,
 
           offset: [0, 0],
-        }
+        },
       );
 
       // -------------------------------------------------
       // Tampilkan label di posisi yang sudah ditentukan
       // -------------------------------------------------
 
-      layer.on(
-        "tooltipopen",
-        (event) => {
+      layer.on("tooltipopen", (event) => {
+        const tooltip = event.tooltip;
 
-          const tooltip =
-            event.tooltip;
+        tooltip.setLatLng(labelPoint);
 
-          tooltip.setLatLng(
-            labelPoint
-          );
+        const element = tooltip.getElement();
 
-          const element =
-            tooltip.getElement();
+        const text = element?.querySelector(".road-label-text");
 
-          const text =
-            element?.querySelector(
-              ".road-label-text"
-            );
+        if (text) {
+          text.style.transform = `rotate(${direction}deg)`;
 
-          if (text) {
-
-            text.style.transform =
-              `rotate(${direction}deg)`;
-
-            text.style.transformOrigin =
-              "center center";
-          }
+          text.style.transformOrigin = "center center";
         }
-      );
+      });
 
       // -------------------------------------------------
       // Tampilkan label hanya pada zoom >= 16
       // -------------------------------------------------
 
-      const update =
-        () => {
+      const update = () => {
+        if (!this.map.hasLayer(layer)) {
+          return;
+        }
 
-          if (
-            !this.map.hasLayer(
-              layer
-            )
-          ) {
-            return;
-          }
+        const tooltip = layer.getTooltip();
 
-          const tooltip =
-            layer.getTooltip();
+        if (!tooltip) {
+          return;
+        }
 
-          if (!tooltip) {
-            return;
-          }
+        if (this.map.getZoom() >= 16) {
+          tooltip.setLatLng(labelPoint);
 
-          if (
-            this.map.getZoom() >= 16
-          ) {
+          layer.openTooltip();
+        } else {
+          layer.closeTooltip();
+        }
+      };
 
-            tooltip.setLatLng(
-              labelPoint
-            );
-
-            layer.openTooltip();
-
-          } else {
-
-            layer.closeTooltip();
-          }
-        };
-
-      this.map.on(
-        "zoomend",
-        update
-      );
+      this.map.on("zoomend", update);
 
       update();
-
     } catch (error) {
-
-      console.warn(
-        "Label jalan gagal:",
-        error
-      );
+      console.warn("Label jalan gagal:", error);
     }
   }
 
@@ -1353,7 +1096,6 @@ class LayerManager {
   // =====================================================
 
   normalizeRoadName(name) {
-
     return String(name || "")
       .trim()
       .toLowerCase()
@@ -1371,164 +1113,78 @@ class LayerManager {
   // 1.00 = akhir jalan
   // =====================================================
 
-  getPathPointAtRatio(
-    path,
-    ratio
-  ) {
-
-    if (
-      !path ||
-      path.length < 2
-    ) {
+  getPathPointAtRatio(path, ratio) {
+    if (!path || path.length < 2) {
       return null;
     }
 
-    const totalLength =
-      this.getPathLength(
-        path
-      );
+    const totalLength = this.getPathLength(path);
 
     if (totalLength === 0) {
       return path[0];
     }
 
-    const targetDistance =
-      totalLength *
-      Math.max(
-        0,
-        Math.min(
-          1,
-          ratio
-        )
-      );
+    const targetDistance = totalLength * Math.max(0, Math.min(1, ratio));
 
     let accumulated = 0;
 
-    for (
-      let i = 0;
-      i < path.length - 1;
-      i++
-    ) {
+    for (let i = 0; i < path.length - 1; i++) {
+      const first = path[i];
 
-      const first =
-        path[i];
+      const second = path[i + 1];
 
-      const second =
-        path[i + 1];
+      const segmentLength = this.getDistance(first, second);
 
-      const segmentLength =
-        this.getDistance(
-          first,
-          second
-        );
-
-      if (
-        accumulated +
-          segmentLength >=
-        targetDistance
-      ) {
-
-        const remaining =
-          targetDistance -
-          accumulated;
+      if (accumulated + segmentLength >= targetDistance) {
+        const remaining = targetDistance - accumulated;
 
         const ratioInsideSegment =
-          segmentLength === 0
-            ? 0
-            : remaining /
-              segmentLength;
+          segmentLength === 0 ? 0 : remaining / segmentLength;
 
         return L.latLng(
-          first.lat +
-            (second.lat -
-              first.lat) *
-              ratioInsideSegment,
+          first.lat + (second.lat - first.lat) * ratioInsideSegment,
 
-          first.lng +
-            (second.lng -
-              first.lng) *
-              ratioInsideSegment
+          first.lng + (second.lng - first.lng) * ratioInsideSegment,
         );
       }
 
-      accumulated +=
-        segmentLength;
+      accumulated += segmentLength;
     }
 
-    return path[
-      path.length - 1
-    ];
+    return path[path.length - 1];
   }
 
   // =====================================================
   // GET PATH DIRECTION AT RATIO
   // =====================================================
 
-  getPathDirectionAtRatio(
-    path,
-    ratio
-  ) {
-
-    if (
-      !path ||
-      path.length < 2
-    ) {
+  getPathDirectionAtRatio(path, ratio) {
+    if (!path || path.length < 2) {
       return 0;
     }
 
-    const totalLength =
-      this.getPathLength(
-        path
-      );
+    const totalLength = this.getPathLength(path);
 
     if (totalLength === 0) {
       return 0;
     }
 
-    const targetDistance =
-      totalLength *
-      Math.max(
-        0,
-        Math.min(
-          1,
-          ratio
-        )
-      );
+    const targetDistance = totalLength * Math.max(0, Math.min(1, ratio));
 
     let accumulated = 0;
 
-    for (
-      let i = 0;
-      i < path.length - 1;
-      i++
-    ) {
+    for (let i = 0; i < path.length - 1; i++) {
+      const first = path[i];
 
-      const first =
-        path[i];
+      const second = path[i + 1];
 
-      const second =
-        path[i + 1];
+      const segmentLength = this.getDistance(first, second);
 
-      const segmentLength =
-        this.getDistance(
-          first,
-          second
-        );
-
-      if (
-        accumulated +
-          segmentLength >=
-        targetDistance
-      ) {
-
-        return this.calculateAngle(
-          first,
-          second
-        );
+      if (accumulated + segmentLength >= targetDistance) {
+        return this.calculateAngle(first, second);
       }
 
-      accumulated +=
-        segmentLength;
+      accumulated += segmentLength;
     }
 
     return 0;
@@ -1539,7 +1195,6 @@ class LayerManager {
   // =====================================================
 
   extractRoadPaths(latlngs) {
-
     if (!Array.isArray(latlngs)) {
       return [];
     }
@@ -1552,15 +1207,10 @@ class LayerManager {
       latlngs.length > 0 &&
       latlngs.every(
         (item) =>
-          item &&
-          typeof item.lat === "number" &&
-          typeof item.lng === "number"
+          item && typeof item.lat === "number" && typeof item.lng === "number",
       )
     ) {
-
-      return [
-        latlngs
-      ];
+      return [latlngs];
     }
 
     // ---------------------------------------------------
@@ -1569,29 +1219,17 @@ class LayerManager {
 
     const paths = [];
 
-    latlngs.forEach(
-      (item) => {
-
-        if (!Array.isArray(item)) {
-          return;
-        }
-
-        const path =
-          this.extractSinglePath(
-            item
-          );
-
-        if (
-          path &&
-          path.length >= 2
-        ) {
-
-          paths.push(
-            path
-          );
-        }
+    latlngs.forEach((item) => {
+      if (!Array.isArray(item)) {
+        return;
       }
-    );
+
+      const path = this.extractSinglePath(item);
+
+      if (path && path.length >= 2) {
+        paths.push(path);
+      }
+    });
 
     return paths;
   }
@@ -1601,7 +1239,6 @@ class LayerManager {
   // =====================================================
 
   extractSinglePath(array) {
-
     if (!Array.isArray(array)) {
       return [];
     }
@@ -1610,30 +1247,20 @@ class LayerManager {
       array.length > 0 &&
       array.every(
         (item) =>
-          item &&
-          typeof item.lat === "number" &&
-          typeof item.lng === "number"
+          item && typeof item.lat === "number" && typeof item.lng === "number",
       )
     ) {
-
       return array;
     }
 
     for (const item of array) {
-
       if (!Array.isArray(item)) {
         continue;
       }
 
-      const path =
-        this.extractSinglePath(
-          item
-        );
+      const path = this.extractSinglePath(item);
 
-      if (
-        path &&
-        path.length >= 2
-      ) {
+      if (path && path.length >= 2) {
         return path;
       }
     }
@@ -1646,27 +1273,14 @@ class LayerManager {
   // =====================================================
 
   getPathLength(path) {
-
-    if (
-      !path ||
-      path.length < 2
-    ) {
+    if (!path || path.length < 2) {
       return 0;
     }
 
     let totalLength = 0;
 
-    for (
-      let i = 0;
-      i < path.length - 1;
-      i++
-    ) {
-
-      totalLength +=
-        this.getDistance(
-          path[i],
-          path[i + 1]
-        );
+    for (let i = 0; i < path.length - 1; i++) {
+      totalLength += this.getDistance(path[i], path[i + 1]);
     }
 
     return totalLength;
@@ -1677,11 +1291,7 @@ class LayerManager {
   // =====================================================
 
   getPathMidpoint(path) {
-
-    return this.getPathPointAtRatio(
-      path,
-      0.50
-    );
+    return this.getPathPointAtRatio(path, 0.5);
   }
 
   // =====================================================
@@ -1689,11 +1299,7 @@ class LayerManager {
   // =====================================================
 
   getPathDirection(path) {
-
-    return this.getPathDirectionAtRatio(
-      path,
-      0.50
-    );
+    return this.getPathDirectionAtRatio(path, 0.5);
   }
 
   // =====================================================
@@ -1701,37 +1307,23 @@ class LayerManager {
   // =====================================================
 
   flattenLatLngs(array) {
-
     if (!Array.isArray(array)) {
       return [];
     }
 
     let result = [];
 
-    array.forEach(
-      (item) => {
-
-        if (
-          item &&
-          typeof item.lat === "number" &&
-          typeof item.lng === "number"
-        ) {
-
-          result.push(item);
-
-        } else if (
-          Array.isArray(item)
-        ) {
-
-          result =
-            result.concat(
-              this.flattenLatLngs(
-                item
-              )
-            );
-        }
+    array.forEach((item) => {
+      if (
+        item &&
+        typeof item.lat === "number" &&
+        typeof item.lng === "number"
+      ) {
+        result.push(item);
+      } else if (Array.isArray(item)) {
+        result = result.concat(this.flattenLatLngs(item));
       }
-    );
+    });
 
     return result;
   }
@@ -1741,11 +1333,7 @@ class LayerManager {
   // =====================================================
 
   getLineMidpoint(latlngs) {
-
-    if (
-      !latlngs ||
-      latlngs.length < 2
-    ) {
+    if (!latlngs || latlngs.length < 2) {
       return null;
     }
 
@@ -1753,90 +1341,45 @@ class LayerManager {
 
     const lengths = [];
 
-    for (
-      let i = 0;
-      i < latlngs.length - 1;
-      i++
-    ) {
+    for (let i = 0; i < latlngs.length - 1; i++) {
+      const distance = this.getDistance(latlngs[i], latlngs[i + 1]);
 
-      const distance =
-        this.getDistance(
-          latlngs[i],
-          latlngs[i + 1]
-        );
+      lengths.push(distance);
 
-      lengths.push(
-        distance
-      );
-
-      totalLength +=
-        distance;
+      totalLength += distance;
     }
 
     if (totalLength === 0) {
-      return latlngs[
-        Math.floor(
-          latlngs.length / 2
-        )
-      ];
+      return latlngs[Math.floor(latlngs.length / 2)];
     }
 
-    const half =
-      totalLength / 2;
+    const half = totalLength / 2;
 
     let accumulated = 0;
 
-    for (
-      let i = 0;
-      i < lengths.length;
-      i++
-    ) {
+    for (let i = 0; i < lengths.length; i++) {
+      const segmentLength = lengths[i];
 
-      const segmentLength =
-        lengths[i];
+      if (accumulated + segmentLength >= half) {
+        const remaining = half - accumulated;
 
-      if (
-        accumulated +
-          segmentLength >=
-        half
-      ) {
+        const ratio = segmentLength === 0 ? 0 : remaining / segmentLength;
 
-        const remaining =
-          half -
-          accumulated;
+        const start = latlngs[i];
 
-        const ratio =
-          segmentLength === 0
-            ? 0
-            : remaining /
-              segmentLength;
-
-        const start =
-          latlngs[i];
-
-        const end =
-          latlngs[i + 1];
+        const end = latlngs[i + 1];
 
         return L.latLng(
-          start.lat +
-            (end.lat -
-              start.lat) *
-              ratio,
+          start.lat + (end.lat - start.lat) * ratio,
 
-          start.lng +
-            (end.lng -
-              start.lng) *
-              ratio
+          start.lng + (end.lng - start.lng) * ratio,
         );
       }
 
-      accumulated +=
-        segmentLength;
+      accumulated += segmentLength;
     }
 
-    return latlngs[
-      latlngs.length - 1
-    ];
+    return latlngs[latlngs.length - 1];
   }
 
   // =====================================================
@@ -1844,61 +1387,28 @@ class LayerManager {
   // =====================================================
 
   getDistance(first, second) {
-
-    if (
-      !first ||
-      !second
-    ) {
+    if (!first || !second) {
       return 0;
     }
 
-    const R =
-      6371000;
+    const R = 6371000;
 
-    const lat1 =
-      first.lat *
-      Math.PI /
-      180;
+    const lat1 = (first.lat * Math.PI) / 180;
 
-    const lat2 =
-      second.lat *
-      Math.PI /
-      180;
+    const lat2 = (second.lat * Math.PI) / 180;
 
-    const deltaLat =
-      (second.lat -
-        first.lat) *
-      Math.PI /
-      180;
+    const deltaLat = ((second.lat - first.lat) * Math.PI) / 180;
 
-    const deltaLng =
-      (second.lng -
-        first.lng) *
-      Math.PI /
-      180;
+    const deltaLng = ((second.lng - first.lng) * Math.PI) / 180;
 
     const a =
-      Math.sin(
-        deltaLat / 2
-      ) *
-        Math.sin(
-          deltaLat / 2
-        ) +
+      Math.sin(deltaLat / 2) * Math.sin(deltaLat / 2) +
       Math.cos(lat1) *
         Math.cos(lat2) *
-        Math.sin(
-          deltaLng / 2
-        ) *
-        Math.sin(
-          deltaLng / 2
-        );
+        Math.sin(deltaLng / 2) *
+        Math.sin(deltaLng / 2);
 
-    const c =
-      2 *
-      Math.atan2(
-        Math.sqrt(a),
-        Math.sqrt(1 - a)
-      );
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
     return R * c;
   }
@@ -1907,75 +1417,40 @@ class LayerManager {
   // GET DIRECTION AROUND MIDPOINT
   // =====================================================
 
-  getDirectionAroundMidpoint(
-    latlngs
-  ) {
-
-    if (
-      !latlngs ||
-      latlngs.length < 2
-    ) {
+  getDirectionAroundMidpoint(latlngs) {
+    if (!latlngs || latlngs.length < 2) {
       return 0;
     }
 
     let totalLength = 0;
     const lengths = [];
 
-    for (
-      let i = 0;
-      i < latlngs.length - 1;
-      i++
-    ) {
+    for (let i = 0; i < latlngs.length - 1; i++) {
+      const distance = this.getDistance(latlngs[i], latlngs[i + 1]);
 
-      const distance =
-        this.getDistance(
-          latlngs[i],
-          latlngs[i + 1]
-        );
+      lengths.push(distance);
 
-      lengths.push(
-        distance
-      );
-
-      totalLength +=
-        distance;
+      totalLength += distance;
     }
 
     if (totalLength === 0) {
       return 0;
     }
 
-    const half =
-      totalLength / 2;
+    const half = totalLength / 2;
 
     let accumulated = 0;
 
-    for (
-      let i = 0;
-      i < lengths.length;
-      i++
-    ) {
+    for (let i = 0; i < lengths.length; i++) {
+      if (accumulated + lengths[i] >= half) {
+        const first = latlngs[i];
 
-      if (
-        accumulated +
-          lengths[i] >=
-        half
-      ) {
+        const second = latlngs[i + 1];
 
-        const first =
-          latlngs[i];
-
-        const second =
-          latlngs[i + 1];
-
-        return this.calculateAngle(
-          first,
-          second
-        );
+        return this.calculateAngle(first, second);
       }
 
-      accumulated +=
-        lengths[i];
+      accumulated += lengths[i];
     }
 
     return 0;
@@ -1986,37 +1461,23 @@ class LayerManager {
   // =====================================================
 
   extractLatLngs(array) {
-
-    return this.flattenLatLngs(
-      array
-    );
+    return this.flattenLatLngs(array);
   }
 
   // =====================================================
   // CALCULATE ANGLE
   // =====================================================
 
-  calculateAngle(
-    first,
-    second
-  ) {
-
+  calculateAngle(first, second) {
     if (!first || !second) {
       return 0;
     }
 
     let angle =
-      (Math.atan2(
-        second.lat - first.lat,
-        second.lng - first.lng
-      ) *
-        180) /
+      (Math.atan2(second.lat - first.lat, second.lng - first.lng) * 180) /
       Math.PI;
 
-    if (
-      angle > 90 ||
-      angle < -90
-    ) {
+    if (angle > 90 || angle < -90) {
       angle += 180;
     }
 
@@ -2027,134 +1488,65 @@ class LayerManager {
   // DEFAULT POPUP
   // =====================================================
 
-  createDefaultPopup(
-    feature,
-    name
-  ) {
+  createDefaultPopup(feature, name) {
+    const properties = feature.properties || {};
 
-    const properties =
-      feature.properties || {};
-
-    let title =
-      this.formatLayerName(
-        name
-      );
+    let title = this.formatLayerName(name);
 
     let fields = [];
 
     if (name === "batasdesa") {
-
       title = "Batas Desa";
-
-    } else if (
-      name === "batasdusun"
-    ) {
-
-      title =
-        this.getDusunName(
-          feature
-        ) || "Dusun";
+    } else if (name === "batasdusun") {
+      title = this.getDusunName(feature) || "Dusun";
 
       fields = ["Nama"];
-
-    } else if (
-      name === "batasrt"
-    ) {
-
-      title =
-        this.getRTName(
-          feature
-        ) || "RT";
+    } else if (name === "batasrt") {
+      title = this.getRTName(feature) || "RT";
 
       fields = ["Nama"];
-
-    } else if (
-      name === "jaringanjalan"
-    ) {
-
-      title =
-        this.getRoadName(
-          feature
-        ) || "Jalan";
+    } else if (name === "jaringanjalan") {
+      title = this.getRoadName(feature) || "Jalan";
 
       fields = ["Nama"];
+    } else if (name === "pju") {
+      title = "Penerangan Jalan Umum";
 
-    } else if (
-      name === "pju"
-    ) {
-
-      title =
-        "Penerangan Jalan Umum";
-
-      fields = [
-        "Kondisi",
-        "Status",
-      ];
-
-    } else if (
-      name === "minim_penerangan"
-    ) {
-
-      title =
-        "Area Minim Penerangan";
+      fields = ["Kondisi", "Status"];
+    } else if (name === "minim_penerangan") {
+      title = "Area Minim Penerangan";
 
       fields = ["Status"];
-
     } else {
-
-      fields =
-        this.getPopupFields(
-          name
-        );
+      fields = this.getPopupFields(name);
     }
 
-    let html =
-      `<div class="popup-content">`;
+    let html = `<div class="popup-content">`;
 
-    html += `<h3>${this.escapeHtml(
-      title
-    )}</h3>`;
+    html += `<h3>${this.escapeHtml(title)}</h3>`;
 
     let hasData = false;
 
-    fields.forEach(
-      (key) => {
+    fields.forEach((key) => {
+      const value = properties[key];
 
-        const value =
-          properties[key];
+      if (value === null || value === undefined || value === "") {
+        return;
+      }
 
-        if (
-          value === null ||
-          value === undefined ||
-          value === ""
-        ) {
-          return;
-        }
+      hasData = true;
 
-        hasData = true;
-
-        html += `
+      html += `
           <div class="popup-row">
-            <strong>${this.escapeHtml(
-              this.formatPropertyName(
-                key
-              )
-            )}:</strong>
+            <strong>${this.escapeHtml(this.formatPropertyName(key))}:</strong>
 
-            <span>${this.escapeHtml(
-              value
-            )}</span>
+            <span>${this.escapeHtml(value)}</span>
           </div>
         `;
-      }
-    );
+    });
 
-    if (
-      !hasData &&
-      name !== "batasdesa"
-    ) {
-      html +=
-        "<p>Informasi utama tidak tersedia.</p>";
+    if (!hasData && name !== "batasdesa") {
+      html += "<p>Informasi utama tidak tersedia.</p>";
     }
 
     html += "</div>";
@@ -2167,52 +1559,35 @@ class LayerManager {
   // =====================================================
 
   getPopupFields(name) {
+    return (
+      {
+        pemerintahan: ["Nama"],
 
-    return {
-      pemerintahan: ["Nama"],
+        pendidikan: ["Nama"],
 
-      pendidikan: ["Nama"],
+        peribadatan: ["Nama", "Jenis"],
 
-      peribadatan: [
-        "Nama",
-        "Jenis",
-      ],
+        lapangan: ["Nama", "Jenis"],
 
-      lapangan: [
-        "Nama",
-        "Jenis",
-      ],
+        tpu: ["Nama"],
 
-      tpu: ["Nama"],
+        sppg: ["Nama"],
 
-      sppg: ["Nama"],
+        kopdes: ["Nama"],
 
-      kopdes: ["Nama"],
+        umkm: ["nama_usaha", "kelas"],
 
-      umkm: [
-        "nama_usaha",
-        "kelas",
-      ],
+        industri: ["Nama", "Jenis"],
 
-      industri: [
-        "Nama",
-        "Jenis",
-      ],
+        relkereta: ["Nama"],
 
-      relkereta: ["Nama"],
+        sungai: ["Nama"],
 
-      sungai: ["Nama"],
+        situsbudaya: ["Nama", "Jenis"],
 
-      situsbudaya: [
-        "Nama",
-        "Jenis",
-      ],
-
-      sumbor: [
-        "Nama",
-        "Kondisi",
-      ],
-    }[name] || ["Nama"];
+        sumbor: ["Nama", "Kondisi"],
+      }[name] || ["Nama"]
+    );
   }
 
   // =====================================================
@@ -2220,28 +1595,12 @@ class LayerManager {
   // =====================================================
 
   escapeHtml(value) {
-
     return String(value)
-      .replace(
-        /&/g,
-        "&amp;"
-      )
-      .replace(
-        /</g,
-        "&lt;"
-      )
-      .replace(
-        />/g,
-        "&gt;"
-      )
-      .replace(
-        /"/g,
-        "&quot;"
-      )
-      .replace(
-        /'/g,
-        "&#039;"
-      );
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
   }
 
   // =====================================================
@@ -2249,62 +1608,47 @@ class LayerManager {
   // =====================================================
 
   formatLayerName(name) {
+    return (
+      {
+        batasdesa: "Batas Desa",
 
-    return {
-      batasdesa: "Batas Desa",
+        batasdusun: "Batas Dusun",
 
-      batasdusun: "Batas Dusun",
+        batasrt: "Batas RT",
 
-      batasrt: "Batas RT",
+        pemerintahan: "Pemerintahan",
 
-      pemerintahan:
-        "Pemerintahan",
+        pendidikan: "Pendidikan",
 
-      pendidikan:
-        "Pendidikan",
+        peribadatan: "Peribadatan",
 
-      peribadatan:
-        "Peribadatan",
+        lapangan: "Lapangan",
 
-      lapangan:
-        "Lapangan",
+        tpu: "Tempat Pemakaman Umum",
 
-      tpu:
-        "Tempat Pemakaman Umum",
+        sppg: "SPPG",
 
-      sppg: "SPPG",
+        kopdes: "Koperasi Desa",
 
-      kopdes:
-        "Koperasi Desa",
+        umkm: "UMKM",
 
-      umkm:
-        "UMKM",
+        industri: "Industri",
 
-      industri:
-        "Industri",
+        jaringanjalan: "Jaringan Jalan",
 
-      jaringanjalan:
-        "Jaringan Jalan",
+        relkereta: "Jalur Kereta Api",
 
-      relkereta:
-        "Jalur Kereta Api",
+        sungai: "Sungai",
 
-      sungai:
-        "Sungai",
+        pju: "Penerangan Jalan Umum",
 
-      pju:
-        "Penerangan Jalan Umum",
+        minim_penerangan: "Area Minim Penerangan",
 
-      minim_penerangan:
-        "Area Minim Penerangan",
+        situsbudaya: "Situs Budaya",
 
-      situsbudaya:
-        "Situs Budaya",
-
-      sumbor:
-        "Sumur Bor",
-
-    }[name] || name;
+        sumbor: "Sumur Bor",
+      }[name] || name
+    );
   }
 
   // =====================================================
@@ -2312,40 +1656,18 @@ class LayerManager {
   // =====================================================
 
   formatPropertyName(name) {
-
     return String(name)
-      .replace(
-        /_/g,
-        " "
-      )
-      .replace(
-        /\b\w/g,
-        (char) =>
-          char.toUpperCase()
-      );
+      .replace(/_/g, " ")
+      .replace(/\b\w/g, (char) => char.toUpperCase());
   }
 
   // =====================================================
   // RESET STYLE
   // =====================================================
 
-  resetLayerStyle(
-    name,
-    layer,
-    feature
-  ) {
-
-    if (
-      layer &&
-      layer.setStyle
-    ) {
-
-      layer.setStyle(
-        this.getLayerStyle(
-          name,
-          feature
-        )
-      );
+  resetLayerStyle(name, layer, feature) {
+    if (layer && layer.setStyle) {
+      layer.setStyle(this.getLayerStyle(name, feature));
     }
   }
 
@@ -2354,31 +1676,18 @@ class LayerManager {
   // =====================================================
 
   updateBounds(layer) {
-
     try {
+      const bounds = layer.getBounds();
 
-      const bounds =
-        layer.getBounds();
-
-      if (
-        !bounds ||
-        !bounds.isValid()
-      ) {
+      if (!bounds || !bounds.isValid()) {
         return;
       }
 
       if (this.bounds) {
-
-        this.bounds.extend(
-          bounds
-        );
-
+        this.bounds.extend(bounds);
       } else {
-
-        this.bounds =
-          bounds;
+        this.bounds = bounds;
       }
-
     } catch (error) {
       // Tidak perlu menghentikan proses layer
     }
@@ -2388,35 +1697,17 @@ class LayerManager {
   // TOGGLE LAYER
   // =====================================================
 
-  toggleLayer(
-    name,
-    visible
-  ) {
-
-    const group =
-      this.layerGroups[name];
+  toggleLayer(name, visible) {
+    const group = this.layerGroups[name];
 
     if (!group) {
       return;
     }
 
-    if (
-      visible &&
-      !this.map.hasLayer(group)
-    ) {
-
-      group.addTo(
-        this.map
-      );
-
-    } else if (
-      !visible &&
-      this.map.hasLayer(group)
-    ) {
-
-      this.map.removeLayer(
-        group
-      );
+    if (visible && !this.map.hasLayer(group)) {
+      group.addTo(this.map);
+    } else if (!visible && this.map.hasLayer(group)) {
+      this.map.removeLayer(group);
     }
   }
 
@@ -2425,47 +1716,28 @@ class LayerManager {
   // =====================================================
 
   zoomToLayer(name) {
-
-    const layer =
-      this.layers[name];
+    const layer = this.layers[name];
 
     if (!layer) {
       return;
     }
 
     try {
+      const bounds = layer.getBounds();
 
-      const bounds =
-        layer.getBounds();
-
-      if (
-        bounds &&
-        bounds.isValid()
-      ) {
-
-        this.map.fitBounds(
-          bounds,
-          {
-            padding: [40, 40],
-          }
-        );
+      if (bounds && bounds.isValid()) {
+        this.map.fitBounds(bounds, {
+          padding: [40, 40],
+        });
 
         return;
       }
-
     } catch (error) {}
 
-    const center =
-      this.getLayerCenter(
-        layer
-      );
+    const center = this.getLayerCenter(layer);
 
     if (center) {
-
-      this.map.setView(
-        center,
-        18
-      );
+      this.map.setView(center, 18);
     }
   }
 
@@ -2474,20 +1746,12 @@ class LayerManager {
   // =====================================================
 
   getLayerCenter(layer) {
-
     try {
+      const bounds = layer.getBounds();
 
-      const bounds =
-        layer.getBounds();
-
-      if (
-        bounds &&
-        bounds.isValid()
-      ) {
-
+      if (bounds && bounds.isValid()) {
         return bounds.getCenter();
       }
-
     } catch (error) {}
 
     return null;
@@ -2498,25 +1762,12 @@ class LayerManager {
   // =====================================================
 
   zoomToExtent() {
-
-    if (
-      this.bounds &&
-      this.bounds.isValid()
-    ) {
-
-      this.map.fitBounds(
-        this.bounds,
-        {
-          padding: [30, 30],
-        }
-      );
-
+    if (this.bounds && this.bounds.isValid()) {
+      this.map.fitBounds(this.bounds, {
+        padding: [30, 30],
+      });
     } else {
-
-      this.map.setView(
-        mapConfig.center,
-        mapConfig.zoom
-      );
+      this.map.setView(mapConfig.center, mapConfig.zoom);
     }
   }
 
@@ -2525,103 +1776,57 @@ class LayerManager {
   // =====================================================
 
   async loadAllLayers() {
-
-    const loading =
-      document.getElementById(
-        "loading"
-      );
+    const loading = document.getElementById("loading");
 
     if (loading) {
-      loading.style.display =
-        "block";
+      loading.style.display = "block";
     }
 
     try {
-
-      for (
-        const name of Object.keys(
-          mapConfig.dataSources
-        )
-      ) {
-
-        const layer =
-          await this.loadLayer(
-            name
-          );
+      for (const name of Object.keys(mapConfig.dataSources)) {
+        const layer = await this.loadLayer(name);
 
         if (!layer) {
           continue;
         }
 
-        const group =
-          this.layerGroups[name];
+        const group = this.layerGroups[name];
 
         if (!group) {
           continue;
         }
 
-        const checkbox =
-          document.getElementById(
-            name
-          );
+        const checkbox = document.getElementById(name);
 
         // DEFAULT HIDDEN
-        if (
-          this.defaultHiddenLayers.includes(
-            name
-          )
-        ) {
-
+        if (this.defaultHiddenLayers.includes(name)) {
           if (checkbox) {
-            checkbox.checked =
-              false;
+            checkbox.checked = false;
           }
 
-          this.map.removeLayer(
-            group
-          );
+          this.map.removeLayer(group);
 
           continue;
         }
 
         // CHECKBOX
-        const shouldShow =
-          checkbox
-            ? checkbox.checked
-            : this.defaultVisibleLayers.includes(
-                name
-              );
+        const shouldShow = checkbox
+          ? checkbox.checked
+          : this.defaultVisibleLayers.includes(name);
 
         if (shouldShow) {
-
-          group.addTo(
-            this.map
-          );
-
+          group.addTo(this.map);
         } else {
-
-          this.map.removeLayer(
-            group
-          );
+          this.map.removeLayer(group);
         }
       }
 
-      console.log(
-        "✓ Semua layer selesai dimuat."
-      );
-
+      console.log("✓ Semua layer selesai dimuat.");
     } catch (error) {
-
-      console.error(
-        "Gagal memuat semua layer:",
-        error
-      );
-
+      console.error("Gagal memuat semua layer:", error);
     } finally {
-
       if (loading) {
-        loading.style.display =
-          "none";
+        loading.style.display = "none";
       }
     }
   }
@@ -2639,5 +1844,4 @@ class LayerManager {
 // GLOBAL
 // =====================================================
 
-window.LayerManager =
-  LayerManager;
+window.LayerManager = LayerManager;
