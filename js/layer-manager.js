@@ -525,32 +525,38 @@ class LayerManager {
     // ===================================================
     // BATAS DESA
     // ===================================================
-// ===================================================
-// BATAS DESA
-// ===================================================
 
-if (name === "batasdesa") {
-  const config = mapConfig.layerStyles?.batasdesa || {};
+    if (name === "batasdesa") {
+      const config = mapConfig.layerStyles?.batasdesa || {};
 
-  return {
-    color: "#FFD700",
+      return {
+        color: "#FFD700",
 
-    weight: config.weight !== undefined ? config.weight : 3,
+        weight:
+          config.weight !== undefined
+            ? config.weight
+            : 3,
 
-    opacity: config.opacity !== undefined ? config.opacity : 1,
+        opacity:
+          config.opacity !== undefined
+            ? config.opacity
+            : 1,
 
-    fill: true,
+        fill: true,
 
-    fillColor: "#FFD700",
+        fillColor: "#FFD700",
 
-    fillOpacity:
-      config.fillOpacity !== undefined ? config.fillOpacity : 0.15,
+        fillOpacity:
+          config.fillOpacity !== undefined
+            ? config.fillOpacity
+            : 0.15,
 
-    dashArray: config.dashArray || null,
+        dashArray:
+          config.dashArray || null,
 
-    pane: this.paneMapping[name],
-  };
-}
+        pane: this.paneMapping[name],
+      };
+    }
 
     // ===================================================
     // BATAS DUSUN
@@ -1116,6 +1122,15 @@ if (name === "batasdesa") {
     );
   }
 
+  // =====================================================
+  // LABEL JALAN
+  // =====================================================
+  // Posisi default = 50% panjang jalan.
+  //
+  // KHUSUS:
+  // Jl. Panembahan Senopati I = 25% dari awal jalan.
+  // =====================================================
+
   bindRoadLabel(
     layer,
     name
@@ -1123,42 +1138,112 @@ if (name === "batasdesa") {
 
     try {
 
-      const points =
-        this.extractLatLngs(
-          layer.getLatLngs()
+      const rawLatLngs =
+        layer.getLatLngs();
+
+      const paths =
+        this.extractRoadPaths(
+          rawLatLngs
         );
 
-      if (points.length < 2) {
+      if (
+        !paths ||
+        paths.length === 0
+      ) {
         return;
       }
 
-      const middleIndex =
-        Math.floor(
-          points.length / 2
+      // -------------------------------------------------
+      // Pilih bagian garis TERPANJANG
+      // -------------------------------------------------
+
+      let selectedPath =
+        paths[0];
+
+      let longestLength =
+        this.getPathLength(
+          selectedPath
         );
 
-      const angle =
-        this.calculateAngle(
-          points[
-            Math.max(
-              0,
-              middleIndex - 1
-            )
-          ],
+      for (
+        let i = 1;
+        i < paths.length;
+        i++
+      ) {
 
-          points[
-            Math.min(
-              points.length - 1,
-              middleIndex + 1
-            )
-          ]
+        const currentLength =
+          this.getPathLength(
+            paths[i]
+          );
+
+        if (
+          currentLength >
+          longestLength
+        ) {
+
+          longestLength =
+            currentLength;
+
+          selectedPath =
+            paths[i];
+        }
+      }
+
+      if (
+        !selectedPath ||
+        selectedPath.length < 2
+      ) {
+        return;
+      }
+
+      // -------------------------------------------------
+      // POSISI LABEL
+      // -------------------------------------------------
+      //
+      // Default semua jalan:
+      // 50%
+      //
+      // Khusus Jl. Panembahan Senopati I:
+      // 25% dari awal jalan
+      // -------------------------------------------------
+
+      const isPanembahanSenopatiI =
+        this.normalizeRoadName(name) ===
+        "jl panembahan senopati i";
+
+      const labelPosition =
+        isPanembahanSenopatiI
+          ? 0.25
+          : 0.50;
+
+      const labelPoint =
+        this.getPathPointAtRatio(
+          selectedPath,
+          labelPosition
         );
+
+      if (!labelPoint) {
+        return;
+      }
+
+      // -------------------------------------------------
+      // Arah jalan di sekitar posisi label
+      // -------------------------------------------------
+
+      const direction =
+        this.getPathDirectionAtRatio(
+          selectedPath,
+          labelPosition
+        );
+
+      // -------------------------------------------------
+      // Buat tooltip label
+      // -------------------------------------------------
 
       layer.bindTooltip(
         `<span class="road-label-text">${this.escapeHtml(
           name
         )}</span>`,
-
         {
           permanent: false,
 
@@ -1170,8 +1255,48 @@ if (name === "batasdesa") {
           sticky: false,
 
           opacity: 1,
+
+          offset: [0, 0],
         }
       );
+
+      // -------------------------------------------------
+      // Tampilkan label di posisi yang sudah ditentukan
+      // -------------------------------------------------
+
+      layer.on(
+        "tooltipopen",
+        (event) => {
+
+          const tooltip =
+            event.tooltip;
+
+          tooltip.setLatLng(
+            labelPoint
+          );
+
+          const element =
+            tooltip.getElement();
+
+          const text =
+            element?.querySelector(
+              ".road-label-text"
+            );
+
+          if (text) {
+
+            text.style.transform =
+              `rotate(${direction}deg)`;
+
+            text.style.transformOrigin =
+              "center center";
+          }
+        }
+      );
+
+      // -------------------------------------------------
+      // Tampilkan label hanya pada zoom >= 16
+      // -------------------------------------------------
 
       const update =
         () => {
@@ -1194,30 +1319,18 @@ if (name === "batasdesa") {
           if (
             this.map.getZoom() >= 16
           ) {
+
+            tooltip.setLatLng(
+              labelPoint
+            );
+
             layer.openTooltip();
+
           } else {
+
             layer.closeTooltip();
           }
         };
-
-      layer.on(
-        "tooltipopen",
-        (event) => {
-
-          const element =
-            event.tooltip.getElement();
-
-          const text =
-            element?.querySelector(
-              ".road-label-text"
-            );
-
-          if (text) {
-            text.style.transform =
-              `rotate(${angle}deg)`;
-          }
-        }
-      );
 
       this.map.on(
         "zoomend",
@@ -1236,21 +1349,647 @@ if (name === "batasdesa") {
   }
 
   // =====================================================
-  // EXTRACT LAT LNG
+  // NORMALIZE ROAD NAME
   // =====================================================
 
-  extractLatLngs(array) {
+  normalizeRoadName(name) {
+
+    return String(name || "")
+      .trim()
+      .toLowerCase()
+      .replace(/\./g, "")
+      .replace(/\s+/g, " ");
+  }
+
+  // =====================================================
+  // GET PATH POINT AT RATIO
+  // =====================================================
+  // ratio:
+  // 0.00 = awal jalan
+  // 0.25 = 1/4 jalan
+  // 0.50 = tengah jalan
+  // 1.00 = akhir jalan
+  // =====================================================
+
+  getPathPointAtRatio(
+    path,
+    ratio
+  ) {
+
+    if (
+      !path ||
+      path.length < 2
+    ) {
+      return null;
+    }
+
+    const totalLength =
+      this.getPathLength(
+        path
+      );
+
+    if (totalLength === 0) {
+      return path[0];
+    }
+
+    const targetDistance =
+      totalLength *
+      Math.max(
+        0,
+        Math.min(
+          1,
+          ratio
+        )
+      );
+
+    let accumulated = 0;
+
+    for (
+      let i = 0;
+      i < path.length - 1;
+      i++
+    ) {
+
+      const first =
+        path[i];
+
+      const second =
+        path[i + 1];
+
+      const segmentLength =
+        this.getDistance(
+          first,
+          second
+        );
+
+      if (
+        accumulated +
+          segmentLength >=
+        targetDistance
+      ) {
+
+        const remaining =
+          targetDistance -
+          accumulated;
+
+        const ratioInsideSegment =
+          segmentLength === 0
+            ? 0
+            : remaining /
+              segmentLength;
+
+        return L.latLng(
+          first.lat +
+            (second.lat -
+              first.lat) *
+              ratioInsideSegment,
+
+          first.lng +
+            (second.lng -
+              first.lng) *
+              ratioInsideSegment
+        );
+      }
+
+      accumulated +=
+        segmentLength;
+    }
+
+    return path[
+      path.length - 1
+    ];
+  }
+
+  // =====================================================
+  // GET PATH DIRECTION AT RATIO
+  // =====================================================
+
+  getPathDirectionAtRatio(
+    path,
+    ratio
+  ) {
+
+    if (
+      !path ||
+      path.length < 2
+    ) {
+      return 0;
+    }
+
+    const totalLength =
+      this.getPathLength(
+        path
+      );
+
+    if (totalLength === 0) {
+      return 0;
+    }
+
+    const targetDistance =
+      totalLength *
+      Math.max(
+        0,
+        Math.min(
+          1,
+          ratio
+        )
+      );
+
+    let accumulated = 0;
+
+    for (
+      let i = 0;
+      i < path.length - 1;
+      i++
+    ) {
+
+      const first =
+        path[i];
+
+      const second =
+        path[i + 1];
+
+      const segmentLength =
+        this.getDistance(
+          first,
+          second
+        );
+
+      if (
+        accumulated +
+          segmentLength >=
+        targetDistance
+      ) {
+
+        return this.calculateAngle(
+          first,
+          second
+        );
+      }
+
+      accumulated +=
+        segmentLength;
+    }
+
+    return 0;
+  }
+
+  // =====================================================
+  // EXTRACT ROAD PATHS
+  // =====================================================
+
+  extractRoadPaths(latlngs) {
+
+    if (!Array.isArray(latlngs)) {
+      return [];
+    }
+
+    // ---------------------------------------------------
+    // LineString
+    // ---------------------------------------------------
+
+    if (
+      latlngs.length > 0 &&
+      latlngs.every(
+        (item) =>
+          item &&
+          typeof item.lat === "number" &&
+          typeof item.lng === "number"
+      )
+    ) {
+
+      return [
+        latlngs
+      ];
+    }
+
+    // ---------------------------------------------------
+    // MultiLineString
+    // ---------------------------------------------------
+
+    const paths = [];
+
+    latlngs.forEach(
+      (item) => {
+
+        if (!Array.isArray(item)) {
+          return;
+        }
+
+        const path =
+          this.extractSinglePath(
+            item
+          );
+
+        if (
+          path &&
+          path.length >= 2
+        ) {
+
+          paths.push(
+            path
+          );
+        }
+      }
+    );
+
+    return paths;
+  }
+
+  // =====================================================
+  // EXTRACT SINGLE PATH
+  // =====================================================
+
+  extractSinglePath(array) {
 
     if (!Array.isArray(array)) {
       return [];
     }
 
-    return array.length &&
-      Array.isArray(array[0])
-      ? this.extractLatLngs(
-          array[0]
+    if (
+      array.length > 0 &&
+      array.every(
+        (item) =>
+          item &&
+          typeof item.lat === "number" &&
+          typeof item.lng === "number"
+      )
+    ) {
+
+      return array;
+    }
+
+    for (const item of array) {
+
+      if (!Array.isArray(item)) {
+        continue;
+      }
+
+      const path =
+        this.extractSinglePath(
+          item
+        );
+
+      if (
+        path &&
+        path.length >= 2
+      ) {
+        return path;
+      }
+    }
+
+    return [];
+  }
+
+  // =====================================================
+  // GET PATH LENGTH
+  // =====================================================
+
+  getPathLength(path) {
+
+    if (
+      !path ||
+      path.length < 2
+    ) {
+      return 0;
+    }
+
+    let totalLength = 0;
+
+    for (
+      let i = 0;
+      i < path.length - 1;
+      i++
+    ) {
+
+      totalLength +=
+        this.getDistance(
+          path[i],
+          path[i + 1]
+        );
+    }
+
+    return totalLength;
+  }
+
+  // =====================================================
+  // GET PATH MIDPOINT
+  // =====================================================
+
+  getPathMidpoint(path) {
+
+    return this.getPathPointAtRatio(
+      path,
+      0.50
+    );
+  }
+
+  // =====================================================
+  // GET PATH DIRECTION
+  // =====================================================
+
+  getPathDirection(path) {
+
+    return this.getPathDirectionAtRatio(
+      path,
+      0.50
+    );
+  }
+
+  // =====================================================
+  // FLATTEN LAT LNGS
+  // =====================================================
+
+  flattenLatLngs(array) {
+
+    if (!Array.isArray(array)) {
+      return [];
+    }
+
+    let result = [];
+
+    array.forEach(
+      (item) => {
+
+        if (
+          item &&
+          typeof item.lat === "number" &&
+          typeof item.lng === "number"
+        ) {
+
+          result.push(item);
+
+        } else if (
+          Array.isArray(item)
+        ) {
+
+          result =
+            result.concat(
+              this.flattenLatLngs(
+                item
+              )
+            );
+        }
+      }
+    );
+
+    return result;
+  }
+
+  // =====================================================
+  // GET LINE MIDPOINT
+  // =====================================================
+
+  getLineMidpoint(latlngs) {
+
+    if (
+      !latlngs ||
+      latlngs.length < 2
+    ) {
+      return null;
+    }
+
+    let totalLength = 0;
+
+    const lengths = [];
+
+    for (
+      let i = 0;
+      i < latlngs.length - 1;
+      i++
+    ) {
+
+      const distance =
+        this.getDistance(
+          latlngs[i],
+          latlngs[i + 1]
+        );
+
+      lengths.push(
+        distance
+      );
+
+      totalLength +=
+        distance;
+    }
+
+    if (totalLength === 0) {
+      return latlngs[
+        Math.floor(
+          latlngs.length / 2
         )
-      : array;
+      ];
+    }
+
+    const half =
+      totalLength / 2;
+
+    let accumulated = 0;
+
+    for (
+      let i = 0;
+      i < lengths.length;
+      i++
+    ) {
+
+      const segmentLength =
+        lengths[i];
+
+      if (
+        accumulated +
+          segmentLength >=
+        half
+      ) {
+
+        const remaining =
+          half -
+          accumulated;
+
+        const ratio =
+          segmentLength === 0
+            ? 0
+            : remaining /
+              segmentLength;
+
+        const start =
+          latlngs[i];
+
+        const end =
+          latlngs[i + 1];
+
+        return L.latLng(
+          start.lat +
+            (end.lat -
+              start.lat) *
+              ratio,
+
+          start.lng +
+            (end.lng -
+              start.lng) *
+              ratio
+        );
+      }
+
+      accumulated +=
+        segmentLength;
+    }
+
+    return latlngs[
+      latlngs.length - 1
+    ];
+  }
+
+  // =====================================================
+  // DISTANCE
+  // =====================================================
+
+  getDistance(first, second) {
+
+    if (
+      !first ||
+      !second
+    ) {
+      return 0;
+    }
+
+    const R =
+      6371000;
+
+    const lat1 =
+      first.lat *
+      Math.PI /
+      180;
+
+    const lat2 =
+      second.lat *
+      Math.PI /
+      180;
+
+    const deltaLat =
+      (second.lat -
+        first.lat) *
+      Math.PI /
+      180;
+
+    const deltaLng =
+      (second.lng -
+        first.lng) *
+      Math.PI /
+      180;
+
+    const a =
+      Math.sin(
+        deltaLat / 2
+      ) *
+        Math.sin(
+          deltaLat / 2
+        ) +
+      Math.cos(lat1) *
+        Math.cos(lat2) *
+        Math.sin(
+          deltaLng / 2
+        ) *
+        Math.sin(
+          deltaLng / 2
+        );
+
+    const c =
+      2 *
+      Math.atan2(
+        Math.sqrt(a),
+        Math.sqrt(1 - a)
+      );
+
+    return R * c;
+  }
+
+  // =====================================================
+  // GET DIRECTION AROUND MIDPOINT
+  // =====================================================
+
+  getDirectionAroundMidpoint(
+    latlngs
+  ) {
+
+    if (
+      !latlngs ||
+      latlngs.length < 2
+    ) {
+      return 0;
+    }
+
+    let totalLength = 0;
+    const lengths = [];
+
+    for (
+      let i = 0;
+      i < latlngs.length - 1;
+      i++
+    ) {
+
+      const distance =
+        this.getDistance(
+          latlngs[i],
+          latlngs[i + 1]
+        );
+
+      lengths.push(
+        distance
+      );
+
+      totalLength +=
+        distance;
+    }
+
+    if (totalLength === 0) {
+      return 0;
+    }
+
+    const half =
+      totalLength / 2;
+
+    let accumulated = 0;
+
+    for (
+      let i = 0;
+      i < lengths.length;
+      i++
+    ) {
+
+      if (
+        accumulated +
+          lengths[i] >=
+        half
+      ) {
+
+        const first =
+          latlngs[i];
+
+        const second =
+          latlngs[i + 1];
+
+        return this.calculateAngle(
+          first,
+          second
+        );
+      }
+
+      accumulated +=
+        lengths[i];
+    }
+
+    return 0;
+  }
+
+  // =====================================================
+  // EXTRACT LAT LNGS
+  // =====================================================
+
+  extractLatLngs(array) {
+
+    return this.flattenLatLngs(
+      array
+    );
   }
 
   // =====================================================
@@ -1538,9 +2277,11 @@ if (name === "batasdesa") {
       kopdes:
         "Koperasi Desa",
 
-      umkm: "UMKM",
+      umkm:
+        "UMKM",
 
-      industri: "Industri",
+      industri:
+        "Industri",
 
       jaringanjalan:
         "Jaringan Jalan",
@@ -1548,7 +2289,8 @@ if (name === "batasdesa") {
       relkereta:
         "Jalur Kereta Api",
 
-      sungai: "Sungai",
+      sungai:
+        "Sungai",
 
       pju:
         "Penerangan Jalan Umum",
@@ -1823,10 +2565,7 @@ if (name === "batasdesa") {
             name
           );
 
-        // =============================================
         // DEFAULT HIDDEN
-        // =============================================
-
         if (
           this.defaultHiddenLayers.includes(
             name
@@ -1845,10 +2584,7 @@ if (name === "batasdesa") {
           continue;
         }
 
-        // =============================================
         // CHECKBOX
-        // =============================================
-
         const shouldShow =
           checkbox
             ? checkbox.checked
@@ -1895,14 +2631,13 @@ if (name === "batasdesa") {
   // =====================================================
 
   showError(message) {
-
     console.error(message);
   }
 }
 
-// =======================================================
+// =====================================================
 // GLOBAL
-// =======================================================
+// =====================================================
 
 window.LayerManager =
   LayerManager;
